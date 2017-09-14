@@ -1,9 +1,13 @@
+// 声明是 Android 程序
 apply plugin: 'com.android.application'
 
 android {
+    // 编译 SDK 的版本
     compileSdkVersion 25
+    // build tools 的版本
     buildToolsVersion "25.0.2"
     defaultConfig {
+        // 应用的包名
         applicationId "com.example.wangjun.demoapk"
         minSdkVersion 15
         targetSdkVersion 25
@@ -12,14 +16,24 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        // debug {
+        //     // debug模式
+        // }
         release {
+            // 是否进行混淆
             minifyEnabled false
+            // 混淆文件的位置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // 移除lint检查的error
+    // lintOptions {
+    //     abortOnError false
+    // }
 }
 
 dependencies {
+    // 编译 libs 目录下的所有 jar 包
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -27,4 +41,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     testCompile 'junit:junit:4.12'
+
+    // 编译extras目录下的ShimmerAndroid模块
+    // compile project(':extras:ShimmerAndroid')
 }
