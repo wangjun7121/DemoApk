@@ -8,13 +8,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
 
 
 public class MainActivity extends AppCompatActivity {
 
-    String sDebugTAG = "DemoApk";
+    private static String sLogcatTAG = "DemoApk";
     /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     // listview 列表项名称:
     //      注：数组中的名称与类名有一定关系： 类名 = 类名文件夹.数组项名+Activity
     private String[] saDemo = {
-        "HelloWorld"
+        "HelloWorld",
+         "ListViewDemo"
     };
 
 
@@ -36,8 +35,9 @@ public class MainActivity extends AppCompatActivity {
         String sTargetActivity ;
 
         sTargetActivity = "com.example.wangjun.demoapk."+saDemo[position]+"."+saDemo[position]+"Activity";
-        Log.d(sDebugTAG,sTargetActivity);
+        Log.d(sLogcatTAG,sTargetActivity);
 
+        // 使用反射从类路径获得类 class 对象
         clTargetActivity = Class.forName(sTargetActivity);
         //Intent intent = new Intent(MainActivity.this,HelloWorldActivity.class);
         Intent intent = new Intent(MainActivity.this,(Class)clTargetActivity);

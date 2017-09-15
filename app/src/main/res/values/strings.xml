@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DemoApk</string>
+
+    <!-- ListViewDemoActivity  start-->
+    <string name="ListViewDemo_textTitle">ListView Tutorial</string>
+    <string name="ListViewDemo_testArrayAdapter_Btn">ArrayAdapter：简单列表</string>
+    <string name="ListViewDemo_testSimpleCursorAdapter_Btn">SimpleCursorAdapter：读取联系人</string>
+    <string name="ListViewDemo_testSimpleAdapter_Btn">SimpleAdapter：带图片的列表</string>
+    <string name="ListViewDemo_testMyAdapter_Btn">MyAdapter：自定义列表</string>
+    <string name="ListViewDemo_testmyAdapter_more_Btn">More</string>
+    <!-- ListViewDemoActivity  end-->
+
+
 </resources>
