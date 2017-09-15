@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     //      注：数组中的名称与类名有一定关系： 类名 = 类名文件夹.数组项名+Activity
     private String[] saDemo = {
         "HelloWorld",
-         "ListViewDemo"
+         "ListViewDemo",
+         "SensorDemo"
     };
 
 

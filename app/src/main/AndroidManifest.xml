@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wangjun.demoapk">
 
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,15 +22,21 @@
         <activity android:name=".HelloWorld.HelloWorldActivity" />
 
         <!-- ListViewDemo start -->
-        <activity android:name=".ListViewDemo.ListViewDemoActivity"></activity>
-        <activity android:name=".ListViewDemo.TestArrayAdapter"></activity>
-        <activity android:name=".ListViewDemo.TestSimpleCursorAdapter"></activity>
-        <activity android:name=".ListViewDemo.TestSimpleAdapter"></activity>
-        <activity android:name=".ListViewDemo.TestMyListView"></activity>
+        <activity android:name=".ListViewDemo.ListViewDemoActivity" />
+        <activity android:name=".ListViewDemo.TestArrayAdapter" />
+        <activity android:name=".ListViewDemo.TestSimpleCursorAdapter" />
+        <activity android:name=".ListViewDemo.TestSimpleAdapter" />
+        <activity android:name=".ListViewDemo.TestMyListView" />
         <!-- ListViewDemo end -->
+
+
+        <!-- SensorDemo start -->
+        <activity android:name=".SensorDemo.SensorDemoActivity" />
+        <activity android:name=".SensorDemo.TestAlsActivity" />
+        <activity android:name=".SensorDemo.TestAccelActivity"></activity>
+        <!-- SensorDemo end -->
+
 
     </application>
 
-    <!-- 读取联系人权限 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
 </manifest>

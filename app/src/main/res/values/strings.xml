@@ -10,5 +10,10 @@
     <string name="ListViewDemo_testmyAdapter_more_Btn">More</string>
     <!-- ListViewDemoActivity  end-->
 
+    <!-- SensorDemoActivity  start-->
+    <string name="SensorDemo_testAls_Btn">环境光传感器</string>
+    <string name="SensorDemo_TestAcceel_titletext">当前加速度值: </string>
+    <string name="SensorDemo_testAccel_Btn">加速度传感器</string>
+    <!-- SensorDemoActivity  end-->
 
 </resources>
