@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     */
 
     // listview 列表项名称:
-    //      注：数组中的名称与类名有一定关系： 类名 = 数组项名+Activity
+    //      注：数组中的名称与类名有一定关系： 类名 = 类名文件夹.数组项名+Activity
     private String[] saDemo = {
         "HelloWorld"
     };
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Class<?> clTargetActivity ;
         String sTargetActivity ;
 
-        sTargetActivity = "com.example.wangjun.demoapk."+saDemo[position]+"Activity";
+        sTargetActivity = "com.example.wangjun.demoapk."+saDemo[position]+"."+saDemo[position]+"Activity";
         Log.d(sDebugTAG,sTargetActivity);
 
         clTargetActivity = Class.forName(sTargetActivity);
