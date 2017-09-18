@@ -45,7 +45,6 @@ public class ListViewDemoActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Log.v(sLogcatTAG, "testArrayAdapterBtn");
-            // Intent intent = new Intent("android.intent.action.mylistview");
             Intent intent = new Intent(ListViewDemoActivity.this, TestArrayAdapter.class);
             startActivity(intent);
 

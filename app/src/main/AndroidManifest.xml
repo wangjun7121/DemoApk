@@ -23,15 +23,52 @@
         <!-- ActivityDemo start -->
         <activity android:name=".ActivityDemo.ActivityDemoActivity" />
         <activity android:name=".ActivityDemo.TestActivityLifeCycleActivity" />
-        <activity android:name=".ActivityDemo.TestActivityLifeCycleDialgActivity"
-            android:theme="@android:style/Theme.Dialog"/>
-        <activity android:name=".ActivityDemo.TestActivityLifeCycleNorActivity"></activity>
+        <activity
+            android:name=".ActivityDemo.TestActivityLifeCycleDialgActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".ActivityDemo.TestActivityLifeCycleNorActivity" />
         <!-- ActivityDemo start -->
 
 
         <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
         <!-- HelloWorld start -->
+
+
+        <!-- IntentDemo start -->
+        <activity android:name=".IntentDemo.IntentDemoActivity" />
+        <activity android:name=".IntentDemo.TestIntentActivity">
+            <intent-filter>
+                <action android:name="com.example.activitytest.ACTION_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.activitytest.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IntentDemo.TestIntentBrowerActivity">
+            <intent-filter>
+
+                <!-- 接收和浏览器相关的 intent 事件 -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- data 标签作用: -->
+                <!-- 1. android:scheme -->
+                <!-- 用于指定数据的协议部分，如上例中的 http 部分。 -->
+                <!-- 2. android:host -->
+                <!-- 用于指定数据的主机名部分，如上例中的 www.baidu.com 部分。 -->
+                <!-- 3. android:port -->
+                <!-- 用于指定数据的端口部分，一般紧随在主机名之后。 -->
+                <!-- 4. android:path -->
+                <!-- 用于指定主机名和端口之后的部分，如一段网址中跟在域名之后的内容。 -->
+                <!-- 5. android:mimeTyp -->
+                <!-- 用于指定可以处理的数据类型，允许使用通配符的方式进行指定 -->
+                <!-- 只有<data>标签中指定的内容和 Intent 中携带的 Data 完全一致时， 当前活动才能够响应 -->
+                <!-- 该 Intent -->
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <!-- IntentDemo end -->
 
 
         <!-- LayoutDemo start -->
@@ -69,7 +106,7 @@
         <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
 
-
+        <activity android:name=".IntentDemo.TestIntentArgsActivity"></activity>
     </application>
 
 </manifest>

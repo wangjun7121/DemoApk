@@ -25,7 +25,6 @@ public class LayoutDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(LayoutDemoActivity.this, TestTabLayoutActivity.class);
                 startActivity(intent);
             }

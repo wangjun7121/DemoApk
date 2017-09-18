@@ -20,13 +20,11 @@ public class SensorDemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sensor_demo);
 
-
         testAlsBtn = (Button) findViewById(R.id.testAls_btn);
         testAlsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(SensorDemoActivity.this, TestAlsActivity.class);
                 startActivity(intent);
             }
@@ -38,7 +36,6 @@ public class SensorDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testAccelBtn");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(SensorDemoActivity.this, TestAccelActivity.class);
                 startActivity(intent);
             }

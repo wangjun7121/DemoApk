@@ -25,7 +25,6 @@ public class MenuDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(MenuDemoActivity.this, TestMenuActivity.class);
                 startActivity(intent);
             }

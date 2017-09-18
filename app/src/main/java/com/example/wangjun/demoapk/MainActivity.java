@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] saDemo = {
             "ActivityDemo",
             "HelloWorld",
+            "IntentDemo",
             "ListViewDemo",
             "LayoutDemo",
             "MenuDemo",

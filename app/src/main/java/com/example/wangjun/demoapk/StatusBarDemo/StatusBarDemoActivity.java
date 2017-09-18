@@ -27,7 +27,6 @@ public class StatusBarDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn1");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(StatusBarDemoActivity.this, testStaticHideBar1Activity.class);
                 startActivity(intent);
             }
@@ -39,7 +38,6 @@ public class StatusBarDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn2");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(StatusBarDemoActivity.this, testStaticHideBar2Activity.class);
                 startActivity(intent);
             }
@@ -50,7 +48,6 @@ public class StatusBarDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn2");
-                // Intent intent = new Intent("android.intent.action.mylistview");
                 Intent intent = new Intent(StatusBarDemoActivity.this, testDynamicStatusBarActivity.class);
                 startActivity(intent);
             }
