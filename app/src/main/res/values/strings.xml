@@ -16,4 +16,9 @@
     <string name="SensorDemo_testAccel_Btn">加速度传感器</string>
     <!-- SensorDemoActivity  end-->
 
+    <!-- StatusBarDemoActivity  start-->
+    <string name="testStaticHideBarBtn1">AppCompatActivity 隐藏状态栏</string>
+    <string name="testStaticHideBarBtn2">Activity 隐藏状态栏</string>
+    <string name="testDynamicStatusBarBtn">动态显示/隐藏状态栏</string>
+    <!-- StatusBarDemoActivity  start-->
 </resources>

@@ -19,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
+        <!-- HelloWorld start -->
+
 
         <!-- ListViewDemo start -->
         <activity android:name=".ListViewDemo.ListViewDemoActivity" />
@@ -33,8 +37,16 @@
         <!-- SensorDemo start -->
         <activity android:name=".SensorDemo.SensorDemoActivity" />
         <activity android:name=".SensorDemo.TestAlsActivity" />
-        <activity android:name=".SensorDemo.TestAccelActivity"></activity>
+        <activity android:name=".SensorDemo.TestAccelActivity" />
         <!-- SensorDemo end -->
+
+
+        <!-- StatusBarDemo start -->
+        <activity android:name=".StatusBarDemo.StatusBarDemoActivity" />
+        <activity android:name=".StatusBarDemo.testStaticHideBar1Activity" />
+        <activity android:name=".StatusBarDemo.testStaticHideBar2Activity" />
+        <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity"></activity>
+        <!-- StatusBarDemo end -->
 
 
     </application>
