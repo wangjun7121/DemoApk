@@ -27,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
     // listview 列表项名称:
     //      注：数组中的名称与类名有一定关系： 类名 = 类名文件夹.数组项名+Activity
     private String[] saDemo = {
-        "HelloWorld",
-         "ListViewDemo",
-         "MenuDemo",
-         "SensorDemo",
-         "StatusBarDemo"
+            "HelloWorld",
+            "ListViewDemo",
+            "LayoutDemo",
+            "MenuDemo",
+            "SensorDemo",
+            "StatusBarDemo"
     };
 
 

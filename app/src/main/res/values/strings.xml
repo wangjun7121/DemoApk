@@ -26,4 +26,8 @@
     <string name="testMenuBtn">简单菜单显示</string>
     <!-- MenuDemoActivity  start-->
 
+    <!-- LayoutDemoActivity  start-->
+    <string name="testTablayoutBtn">TabLayout测试</string>
+    <!-- LayoutDemoActivity  start-->
+
 </resources>

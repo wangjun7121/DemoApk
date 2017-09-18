@@ -33,13 +33,6 @@ public class MenuDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
     }
 
 }

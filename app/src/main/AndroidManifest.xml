@@ -51,9 +51,16 @@
 
         <!-- MenuDemo start -->
         <activity android:name=".MenuDemo.MenuDemoActivity" />
+        <activity android:name=".MenuDemo.TestMenuActivity" />
         <!-- MenuDemo end -->
 
-        <activity android:name=".MenuDemo.TestMenuActivity"></activity>
+
+        <!-- LayoutDemo start -->
+        <activity android:name=".LayoutDemo.LayoutDemoActivity" />
+        <activity android:name=".LayoutDemo.TestTabLayoutActivity" />
+        <!-- LayoutDemo end -->
+
+        <activity android:name=".LayoutDemo.TestTabLayoutFragment"></activity>
     </application>
 
 </manifest>
