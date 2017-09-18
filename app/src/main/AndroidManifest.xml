@@ -45,10 +45,15 @@
         <activity android:name=".StatusBarDemo.StatusBarDemoActivity" />
         <activity android:name=".StatusBarDemo.testStaticHideBar1Activity" />
         <activity android:name=".StatusBarDemo.testStaticHideBar2Activity" />
-        <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity"></activity>
+        <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
 
 
+        <!-- MenuDemo start -->
+        <activity android:name=".MenuDemo.MenuDemoActivity" />
+        <!-- MenuDemo end -->
+
+        <activity android:name=".MenuDemo.TestMenuActivity"></activity>
     </application>
 
 </manifest>

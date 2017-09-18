@@ -7,16 +7,11 @@
     >
 
     <Button
-        android:id="@+id/testAls_btn"
+        android:id="@+id/testMenuBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="@string/SensorDemo_testAls_Btn" />
-    <Button
-    android:id="@+id/testAccel_btn"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:textAllCaps="false"
-    android:text="@string/SensorDemo_testAccel_Btn" />
+        android:text="@string/testMenuBtn" />
+
 
 </LinearLayout>
