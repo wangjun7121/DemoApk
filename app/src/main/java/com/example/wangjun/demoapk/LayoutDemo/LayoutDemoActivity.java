@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.wangjun.demoapk.MenuDemo.MenuDemoActivity;
-import com.example.wangjun.demoapk.MenuDemo.TestMenuActivity;
 import com.example.wangjun.demoapk.R;
 
 public class LayoutDemoActivity extends AppCompatActivity {
@@ -20,7 +18,7 @@ public class LayoutDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout_demo);
+        setContentView(R.layout.layout_demo);
 
         testTablayoutBtn = (Button) findViewById(R.id.testTablayoutBtn);
         testTablayoutBtn.setOnClickListener(new View.OnClickListener() {

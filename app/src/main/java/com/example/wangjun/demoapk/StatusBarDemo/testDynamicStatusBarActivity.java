@@ -1,7 +1,6 @@
 package com.example.wangjun.demoapk.StatusBarDemo;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +27,7 @@ public class testDynamicStatusBarActivity extends Activity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_status_bar_demo_testdynamicstatusbar);
+        setContentView(R.layout.status_bar_demo_testdynamicstatusbar);
         assignViews();
 
 

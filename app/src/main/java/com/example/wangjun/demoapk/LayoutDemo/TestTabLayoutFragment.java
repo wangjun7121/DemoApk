@@ -34,7 +34,7 @@ public class TestTabLayoutFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.activity_layoutdemo_testtablayoutfragment,container,false);
+        View view=inflater.inflate(R.layout.layoutdemo_testtablayoutfragment,container,false);
         mTextView= (TextView) view.findViewById(R.id.fragment_textView);
         mTextView.setText("Page"+(mTitle+1));
         mLinear= (LinearLayout) view.findViewById(R.id.fragment_ll);

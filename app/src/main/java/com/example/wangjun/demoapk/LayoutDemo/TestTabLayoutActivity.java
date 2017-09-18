@@ -18,7 +18,7 @@ public class TestTabLayoutActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_layout_demo_testtablayout);
+        setContentView(R.layout.layout_demo_testtablayout);
         mAdapter=new TestTabLayoutAdapter(getSupportFragmentManager());
         mViewPager= (ViewPager) findViewById(R.id.main_viewPager);
         mViewPager.setAdapter(mAdapter);

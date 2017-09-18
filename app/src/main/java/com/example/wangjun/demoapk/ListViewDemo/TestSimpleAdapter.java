@@ -22,7 +22,7 @@ public class TestSimpleAdapter extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SimpleAdapter adapter = new SimpleAdapter(this,getData(), R.layout.activity_list_view_demo_testsimpleadapter,
+        SimpleAdapter adapter = new SimpleAdapter(this,getData(), R.layout.list_view_demo_testsimpleadapter,
                 new String[]{"title","info","img"},         // HashMap 文件 ID
                 new int[]{R.id.title,R.id.info,R.id.img});  // 映射到布局文件对应的位置
         setListAdapter(adapter);

@@ -20,7 +20,7 @@ public class ListViewDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_demo);
+        setContentView(R.layout.list_view_demo);
         findBtnViews();
         setBtnListeners();
     }

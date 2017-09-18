@@ -20,9 +20,24 @@
             </intent-filter>
         </activity>
 
+        <!-- ActivityDemo start -->
+        <activity android:name=".ActivityDemo.ActivityDemoActivity" />
+        <activity android:name=".ActivityDemo.TestActivityLifeCycleActivity" />
+        <activity android:name=".ActivityDemo.TestActivityLifeCycleDialgActivity"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".ActivityDemo.TestActivityLifeCycleNorActivity"></activity>
+        <!-- ActivityDemo start -->
+
+
         <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
         <!-- HelloWorld start -->
+
+
+        <!-- LayoutDemo start -->
+        <activity android:name=".LayoutDemo.LayoutDemoActivity" />
+        <activity android:name=".LayoutDemo.TestTabLayoutActivity" />
+        <!-- LayoutDemo end -->
 
 
         <!-- ListViewDemo start -->
@@ -32,6 +47,12 @@
         <activity android:name=".ListViewDemo.TestSimpleAdapter" />
         <activity android:name=".ListViewDemo.TestMyListView" />
         <!-- ListViewDemo end -->
+
+
+        <!-- MenuDemo start -->
+        <activity android:name=".MenuDemo.MenuDemoActivity" />
+        <activity android:name=".MenuDemo.TestMenuActivity" />
+        <!-- MenuDemo end -->
 
 
         <!-- SensorDemo start -->
@@ -49,18 +70,6 @@
         <!-- StatusBarDemo end -->
 
 
-        <!-- MenuDemo start -->
-        <activity android:name=".MenuDemo.MenuDemoActivity" />
-        <activity android:name=".MenuDemo.TestMenuActivity" />
-        <!-- MenuDemo end -->
-
-
-        <!-- LayoutDemo start -->
-        <activity android:name=".LayoutDemo.LayoutDemoActivity" />
-        <activity android:name=".LayoutDemo.TestTabLayoutActivity" />
-        <!-- LayoutDemo end -->
-
-        <activity android:name=".LayoutDemo.TestTabLayoutFragment"></activity>
     </application>
 
 </manifest>

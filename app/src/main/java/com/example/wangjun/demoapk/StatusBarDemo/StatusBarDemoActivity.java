@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.wangjun.demoapk.R;
-import com.example.wangjun.demoapk.SensorDemo.TestAccelActivity;
-import com.example.wangjun.demoapk.SensorDemo.TestAlsActivity;
 
 
 public class StatusBarDemoActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class StatusBarDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_status_bar_demo);
+        setContentView(R.layout.status_bar_demo);
 
         testStaticHideBarBtn1 = (Button) findViewById(R.id.testStaticHideBarBtn1);
         testStaticHideBarBtn1.setOnClickListener(new View.OnClickListener() {

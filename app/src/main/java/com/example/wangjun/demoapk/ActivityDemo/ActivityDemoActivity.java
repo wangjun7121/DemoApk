@@ -1,4 +1,4 @@
-package com.example.wangjun.demoapk.MenuDemo;
+package com.example.wangjun.demoapk.ActivityDemo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,27 +9,25 @@ import android.widget.Button;
 
 import com.example.wangjun.demoapk.R;
 
-public class MenuDemoActivity extends AppCompatActivity {
-    private static String sLogcatTAG = "MenuDemoActivity";
+public class ActivityDemoActivity extends AppCompatActivity {
+
+    private static String sLogcatTAG = "ActivityDemoActivity";
     // 定义按钮
-    private Button testMenuBtn;
+    private Button testActivityLiftCycleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_demo);
+        setContentView(R.layout.activity_demo);
 
-
-        testMenuBtn = (Button) findViewById(R.id.testMenuBtn);
-        testMenuBtn.setOnClickListener(new View.OnClickListener() {
+        testActivityLiftCycleBtn = (Button) findViewById(R.id.testActivityLiftCycleBtn);
+        testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                // Intent intent = new Intent("android.intent.action.mylistview");
-                Intent intent = new Intent(MenuDemoActivity.this, TestMenuActivity.class);
+                Intent intent = new Intent(ActivityDemoActivity.this, TestActivityLifeCycleActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 }

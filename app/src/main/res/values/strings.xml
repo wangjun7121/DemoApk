@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">DemoApk</string>
 
+    <!-- ActivityDemoActivity  start-->
+    <string name="testActivityLiftCycleBtn">Activity 生命周期演示</string>
+    <!-- ActivityDemoActivity  end-->
+
+    <!-- LayoutDemoActivity  start-->
+    <string name="testTablayoutBtn">TabLayout测试</string>
+    <!-- LayoutDemoActivity  end-->
+
     <!-- ListViewDemoActivity  start-->
     <string name="ListViewDemo_textTitle">ListView Tutorial</string>
     <string name="ListViewDemo_testArrayAdapter_Btn">ArrayAdapter：简单列表</string>
@@ -9,6 +17,10 @@
     <string name="ListViewDemo_testMyAdapter_Btn">MyAdapter：自定义列表</string>
     <string name="ListViewDemo_testmyAdapter_more_Btn">More</string>
     <!-- ListViewDemoActivity  end-->
+
+    <!-- MenuDemoActivity  start-->
+    <string name="testMenuBtn">简单菜单显示</string>
+    <!-- MenuDemoActivity  end-->
 
     <!-- SensorDemoActivity  start-->
     <string name="SensorDemo_testAls_Btn">环境光传感器</string>
@@ -20,14 +32,7 @@
     <string name="testStaticHideBarBtn1">AppCompatActivity 隐藏状态栏</string>
     <string name="testStaticHideBarBtn2">Activity 隐藏状态栏</string>
     <string name="testDynamicStatusBarBtn">动态显示/隐藏状态栏</string>
-    <!-- StatusBarDemoActivity  start-->
+    <!-- StatusBarDemoActivity  end-->
 
-    <!-- MenuDemoActivity  start-->
-    <string name="testMenuBtn">简单菜单显示</string>
-    <!-- MenuDemoActivity  start-->
-
-    <!-- LayoutDemoActivity  start-->
-    <string name="testTablayoutBtn">TabLayout测试</string>
-    <!-- LayoutDemoActivity  start-->
 
 </resources>

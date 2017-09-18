@@ -1,6 +1,5 @@
 package com.example.wangjun.demoapk.SensorDemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.wangjun.demoapk.R;
@@ -8,7 +7,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
@@ -25,7 +23,7 @@ public class TestAccelActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sensor_demo_testaccel);
+        setContentView(R.layout.sensor_demo_testaccel);
 
         curAccelX_TextView = (TextView) findViewById(R.id.accel_x);
         curAccelY_TextView = (TextView) findViewById(R.id.accel_y);

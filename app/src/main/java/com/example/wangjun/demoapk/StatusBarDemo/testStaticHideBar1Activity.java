@@ -14,7 +14,7 @@ public class testStaticHideBar1Activity extends AppCompatActivity {
         if (getSupportActionBar() != null){
             getSupportActionBar().hide();
         }
-        setContentView(R.layout.activity_hello_world);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar1);
+        setContentView(R.layout.hello_world);
+        setContentView(R.layout.status_bar_demo_teststatichidebar1);
     }
 }

@@ -1,11 +1,8 @@
 package com.example.wangjun.demoapk.StatusBarDemo;
 
 import android.app.Activity;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
-import android.view.WindowManager;
 
 import com.example.wangjun.demoapk.R;
 
@@ -29,14 +26,14 @@ public class testStaticHideBar2Activity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
     }
 
 
 /*
     private void showFEATURE_INDETERMINATE_PROGRESS() {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
         getWindow().setFeatureInt(Window.FEATURE_INDETERMINATE_PROGRESS, R.layout.progress);
         // 必须得加上否则显示不出效果 可以通过这个在以后设置显示或隐藏
         setProgressBarIndeterminateVisibility(true);
@@ -44,19 +41,19 @@ public class testStaticHideBar2Activity extends Activity {
     private void showFEATURE_CUSTOM_TITLE() {
         // 自定义标题。当需要自定义标题时必须指定。如：标题是一个按钮时
         requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.customtitle);
     }
     private void showFEATURE_LEFT_ICON()
     {
         requestWindowFeature(Window.FEATURE_LEFT_ICON);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
         getWindow().setFeatureDrawableResource(Window.FEATURE_LEFT_ICON, R.drawable.icon);
     }
     private void showFEATURE_NO_TITLE()
     {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
         // 加上这句设置为全屏 不加则只隐藏title
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -65,7 +62,7 @@ public class testStaticHideBar2Activity extends Activity {
     {
         requestWindowFeature(Window.FEATURE_PROGRESS);
         setProgressBarVisibility(true);
-        setContentView(R.layout.activity_status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.status_bar_demo_teststatichidebar2);
         setTitle("");
         getWindow().setFeatureInt(Window.FEATURE_PROGRESS, Window.PROGRESS_VISIBILITY_ON);
         // 通过线程来改变ProgressBar的值

@@ -1,9 +1,7 @@
 package com.example.wangjun.demoapk.HelloWorld;
 
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
 
 import com.example.wangjun.demoapk.R;
 
@@ -20,6 +18,6 @@ public class HelloWorldActivity extends AppCompatActivity {
         //if (getSupportActionBar() != null){
         //    getSupportActionBar().hide();
         //}
-        setContentView(R.layout.activity_hello_world);
+        setContentView(R.layout.hello_world);
     }
 }

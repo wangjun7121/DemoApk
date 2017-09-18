@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.wangjun.demoapk.ListViewDemo.ListViewDemoActivity;
-import com.example.wangjun.demoapk.ListViewDemo.TestArrayAdapter;
 import com.example.wangjun.demoapk.R;
 
 public class SensorDemoActivity extends AppCompatActivity {
@@ -20,7 +18,7 @@ public class SensorDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sensor_demo);
+        setContentView(R.layout.sensor_demo);
 
 
         testAlsBtn = (Button) findViewById(R.id.testAls_btn);
