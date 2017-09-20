@@ -37,6 +37,7 @@
 
         <!-- IntentDemo start -->
         <activity android:name=".IntentDemo.IntentDemoActivity" />
+        <activity android:name=".IntentDemo.TestIntentArgsActivity" />
         <activity android:name=".IntentDemo.TestIntentActivity">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
@@ -106,7 +107,12 @@
         <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
 
-        <activity android:name=".IntentDemo.TestIntentArgsActivity"></activity>
+        <!-- WidgetDemo start -->
+        <activity android:name=".WidgetDemo.WidgetDemoActivity" />
+        <activity android:name=".WidgetDemo.TestWidgetActivity"></activity>
+        <!-- WidgetDemo end -->
+
+
     </application>
 
 </manifest>

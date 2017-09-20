@@ -7,11 +7,11 @@
     >
 
     <Button
-        android:id="@+id/m_testActivityLiftCycleBtn"
+        android:id="@+id/m_testWidgetBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="@string/testActivityLiftCycleBtn" />
+        android:text="常用控件测试" />
 
 
 </LinearLayout>

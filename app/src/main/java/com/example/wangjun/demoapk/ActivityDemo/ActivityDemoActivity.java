@@ -13,15 +13,15 @@ public class ActivityDemoActivity extends AppCompatActivity {
 
     private static String sLogcatTAG = "ActivityDemoActivity";
     // 定义按钮
-    private Button testActivityLiftCycleBtn;
+    private Button m_testActivityLiftCycleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
 
-        testActivityLiftCycleBtn = (Button) findViewById(R.id.testActivityLiftCycleBtn);
-        testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
+        m_testActivityLiftCycleBtn = (Button) findViewById(R.id.m_testActivityLiftCycleBtn);
+        m_testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
