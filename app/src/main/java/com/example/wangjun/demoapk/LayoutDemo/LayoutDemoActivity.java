@@ -14,6 +14,10 @@ public class LayoutDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "LayoutDemoActivity";
     // 定义按钮
     private Button testTablayoutBtn;
+    private Button testLinearlayoutBtn;
+    private Button testRelativelayoutBtn;
+    private Button testFramelayoutBtn;
+    private Button testTablelayoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +33,46 @@ public class LayoutDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        testLinearlayoutBtn = (Button) findViewById(R.id.testLinearlayoutBtn);
+        testLinearlayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestLinearLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testRelativelayoutBtn = (Button) findViewById(R.id.testRelativelayoutBtn);
+        testRelativelayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestRelativeLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testFramelayoutBtn = (Button) findViewById(R.id.testFramelayoutBtn);
+        testFramelayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestFrameLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testTablelayoutBtn = (Button) findViewById(R.id.testTablelayoutBtn);
+        testTablelayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestTableLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

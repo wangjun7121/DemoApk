@@ -13,5 +13,31 @@
         android:textAllCaps="false"
         android:text="@string/testTablayoutBtn" />
 
+    <Button
+        android:id="@+id/testLinearlayoutBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="LinearLayout 测试" />
+
+    <Button
+        android:id="@+id/testRelativelayoutBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="RelativeLayout 测试" />
+
+    <Button
+        android:id="@+id/testFramelayoutBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Framelayout 测试" />
+    <Button
+        android:id="@+id/testTablelayoutBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Tablelayout 测试" />
 
 </LinearLayout>
