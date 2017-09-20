@@ -24,6 +24,7 @@ public class WidgetDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "ActivityDemoActivity";
     // 定义按钮
     private Button m_testWidgetBtn;
+    private Button m_dynamicAddBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,5 +40,22 @@ public class WidgetDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        m_dynamicAddBtn = (Button) findViewById(R.id.m_dynamicAddBtn);
+        m_dynamicAddBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WidgetDemoActivity.this, TestDynamidAddButtonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
+
+
+
+
+
 }

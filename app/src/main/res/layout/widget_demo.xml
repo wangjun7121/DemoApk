@@ -7,11 +7,18 @@
     >
 
     <Button
-        android:id="@+id/m_testWidgetBtn"
+    android:id="@+id/m_testWidgetBtn"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:textAllCaps="false"
+    android:text="常用控件测试" />
+
+    <Button
+        android:id="@+id/m_dynamicAddBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="常用控件测试" />
+        android:text="动态添加 Button 测试" />
 
 
 </LinearLayout>

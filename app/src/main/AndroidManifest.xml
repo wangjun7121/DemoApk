@@ -107,12 +107,14 @@
         <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
 
+
         <!-- WidgetDemo start -->
         <activity android:name=".WidgetDemo.WidgetDemoActivity" />
-        <activity android:name=".WidgetDemo.TestWidgetActivity"></activity>
+        <activity android:name=".WidgetDemo.TestWidgetActivity" />
         <!-- WidgetDemo end -->
 
-
+        <activity android:name=".LayoutDemo.TestLinearLayoutActivity" />
+        <activity android:name=".WidgetDemo.TestDynamidAddButtonActivity"></activity>
     </application>
 
 </manifest>
