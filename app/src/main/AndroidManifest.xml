@@ -117,7 +117,8 @@
         <activity android:name=".WidgetDemo.TestDynamidAddButtonActivity" />
         <activity android:name=".LayoutDemo.TestRelativeLayoutActivity" />
         <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestTableLayoutActivity"></activity>
+        <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
+        <activity android:name=".ActivityDemo.TestActivityLaunchModeActivity"></activity>
     </application>
 
 </manifest>

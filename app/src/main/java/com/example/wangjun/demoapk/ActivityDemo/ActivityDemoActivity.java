@@ -14,6 +14,7 @@ public class ActivityDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "ActivityDemoActivity";
     // 定义按钮
     private Button m_testActivityLiftCycleBtn;
+    private Button m_testActivityLanchModeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +30,16 @@ public class ActivityDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        m_testActivityLanchModeBtn = (Button) findViewById(R.id.m_testActivityLanchModeBtn);
+        m_testActivityLanchModeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(ActivityDemoActivity.this, TestActivityLaunchModeActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
