@@ -16,68 +16,64 @@ public class ListViewDemoActivity extends AppCompatActivity {
     private Button testSimpleCursorAdapterBtn;
     private Button testSimpleAdapterBtn;
     private Button testMyAdapterBtn;
+    private Button testUIChatBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view_demo);
-        findBtnViews();
-        setBtnListeners();
-    }
-    private void findBtnViews() {
-        // 查找对应按钮
+
         testArrayAdapterBtn = (Button) findViewById(R.id.mylistview_btn);
+        testArrayAdapterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(ListViewDemoActivity.this, TestArrayAdapter.class);
+                startActivity(intent);
+            }
+        });
+
         testSimpleCursorAdapterBtn = (Button) findViewById(R.id.simpleCursorAdapter_btn);
+        testSimpleCursorAdapterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testSimpleCursorAdapterBtn");
+                Intent intent = new Intent(ListViewDemoActivity.this, TestSimpleCursorAdapter.class);
+                startActivity(intent);
+            }
+        });
+
         testSimpleAdapterBtn = (Button) findViewById(R.id.simpleAdapter_btn);
+        testSimpleAdapterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testSimpleAdapterBtn");
+                Intent intent = new Intent(ListViewDemoActivity.this, TestSimpleAdapter.class);
+                startActivity(intent);
+            }
+        });
+
         testMyAdapterBtn = (Button) findViewById(R.id.myAdapter_btn);
+        testMyAdapterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "myAdapter");
+                Intent intent = new Intent(ListViewDemoActivity.this, TestMyListView.class);
+                startActivity(intent);
+            }
+        });
+
+        testUIChatBtn = (Button) findViewById(R.id.testUIChatBtn);
+        testUIChatBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "myAdapter");
+                Intent intent = new Intent(ListViewDemoActivity.this, TestUIChatActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
-
-    private void setBtnListeners() {
-        // 设置按键监听函数
-        testArrayAdapterBtn.setOnClickListener(myListViewBtnListener);
-        testSimpleCursorAdapterBtn.setOnClickListener(simpleCursorAdapterBtnListener);
-        testSimpleAdapterBtn.setOnClickListener(simpleAdapterBtnListener);
-        testMyAdapterBtn.setOnClickListener(myAdapterBtnListener);
-    }
-
-    // 按键处理函数：
-    private View.OnClickListener myListViewBtnListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.v(sLogcatTAG, "testArrayAdapterBtn");
-            Intent intent = new Intent(ListViewDemoActivity.this, TestArrayAdapter.class);
-            startActivity(intent);
-
-        }
-
-    };
-    private View.OnClickListener simpleCursorAdapterBtnListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.v(sLogcatTAG, "testSimpleCursorAdapterBtn");
-            Intent intent = new Intent(ListViewDemoActivity.this, TestSimpleCursorAdapter.class);
-            startActivity(intent);
-        }
-    };
-    private View.OnClickListener simpleAdapterBtnListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.v(sLogcatTAG, "testSimpleAdapterBtn");
-            Intent intent = new Intent(ListViewDemoActivity.this, TestSimpleAdapter.class);
-            startActivity(intent);
-        }
-    };
-
-    private View.OnClickListener myAdapterBtnListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Log.v(sLogcatTAG, "myAdapter");
-            Intent intent = new Intent(ListViewDemoActivity.this, TestMyListView.class);
-            startActivity(intent);
-        }
-    };
-
-
 
 
 

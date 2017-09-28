@@ -89,6 +89,7 @@
         <activity android:name=".ListViewDemo.TestSimpleCursorAdapter" />
         <activity android:name=".ListViewDemo.TestSimpleAdapter" />
         <activity android:name=".ListViewDemo.TestMyListView" />
+        <activity android:name=".ListViewDemo.TestUIChatActivity"></activity>
         <!-- ListViewDemo end -->
 
 
@@ -120,9 +121,11 @@
         <activity android:name=".WidgetDemo.TestWidgetInheritActivity" />
         <activity android:name=".WidgetDemo.TestCustomWidgetActivity" />
         <activity android:name=".WidgetDemo.TestWidgetSizeActivity" />
+        <activity android:name=".WidgetDemo.TestTextViewActivity" />
         <!-- WidgetDemo end -->
 
-        <activity android:name=".WidgetDemo.TestTextViewActivity"></activity>
+
+
     </application>
 
 </manifest>

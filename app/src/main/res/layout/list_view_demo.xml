@@ -41,5 +41,13 @@
         android:textAllCaps="false"
         android:text="@string/ListViewDemo_testMyAdapter_Btn"
         />
+
+    <Button
+        android:id="@+id/testUIChatBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="聊天界面"
+        />
 </LinearLayout>
 
