@@ -25,6 +25,8 @@ public class WidgetDemoActivity extends AppCompatActivity {
     // 定义按钮
     private Button m_testWidgetBtn;
     private Button m_dynamicAddBtn;
+    private Button m_widgetInheritBtn;
+    private Button m_customWidgetBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,27 @@ public class WidgetDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        m_widgetInheritBtn = (Button) findViewById(R.id.m_widgetInheritBtn);
+        m_widgetInheritBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WidgetDemoActivity.this, TestWidgetInheritActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        m_customWidgetBtn = (Button) findViewById(R.id.m_customWidgetBtn);
+        m_customWidgetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WidgetDemoActivity.this, TestCustomWidgetActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

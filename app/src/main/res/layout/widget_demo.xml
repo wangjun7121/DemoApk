@@ -21,4 +21,18 @@
         android:text="动态添加 Button 测试" />
 
 
+    <Button
+        android:id="@+id/m_widgetInheritBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Widget 继承关系图" />
+
+    <Button
+        android:id="@+id/m_customWidgetBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="自定义 Widget 测试" />
+
 </LinearLayout>
