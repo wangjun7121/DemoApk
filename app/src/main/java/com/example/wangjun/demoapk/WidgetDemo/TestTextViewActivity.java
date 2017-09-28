@@ -30,6 +30,7 @@ public class TestTextViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.widget_demo_testtextview);
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         TextView htmlFormateTextView = (TextView)findViewById(R.id.text_view);
         String source = "HTML 格式化：这只是一个测试，测试<u>下划线</u>、<i>斜体字</i>、<font color='red'>红色字</font>的格式";
         htmlFormateTextView.setText(Html.fromHtml(source));
@@ -39,7 +40,7 @@ public class TestTextViewActivity extends AppCompatActivity {
         SpannableString msp = null;
         mTextView = (TextView)findViewById(R.id.text_view2);
         //创建一个 SpannableString对象
-        msp = new SpannableString("SpannableString 格式化：字体测试字体大小一半两倍前景色背景色正常粗体斜体粗斜体下划线删除线x1x2电话邮件网站短信彩信地图X轴综合");
+        msp = new SpannableString("字体测试字体大小一半两倍前景色背景色正常粗体斜体粗斜体下划线删除线x1x2电话邮件网站短信彩信地图X轴综合");
 
         //设置字体(default,default-bold,monospace,serif,sans-serif)
         msp.setSpan(new TypefaceSpan("monospace"), 0, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

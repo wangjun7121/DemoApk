@@ -22,5 +22,11 @@ public class TestWidgetSizeActivity extends AppCompatActivity {
         contentTV.setText(Html.fromHtml(strText));
         //contentTV.contentTV(String.valueOf(R.string.WidgetDemo_TestWidgetSize_text)));
         //contentTV.setText(Html.fromHtml(source));
+
+        float xdpi = getResources().getDisplayMetrics().xdpi;
+        float ydpi = getResources().getDisplayMetrics().ydpi;
+        TextView tempTextView = (TextView) findViewById(R.id.textView1);
+        tempTextView.setText("xdpi = "+xdpi+"  ydpi = "+ydpi);
+
     }
 }
