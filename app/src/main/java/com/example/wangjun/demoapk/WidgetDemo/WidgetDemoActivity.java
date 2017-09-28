@@ -27,6 +27,8 @@ public class WidgetDemoActivity extends AppCompatActivity {
     private Button m_dynamicAddBtn;
     private Button m_widgetInheritBtn;
     private Button m_customWidgetBtn;
+    private Button m_testWidgetSizeBtn;
+    private Button m_testTextViewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,25 @@ public class WidgetDemoActivity extends AppCompatActivity {
             }
         });
 
+        m_testWidgetSizeBtn = (Button) findViewById(R.id.m_testWidgetSizeBtn);
+        m_testWidgetSizeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WidgetDemoActivity.this, TestWidgetSizeActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        m_testTextViewBtn = (Button) findViewById(R.id.m_testTextViewBtn);
+        m_testTextViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WidgetDemoActivity.this, TestTextViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

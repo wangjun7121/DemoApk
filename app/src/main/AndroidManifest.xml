@@ -27,6 +27,7 @@
             android:name=".ActivityDemo.TestActivityLifeCycleDialgActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".ActivityDemo.TestActivityLifeCycleNorActivity" />
+        <activity android:name=".ActivityDemo.TestActivityLaunchModeActivity" />
         <!-- ActivityDemo start -->
 
 
@@ -75,6 +76,10 @@
         <!-- LayoutDemo start -->
         <activity android:name=".LayoutDemo.LayoutDemoActivity" />
         <activity android:name=".LayoutDemo.TestTabLayoutActivity" />
+        <activity android:name=".LayoutDemo.TestLinearLayoutActivity" />
+        <activity android:name=".LayoutDemo.TestRelativeLayoutActivity" />
+        <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
+        <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
         <!-- LayoutDemo end -->
 
 
@@ -111,16 +116,13 @@
         <!-- WidgetDemo start -->
         <activity android:name=".WidgetDemo.WidgetDemoActivity" />
         <activity android:name=".WidgetDemo.TestWidgetActivity" />
+        <activity android:name=".WidgetDemo.TestDynamidAddButtonActivity" />
+        <activity android:name=".WidgetDemo.TestWidgetInheritActivity" />
+        <activity android:name=".WidgetDemo.TestCustomWidgetActivity" />
+        <activity android:name=".WidgetDemo.TestWidgetSizeActivity" />
         <!-- WidgetDemo end -->
 
-        <activity android:name=".LayoutDemo.TestLinearLayoutActivity" />
-        <activity android:name=".WidgetDemo.TestDynamidAddButtonActivity" />
-        <activity android:name=".LayoutDemo.TestRelativeLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
-        <activity android:name=".ActivityDemo.TestActivityLaunchModeActivity" />
-        <activity android:name=".WidgetDemo.TestWidgetInheritActivity" />
-        <activity android:name=".WidgetDemo.TestCustomWidgetActivity"></activity>
+        <activity android:name=".WidgetDemo.TestTextViewActivity"></activity>
     </application>
 
 </manifest>

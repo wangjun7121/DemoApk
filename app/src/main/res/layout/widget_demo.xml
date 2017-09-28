@@ -35,4 +35,18 @@
         android:textAllCaps="false"
         android:text="自定义 Widget 测试" />
 
+    <Button
+        android:id="@+id/m_testWidgetSizeBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="控件尺寸：dp/sp" />
+
+    <Button
+        android:id="@+id/m_testTextViewBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="TextView 格式化" />
+
 </LinearLayout>

@@ -3,6 +3,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <!--TextView中有个ellipsize属性,作用是当文字过长时,该控件该如何显示。-->
+    <!--解释如下:-->
+        <!--android:ellipsize=”start”—–省略号显示在开头-->
+        <!--android:ellipsize=”end”——省略号显示在结尾-->
+        <!--android:ellipsize=”middle”—-省略号显示在中间-->
+        <!--android:ellipsize=”marquee”–以跑马灯的方式显示(动画横向移动)-->
+    <!--文字左右滚动三个属性：-->
+        <!--android:singleLine=”true”-->
+        <!--android:ellipsize=”marquee”-->
+        <!--android:marqueeRepeatLimit=”marquee_forever”-->
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
