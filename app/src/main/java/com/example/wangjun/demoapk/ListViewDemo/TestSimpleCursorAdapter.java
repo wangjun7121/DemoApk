@@ -32,14 +32,19 @@ public class TestSimpleCursorAdapter extends Activity {
 
 
         contactsListView = new ListView(this);
+
+        // 传递参数：Context, 列表项布局，列表项数据 List 链表
         contactsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contactsList);
         contactsListView.setAdapter(contactsAdapter);
 
+        // 从联系人数据库中填充列表项数据 List 链表
         Cursor cursor = null;
         int iTemp = 0;
         try {
-            cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                    null, null, null, null);
+            // 获取联系人数据库接口
+            cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,null, null, null, null);
+
+            // 遍历获取各个联系人
             while (cursor.moveToNext()) {
                 String displayName = cursor.getString(cursor
                         .getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));

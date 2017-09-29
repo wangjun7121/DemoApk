@@ -25,6 +25,8 @@ public class TestArrayAdapter extends Activity {
         Log.d(sLogcatTAG,"onCreate()");
 
         listView = new ListView(this);
+
+        // 传入参数：Context, 列表项布局，获得数据的函数
         listView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,getData()));
         setContentView(listView);
     }

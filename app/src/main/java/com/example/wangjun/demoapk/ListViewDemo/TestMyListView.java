@@ -34,6 +34,8 @@ public class TestMyListView extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mData = getData();
+
+        // 使用自定义的 Adapter
         MyAdapter adapter = new MyAdapter(this);
         setListAdapter(adapter);
     }
@@ -122,7 +124,10 @@ public class TestMyListView extends ListActivity {
         }
 
         @Override
+        // 当滚动此相应列表项时调用
         public View getView(int position, View convertView, ViewGroup parent) {
+
+            // convertView: 用于性能优化，保存了之前加载好的布局
 
             ViewHolder holder = null;
             if (convertView == null) {
@@ -134,10 +139,13 @@ public class TestMyListView extends ListActivity {
                 holder.title = (TextView)convertView.findViewById(R.id.title);
                 holder.info = (TextView)convertView.findViewById(R.id.info);
                 holder.viewBtn = (Button)convertView.findViewById(R.id.view_btn);
+
+                // 将 ViewHolder 存储在 View 中，可以不用再通过 findViewById() 再查找一次
                 convertView.setTag(holder);
 
             }else {
 
+                // 重新获得 ViewHolder
                 holder = (ViewHolder)convertView.getTag();
             }
 
