@@ -23,7 +23,7 @@ public class TestAccelActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sensor_demo_testaccel);
+        setContentView(R.layout.sensordemo_testaccel);
 
         curAccelX_TextView = (TextView) findViewById(R.id.accel_x);
         curAccelY_TextView = (TextView) findViewById(R.id.accel_y);

@@ -17,7 +17,7 @@ public class MenuDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_demo);
+        setContentView(R.layout.menudemo);
 
 
         testMenuBtn = (Button) findViewById(R.id.testMenuBtn);

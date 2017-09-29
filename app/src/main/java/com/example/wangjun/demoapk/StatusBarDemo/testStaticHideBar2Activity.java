@@ -26,7 +26,7 @@ public class testStaticHideBar2Activity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.status_bar_demo_teststatichidebar2);
+        setContentView(R.layout.statusbardemo_teststatichidebar2);
     }
 
 

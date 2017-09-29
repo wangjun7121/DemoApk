@@ -18,11 +18,12 @@ public class LayoutDemoActivity extends AppCompatActivity {
     private Button testRelativelayoutBtn;
     private Button testFramelayoutBtn;
     private Button testTablelayoutBtn;
+    private Button testSimpleFramelayoutBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_demo);
+        setContentView(R.layout.layoutdemo);
 
         testTablayoutBtn = (Button) findViewById(R.id.testTablayoutBtn);
         testTablayoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +71,16 @@ public class LayoutDemoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
                 Intent intent = new Intent(LayoutDemoActivity.this, TestTableLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testSimpleFramelayoutBtn = (Button) findViewById(R.id.testSimpleFramelayoutBtn);
+        testSimpleFramelayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestLeftRightFragmentActivity.class);
                 startActivity(intent);
             }
         });

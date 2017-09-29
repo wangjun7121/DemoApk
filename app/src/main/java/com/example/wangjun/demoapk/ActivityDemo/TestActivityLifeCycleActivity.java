@@ -22,7 +22,7 @@ public class TestActivityLifeCycleActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_demo_testactivitylifecycle);
+        setContentView(R.layout.activitydemo_testactivitylifecycle);
         if (savedInstanceState != null) {
             String tempData = savedInstanceState.getString("data_key");
             Log.d(TAG, tempData);

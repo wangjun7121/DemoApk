@@ -10,6 +10,6 @@ public class TestIntentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intent_demo_testintent);
+        setContentView(R.layout.intentdemo_testintent);
     }
 }

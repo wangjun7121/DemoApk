@@ -134,7 +134,7 @@ public class TestMyListView extends ListActivity {
 
                 holder=new ViewHolder();
 
-                convertView = mInflater.inflate(R.layout.list_view_demo_testmylistview, null);
+                convertView = mInflater.inflate(R.layout.listviewdemo_testmylistview, null);
                 holder.img = (ImageView)convertView.findViewById(R.id.img);
                 holder.title = (TextView)convertView.findViewById(R.id.title);
                 holder.info = (TextView)convertView.findViewById(R.id.info);

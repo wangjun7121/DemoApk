@@ -18,6 +18,6 @@ public class HelloWorldActivity extends AppCompatActivity {
         //if (getSupportActionBar() != null){
         //    getSupportActionBar().hide();
         //}
-        setContentView(R.layout.hello_world);
+        setContentView(R.layout.helloworld);
     }
 }

@@ -28,7 +28,7 @@ public class TestTextViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.widget_demo_testtextview);
+        setContentView(R.layout.widgetdemo_testtextview);
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         TextView htmlFormateTextView = (TextView)findViewById(R.id.text_view);

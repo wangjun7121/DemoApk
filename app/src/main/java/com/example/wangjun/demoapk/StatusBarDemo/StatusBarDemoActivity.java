@@ -20,7 +20,7 @@ public class StatusBarDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.status_bar_demo);
+        setContentView(R.layout.statusbardemo);
 
         testStaticHideBarBtn1 = (Button) findViewById(R.id.testStaticHideBarBtn1);
         testStaticHideBarBtn1.setOnClickListener(new View.OnClickListener() {

@@ -2,7 +2,6 @@ package com.example.wangjun.demoapk.IntentDemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -21,7 +20,7 @@ public class TestIntentArgsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.intent_demo_testintentargs);
+        setContentView(R.layout.intentdemo_testintentargs);
 
         // 接收 intent 并获得其中的参数
         Intent intent = getIntent();

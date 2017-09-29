@@ -11,7 +11,7 @@ public class TestWidgetInheritActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.widget_demo_testwidgetinherit);
+        setContentView(R.layout.widgetdemo_testwidgetinherit);
 
         ImageView image = (ImageView) findViewById(R.id.imageView);
         image.setImageResource(R.drawable.widgetdemo_widgetinherit);

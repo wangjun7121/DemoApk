@@ -80,6 +80,7 @@
         <activity android:name=".LayoutDemo.TestRelativeLayoutActivity" />
         <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
         <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
+        <activity android:name=".LayoutDemo.TestLeftRightFragmentActivity" />
         <!-- LayoutDemo end -->
 
 
@@ -89,7 +90,7 @@
         <activity android:name=".ListViewDemo.TestSimpleCursorAdapter" />
         <activity android:name=".ListViewDemo.TestSimpleAdapter" />
         <activity android:name=".ListViewDemo.TestMyListView" />
-        <activity android:name=".ListViewDemo.TestUIChatActivity"></activity>
+        <activity android:name=".ListViewDemo.TestUIChatActivity" />
         <!-- ListViewDemo end -->
 
 
@@ -123,7 +124,6 @@
         <activity android:name=".WidgetDemo.TestWidgetSizeActivity" />
         <activity android:name=".WidgetDemo.TestTextViewActivity" />
         <!-- WidgetDemo end -->
-
 
 
     </application>

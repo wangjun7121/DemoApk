@@ -18,7 +18,7 @@ public class SensorDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sensor_demo);
+        setContentView(R.layout.sensordemo);
 
         testAlsBtn = (Button) findViewById(R.id.testAls_btn);
         testAlsBtn.setOnClickListener(new View.OnClickListener() {

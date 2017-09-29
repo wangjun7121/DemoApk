@@ -19,7 +19,7 @@ public class ActivityDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activitydemo);
 
         m_testActivityLiftCycleBtn = (Button) findViewById(R.id.m_testActivityLiftCycleBtn);
         m_testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {

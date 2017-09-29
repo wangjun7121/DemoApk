@@ -27,7 +27,7 @@ public class testDynamicStatusBarActivity extends Activity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.status_bar_demo_testdynamicstatusbar);
+        setContentView(R.layout.statusbardemo_testdynamicstatusbar);
         assignViews();
 
 

@@ -20,7 +20,7 @@ public class TestAlsActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sensor_demo_testals);
+        setContentView(R.layout.sensordemo_testals);
         lightLevel = (TextView) findViewById(R.id.light_level);
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);

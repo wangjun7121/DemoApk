@@ -10,6 +10,6 @@ public class TestRelativeLayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_demo_testrelativelayout);
+        setContentView(R.layout.layoutdemo_testrelativelayout);
     }
 }

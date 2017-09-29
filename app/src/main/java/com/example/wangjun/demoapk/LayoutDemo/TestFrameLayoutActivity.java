@@ -10,6 +10,6 @@ public class TestFrameLayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_demo_testframelayout);
+        setContentView(R.layout.layoutdemo_testframelayout);
     }
 }

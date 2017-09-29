@@ -14,7 +14,7 @@ public class TestWidgetSizeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.widget_demo_testwidgetsize);
+        setContentView(R.layout.widgetdemo_testwidgetsize);
         TextView contentTV = (TextView) findViewById(R.id.textView);
         contentTV.setMovementMethod(ScrollingMovementMethod.getInstance());
 

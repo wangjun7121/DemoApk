@@ -11,7 +11,7 @@ public class TestActivityLaunchModeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo_activitytestlaunchmode);
+        setContentView(R.layout.activitydemo_activitytestlaunchmode);
 
         ImageView image = (ImageView) findViewById(R.id.imageView);
         image.setImageResource(R.drawable.activitydemo_activitylaunchmode);

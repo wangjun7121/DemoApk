@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.wangjun.demoapk.LayoutDemo.TestTabLayoutActivity;
 import com.example.wangjun.demoapk.R;
 
 
@@ -25,7 +24,7 @@ public class IntentDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intent_demo);
+        setContentView(R.layout.intentdemo);
 
         testIntent1Btn = (Button) findViewById(R.id.testIntent1Btn);
         testIntent1Btn.setOnClickListener(new View.OnClickListener() {

@@ -23,7 +23,7 @@ public class TestSimpleAdapter extends ListActivity {
         super.onCreate(savedInstanceState);
 
         // 列表项使用新布局的用法，在 getData() 中填充各个布局
-        SimpleAdapter adapter = new SimpleAdapter(this,getData(), R.layout.list_view_demo_testsimpleadapter,
+        SimpleAdapter adapter = new SimpleAdapter(this,getData(), R.layout.listviewdemo_testsimpleadapter,
                 new String[]{"title","info","img"},         // HashMap 文件 ID
                 new int[]{R.id.title,R.id.info,R.id.img});  // 映射到布局文件对应的位置
         setListAdapter(adapter);

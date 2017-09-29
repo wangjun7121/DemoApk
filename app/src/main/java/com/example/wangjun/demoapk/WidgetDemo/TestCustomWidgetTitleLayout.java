@@ -15,7 +15,7 @@ public class TestCustomWidgetTitleLayout extends LinearLayout {
 
     public TestCustomWidgetTitleLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.widget_demo_testcustomwidgettitlelayout, this);
+        LayoutInflater.from(context).inflate(R.layout.widgetdemo_testcustomwidgettitlelayout, this);
         Button titleBack = (Button) findViewById(R.id.title_back);
         Button titleEdit = (Button) findViewById(R.id.title_edit);
         titleBack.setOnClickListener(new OnClickListener() {
