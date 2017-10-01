@@ -12,31 +12,30 @@ import com.example.wangjun.demoapk.R;
 public class ActivityDemoActivity extends AppCompatActivity {
 
     private static String sLogcatTAG = "ActivityDemoActivity";
-    // 定义按钮
-    private Button m_testActivityLiftCycleBtn;
-    private Button m_testActivityLanchModeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitydemo);
 
+        Button m_testActivityLiftCycleBtn;
         m_testActivityLiftCycleBtn = (Button) findViewById(R.id.m_testActivityLiftCycleBtn);
         m_testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                Intent intent = new Intent(ActivityDemoActivity.this, TestActivityLifeCycleActivity.class);
+                Intent intent = new Intent(ActivityDemoActivity.this, CActivityLifeCycleActivity.class);
                 startActivity(intent);
             }
         });
 
+        Button m_testActivityLanchModeBtn;
         m_testActivityLanchModeBtn = (Button) findViewById(R.id.m_testActivityLanchModeBtn);
         m_testActivityLanchModeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                Intent intent = new Intent(ActivityDemoActivity.this, TestActivityLaunchModeActivity.class);
+                Intent intent = new Intent(ActivityDemoActivity.this, CActivityLaunchModeActivity.class);
                 startActivity(intent);
             }
         });

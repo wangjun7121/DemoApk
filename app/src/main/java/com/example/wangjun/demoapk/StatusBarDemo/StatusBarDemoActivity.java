@@ -12,43 +12,42 @@ import com.example.wangjun.demoapk.R;
 
 public class StatusBarDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "StatusBarDemoActivity";
-    // 定义按钮
-    private Button testStaticHideBarBtn1;
-    private Button testStaticHideBarBtn2;
-    private Button testDynamicStatusBarBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.statusbardemo);
 
+        Button testStaticHideBarBtn1;
         testStaticHideBarBtn1 = (Button) findViewById(R.id.testStaticHideBarBtn1);
         testStaticHideBarBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn1");
-                Intent intent = new Intent(StatusBarDemoActivity.this, testStaticHideBar1Activity.class);
+                Intent intent = new Intent(StatusBarDemoActivity.this, CAppCompatHideBar1Activity.class);
                 startActivity(intent);
             }
         });
 
-
+        Button testStaticHideBarBtn2;
         testStaticHideBarBtn2 = (Button) findViewById(R.id.testStaticHideBarBtn2);
         testStaticHideBarBtn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn2");
-                Intent intent = new Intent(StatusBarDemoActivity.this, testStaticHideBar2Activity.class);
+                Intent intent = new Intent(StatusBarDemoActivity.this, CActivityHideBarActivity.class);
                 startActivity(intent);
             }
         });
 
+        Button testDynamicStatusBarBtn;
         testDynamicStatusBarBtn = (Button) findViewById(R.id.testDynamicStatusBarBtn);
         testDynamicStatusBarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testStaticHideBarBtn2");
-                Intent intent = new Intent(StatusBarDemoActivity.this, testDynamicStatusBarActivity.class);
+                Intent intent = new Intent(StatusBarDemoActivity.this, CDynamicStatusBarActivity.class);
                 startActivity(intent);
             }
         });

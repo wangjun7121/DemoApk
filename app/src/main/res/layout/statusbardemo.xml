@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+    <Button
+        android:id="@+id/testDynamicStatusBarBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/testDynamicStatusBarBtn" />
+
     <Button
         android:id="@+id/testStaticHideBarBtn1"
         android:layout_width="fill_parent"
@@ -17,11 +25,6 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/testStaticHideBarBtn2" />
-    <Button
-        android:id="@+id/testDynamicStatusBarBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/testDynamicStatusBarBtn" />
+
 
 </LinearLayout>

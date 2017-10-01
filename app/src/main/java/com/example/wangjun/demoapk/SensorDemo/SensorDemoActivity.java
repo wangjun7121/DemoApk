@@ -11,32 +11,30 @@ import com.example.wangjun.demoapk.R;
 
 public class SensorDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "SensorDemoActivity";
-    // 定义按钮
-    private Button testAlsBtn;
-    private Button testAccelBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sensordemo);
 
+        Button testAlsBtn;
         testAlsBtn = (Button) findViewById(R.id.testAls_btn);
         testAlsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                Intent intent = new Intent(SensorDemoActivity.this, TestAlsActivity.class);
+                Intent intent = new Intent(SensorDemoActivity.this, CAlsActivity.class);
                 startActivity(intent);
             }
         });
 
-
+        Button testAccelBtn;
         testAccelBtn = (Button) findViewById(R.id.testAccel_btn);
         testAccelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testAccelBtn");
-                Intent intent = new Intent(SensorDemoActivity.this, TestAccelActivity.class);
+                Intent intent = new Intent(SensorDemoActivity.this, CAccelActivity.class);
                 startActivity(intent);
             }
         });

@@ -22,12 +22,12 @@
 
         <!-- ActivityDemo start -->
         <activity android:name=".ActivityDemo.ActivityDemoActivity" />
-        <activity android:name=".ActivityDemo.TestActivityLifeCycleActivity" />
+        <activity android:name=".ActivityDemo.CActivityLifeCycleActivity" />
         <activity
-            android:name=".ActivityDemo.TestActivityLifeCycleDialgActivity"
+            android:name=".ActivityDemo.CActivityLifeCycleDialgActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name=".ActivityDemo.TestActivityLifeCycleNorActivity" />
-        <activity android:name=".ActivityDemo.TestActivityLaunchModeActivity" />
+        <activity android:name=".ActivityDemo.CActivityLifeCycleNorActivity" />
+        <activity android:name=".ActivityDemo.CActivityLaunchModeActivity" />
         <!-- ActivityDemo start -->
 
 
@@ -38,8 +38,8 @@
 
         <!-- IntentDemo start -->
         <activity android:name=".IntentDemo.IntentDemoActivity" />
-        <activity android:name=".IntentDemo.TestIntentArgsActivity" />
-        <activity android:name=".IntentDemo.TestIntentActivity">
+        <activity android:name=".IntentDemo.CIntentArgsActivity" />
+        <activity android:name=".IntentDemo.CIntentActivity">
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
 
@@ -47,7 +47,7 @@
                 <category android:name="com.example.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntentDemo.TestIntentBrowerActivity">
+        <activity android:name=".IntentDemo.CIntentBrowerActivity">
             <intent-filter>
 
                 <!-- 接收和浏览器相关的 intent 事件 -->
@@ -75,58 +75,59 @@
 
         <!-- LayoutDemo start -->
         <activity android:name=".LayoutDemo.LayoutDemoActivity" />
-        <activity android:name=".LayoutDemo.TestTabLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestLinearLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestRelativeLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
-        <activity android:name=".LayoutDemo.TestLeftRightFragmentActivity" />
-        <activity android:name=".LayoutDemo.TestFragmentLifeCycleActivity"></activity>
+        <activity android:name=".LayoutDemo.CTabLayoutActivity" />
+        <activity android:name=".LayoutDemo.CLinearLayoutActivity" />
+        <activity android:name=".LayoutDemo.CRelativeLayoutActivity" />
+        <activity android:name=".LayoutDemo.CFrameLayoutActivity" />
+        <activity android:name=".LayoutDemo.CTableLayoutActivity" />
+        <activity android:name=".LayoutDemo.CLeftRightFragmentActivity" />
+        <activity android:name=".LayoutDemo.CFragmentLifeCycleActivity" />
         <!-- LayoutDemo end -->
 
 
         <!-- ListViewDemo start -->
         <activity android:name=".ListViewDemo.ListViewDemoActivity" />
-        <activity android:name=".ListViewDemo.TestArrayAdapter" />
-        <activity android:name=".ListViewDemo.TestSimpleCursorAdapter" />
-        <activity android:name=".ListViewDemo.TestSimpleAdapter" />
-        <activity android:name=".ListViewDemo.TestMyListView" />
-        <activity android:name=".ListViewDemo.TestUIChatActivity" />
+        <activity android:name=".ListViewDemo.CArrayAdapter" />
+        <activity android:name=".ListViewDemo.CSimpleCursorAdapter" />
+        <activity android:name=".ListViewDemo.CSimpleAdapter" />
+        <activity android:name=".ListViewDemo.CMyListView" />
+        <activity android:name=".ListViewDemo.CUIChatActivity" />
         <!-- ListViewDemo end -->
 
 
         <!-- MenuDemo start -->
         <activity android:name=".MenuDemo.MenuDemoActivity" />
-        <activity android:name=".MenuDemo.TestMenuActivity" />
+        <activity android:name=".MenuDemo.CMenuActivity" />
         <!-- MenuDemo end -->
 
 
         <!-- SensorDemo start -->
         <activity android:name=".SensorDemo.SensorDemoActivity" />
-        <activity android:name=".SensorDemo.TestAlsActivity" />
-        <activity android:name=".SensorDemo.TestAccelActivity" />
+        <activity android:name=".SensorDemo.CAlsActivity" />
+        <activity android:name=".SensorDemo.CAccelActivity" />
         <!-- SensorDemo end -->
 
 
         <!-- StatusBarDemo start -->
         <activity android:name=".StatusBarDemo.StatusBarDemoActivity" />
-        <activity android:name=".StatusBarDemo.testStaticHideBar1Activity" />
-        <activity android:name=".StatusBarDemo.testStaticHideBar2Activity" />
-        <activity android:name=".StatusBarDemo.testDynamicStatusBarActivity" />
+        <activity android:name=".StatusBarDemo.CAppCompatHideBar1Activity" />
+        <activity android:name=".StatusBarDemo.CActivityHideBarActivity" />
+        <activity android:name=".StatusBarDemo.CDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
 
 
         <!-- WidgetDemo start -->
         <activity android:name=".WidgetDemo.WidgetDemoActivity" />
-        <activity android:name=".WidgetDemo.TestWidgetActivity" />
-        <activity android:name=".WidgetDemo.TestDynamidAddButtonActivity" />
-        <activity android:name=".WidgetDemo.TestWidgetInheritActivity" />
-        <activity android:name=".WidgetDemo.TestCustomWidgetActivity" />
-        <activity android:name=".WidgetDemo.TestWidgetSizeActivity" />
-        <activity android:name=".WidgetDemo.TestTextViewActivity" />
+        <activity android:name=".WidgetDemo.CWidgetActivity" />
+        <activity android:name=".WidgetDemo.CDynamidAddButtonActivity" />
+        <activity android:name=".WidgetDemo.CWidgetInheritActivity" />
+        <activity android:name=".WidgetDemo.CCustomWidgetActivity" />
+        <activity android:name=".WidgetDemo.CWidgetSizeActivity" />
+        <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
 
-
+        <activity android:name=".LayoutDemo.CMultiLayoutActivity" />
+        <activity android:name=".LayoutDemo.CFragmentAppActivity"></activity>
     </application>
 
 </manifest>

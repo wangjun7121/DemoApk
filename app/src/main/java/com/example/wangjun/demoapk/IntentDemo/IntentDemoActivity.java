@@ -15,17 +15,14 @@ import com.example.wangjun.demoapk.R;
 public class IntentDemoActivity extends AppCompatActivity {
 
     private static String sLogcatTAG = "IntentDemoActivity";
-    // 定义按钮
-    private Button testIntent1Btn;
-    private Button testIntent2Btn;
-    private Button testIntent3Btn;
-    private Button testIntent4Btn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intentdemo);
 
+        Button testIntent1Btn;
         testIntent1Btn = (Button) findViewById(R.id.testIntent1Btn);
         testIntent1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +34,7 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testIntent2Btn;
         testIntent2Btn = (Button) findViewById(R.id.testIntent2Btn);
         testIntent2Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +46,7 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testIntent3Btn;
         testIntent3Btn = (Button) findViewById(R.id.testIntent3Btn);
         testIntent3Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +58,14 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testIntent4Btn;
         testIntent4Btn = (Button) findViewById(R.id.testIntent4Btn);
         testIntent4Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
                 String data = "IntentDemo =args=> IntArgsActivity";
-                Intent intent = new Intent(IntentDemoActivity.this, TestIntentArgsActivity.class);
+                Intent intent = new Intent(IntentDemoActivity.this, CIntentArgsActivity.class);
                 intent.putExtra("extra_data", data);
                 startActivityForResult(intent,1);
             }
