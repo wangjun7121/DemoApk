@@ -85,5 +85,15 @@ public class LayoutDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testFragmentLifeCycleBtn;
+        testFragmentLifeCycleBtn = (Button) findViewById(R.id.testFragmentLifeCycleBtn);
+        testFragmentLifeCycleBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(LayoutDemoActivity.this, TestFragmentLifeCycleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

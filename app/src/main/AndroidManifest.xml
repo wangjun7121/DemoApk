@@ -81,6 +81,7 @@
         <activity android:name=".LayoutDemo.TestFrameLayoutActivity" />
         <activity android:name=".LayoutDemo.TestTableLayoutActivity" />
         <activity android:name=".LayoutDemo.TestLeftRightFragmentActivity" />
+        <activity android:name=".LayoutDemo.TestFragmentLifeCycleActivity"></activity>
         <!-- LayoutDemo end -->
 
 
