@@ -82,6 +82,9 @@
         <activity android:name=".LayoutDemo.CTableLayoutActivity" />
         <activity android:name=".LayoutDemo.CLeftRightFragmentActivity" />
         <activity android:name=".LayoutDemo.CFragmentLifeCycleActivity" />
+        <activity android:name=".LayoutDemo.CMultiLayoutActivity" />
+        <activity android:name=".LayoutDemo.CFragmentAppActivity"></activity>
+        <activity android:name=".LayoutDemo.CFragmentApp_NewsContentActivity" />
         <!-- LayoutDemo end -->
 
 
@@ -126,8 +129,7 @@
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
 
-        <activity android:name=".LayoutDemo.CMultiLayoutActivity" />
-        <activity android:name=".LayoutDemo.CFragmentAppActivity"></activity>
+
     </application>
 
 </manifest>

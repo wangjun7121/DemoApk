@@ -113,7 +113,7 @@ public class LayoutDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
-                Intent intent = new Intent(LayoutDemoActivity.this, CMultiLayoutActivity.class);
+                Intent intent = new Intent(LayoutDemoActivity.this, CFragmentAppActivity.class);
                 startActivity(intent);
             }
         });
