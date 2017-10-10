@@ -52,12 +52,13 @@ public class CRegisterReceiverActivity extends AppCompatActivity {
 
     // 静态注册的接收广播：监听开机
     //  注：不允许在广播接收器中开启线程，娄导致 onReceive() 常时间未关闭，导致程序报错
-    public class BootCompleteReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Toast.makeText(context, "Boot Complete", Toast.LENGTH_LONG).show();
-        }
-    }
+    //  【不能使用内部类，会报错】
+//    public class BootCompleteReceiver extends BroadcastReceiver {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            Toast.makeText(context, "Boot Complete", Toast.LENGTH_LONG).show();
+//        }
+//    }
 
 
 }

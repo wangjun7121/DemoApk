@@ -20,4 +20,11 @@
         android:textAllCaps="false"
         android:text="动态/静态 接收广播" />
 
+    <Button
+        android:id="@+id/testSendBroadcastBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="发送/接收自定义标准广播" />
+
 </LinearLayout>

@@ -43,6 +43,17 @@ public class BroadcastsDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testSendBroadcastBtn;
+        testSendBroadcastBtn = (Button) findViewById(R.id.testSendBroadcastBtn);
+        testSendBroadcastBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(BroadcastsDemoActivity.this, CSendBroadcastActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
