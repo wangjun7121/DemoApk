@@ -52,8 +52,15 @@
         </receiver>
 
         <activity android:name=".BroadcastsDemo.CSendBroadcastActivity"></activity>
+        <!--高优先级广播接收者-->
         <receiver android:name=".BroadcastsDemo.CSendBroadcast_MyBroadcastReceiver">
-            <intent-filter>
+            <intent-filter android:priority="100" >
+                <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+        <!--低优先级广播接收者-->
+        <receiver android:name=".BroadcastsDemo.CSendBroadcast_MyBroadcastReceiver2">
+            <intent-filter >
                 <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST"/>
             </intent-filter>
         </receiver>

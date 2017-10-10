@@ -1,12 +1,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sendBroadcastBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Broadcast"
+        android:textAllCaps="false"
+        android:text="sendBroadcast():发送标准广播"
+        />
+
+    <Button
+        android:id="@+id/sendOrderBroadcastBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="sendOrderBroadcast(): 发送有序广播"
         />
 
 </LinearLayout>

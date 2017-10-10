@@ -25,6 +25,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="发送/接收自定义标准广播" />
+        android:text="发送/接收 标准/有序广播" />
 
 </LinearLayout>

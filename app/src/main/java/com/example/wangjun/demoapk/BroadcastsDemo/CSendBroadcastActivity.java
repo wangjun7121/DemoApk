@@ -18,14 +18,25 @@ public class CSendBroadcastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.broadcastsdemo_csendbroadcast);
 
-        Button button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button sendBroadcastBtn = (Button) findViewById(R.id.sendBroadcastBtn);
+        sendBroadcastBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST");
                 sendBroadcast(intent);
             }
         });
+
+
+        Button sendOrderBroadcastBtn = (Button) findViewById(R.id.sendOrderBroadcastBtn);
+        sendOrderBroadcastBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST");
+                sendOrderedBroadcast(intent,null);
+            }
+        });
+
 
     }
 
