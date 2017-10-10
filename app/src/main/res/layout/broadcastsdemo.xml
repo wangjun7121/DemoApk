@@ -27,4 +27,11 @@
         android:textAllCaps="false"
         android:text="发送/接收 标准/有序广播" />
 
+    <Button
+        android:id="@+id/testLocalBroadcastBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="本地广播" />
+
 </LinearLayout>
