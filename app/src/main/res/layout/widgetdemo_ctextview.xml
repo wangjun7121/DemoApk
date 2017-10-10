@@ -21,5 +21,10 @@
         android:textColor="#00ff00"
         android:text="This is TextView" />
 
+    <TextView
+        android:id="@+id/text_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
 
 </LinearLayout>

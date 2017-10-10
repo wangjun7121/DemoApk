@@ -4,7 +4,9 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
@@ -90,5 +92,25 @@ public class CTextViewActivity extends AppCompatActivity {
         mTextView.setText(msp);
         //设置TextView可点击
         mTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Android 同一个TextView中不同的文字格式设置
+        TextView diffFormatTextView = (TextView)findViewById(R.id.text_view3);
+        SpannableStringBuilder spanString = setSpanString();
+        diffFormatTextView.setText(spanString);
+
+    }
+    private SpannableStringBuilder setSpanString(){
+        SpannableStringBuilder builder = new SpannableStringBuilder();
+        String one = "努力";
+        builder.append(one+"  ");
+        int start = builder.length();
+        String center = "恒心";
+        int end = start +   center.length();
+        builder.append( center );
+        builder.setSpan(new ForegroundColorSpan(Color.rgb(32, 178, 170)), start,end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        String sEnd = "耐心";
+        builder.append("  "+sEnd);
+        return builder;
     }
 }

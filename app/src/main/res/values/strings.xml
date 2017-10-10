@@ -69,6 +69,7 @@
     sp（与密度和字体缩放度无关的像素）：与dp类似，但是可以根据用户的字体大小首选项进行缩放。 <br />
 <br />
     尽量使用 dp 作为空间大小单位，sp 作为和文字相关大小单位 <br /></p></string>
+    <string name="title_activity_broadcasts_demo">BroadcastsDemoActivity</string>
     <!-- WidgetDemoActivity  end-->
 
 </resources>

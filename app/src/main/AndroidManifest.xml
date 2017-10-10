@@ -2,8 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wangjun.demoapk">
 
+    <!-- ************************************ 相关权限 ***********************************-->
     <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 查询网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--监听开机广播权限-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- ************************************ 相关权限 ***********************************-->
+
 
     <application
         android:allowBackup="true"
@@ -12,6 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--程序入口-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,17 +33,31 @@
         <!-- ActivityDemo start -->
         <activity android:name=".ActivityDemo.ActivityDemoActivity" />
         <activity android:name=".ActivityDemo.CActivityLifeCycleActivity" />
+        <!--声明此 Activity 为一个 Dialog-->
         <activity
             android:name=".ActivityDemo.CActivityLifeCycleDialgActivity"
             android:theme="@android:style/Theme.Dialog" />
         <activity android:name=".ActivityDemo.CActivityLifeCycleNorActivity" />
         <activity android:name=".ActivityDemo.CActivityLaunchModeActivity" />
-        <!-- ActivityDemo start -->
+        <!-- ActivityDemo end -->
+
+
+        <!-- BroadcastsDemo start -->
+        <activity android:name=".BroadcastsDemo.BroadcastsDemoActivity" />
+        <activity android:name=".BroadcastsDemo.CBroadcastsIntroduceActivity" />
+        <activity android:name=".BroadcastsDemo.CRegisterReceiverActivity"></activity>
+        <!--静态注册接收开机广播-->
+        <receiver android:name=".BroadcastsDemo.CRegisterReceiverActivity$BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <!-- BroadcastsDemo end -->
 
 
         <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
-        <!-- HelloWorld start -->
+        <!-- HelloWorld end -->
 
 
         <!-- IntentDemo start -->
@@ -83,7 +107,7 @@
         <activity android:name=".LayoutDemo.CLeftRightFragmentActivity" />
         <activity android:name=".LayoutDemo.CFragmentLifeCycleActivity" />
         <activity android:name=".LayoutDemo.CMultiLayoutActivity" />
-        <activity android:name=".LayoutDemo.CFragmentAppActivity"></activity>
+        <activity android:name=".LayoutDemo.CFragmentAppActivity" />
         <activity android:name=".LayoutDemo.CFragmentApp_NewsContentActivity" />
         <!-- LayoutDemo end -->
 
