@@ -52,7 +52,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Fragment 生命周期" />
+        android:text="Fragment 生命周期(占击放大)" />
 
     <Button
         android:id="@+id/testMultiLayoutBtn"
