@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- 弹窗权限 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <!-- ************************************ 相关权限 *********************************** -->
     <application
@@ -86,7 +88,8 @@
         <!-- android:authorities 属性中指定了该内容提供器的权限 -->
         <provider
             android:name=".ContentDemo.CContentProvider_DatabaseProvider"
-            android:authorities="com.example.databasetest.provider"></provider>
+            android:authorities="com.example.databasetest.provider" />
+        <activity android:name=".ContentDemo.CAccessContentProviderActivity" />
         <!-- ContentDemo end -->
 
 
@@ -170,6 +173,15 @@
         <activity android:name=".MenuDemo.CMenuActivity" />
         <!-- MenuDemo end -->
 
+        <!-- MultimediaDemo start -->
+        <activity android:name=".MultimediaDemo.MultimediaDemoActivity" />
+        <activity android:name=".MultimediaDemo.CNotificationActivity" />
+        <activity android:name=".MultimediaDemo.CNotification_IntentActivity" />
+        <activity android:name=".MultimediaDemo.CNotificationIntroduceActivity" />
+        <activity android:name=".MultimediaDemo.CWidthNotificationIntroduceActivity" />
+        <activity android:name=".MultimediaDemo.CWidthNotificationActivity" />
+        <activity android:name=".MultimediaDemo.CNotificationProgressActivity"></activity>
+        <!-- MultimediaDemo end -->
 
         <!-- SensorDemo start -->
         <activity android:name=".SensorDemo.SensorDemoActivity" />
@@ -196,7 +208,8 @@
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
 
-        <activity android:name=".ContentDemo.CAccessContentProviderActivity"></activity>
+
+
     </application>
 
 </manifest>

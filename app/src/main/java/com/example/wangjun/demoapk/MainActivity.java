@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             "ListViewDemo",
             "LayoutDemo",
             "MenuDemo",
+            "MultimediaDemo",
             "SensorDemo",
             "StatusBarDemo",
             "WidgetDemo"
