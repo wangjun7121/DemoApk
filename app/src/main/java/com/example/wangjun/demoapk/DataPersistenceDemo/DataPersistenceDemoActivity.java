@@ -40,5 +40,16 @@ public class DataPersistenceDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button testDatabaseBtn;
+        testDatabaseBtn = (Button) findViewById(R.id.testDatabaseBtn);
+        testDatabaseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(DataPersistenceDemoActivity.this, COperateDatabaseActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

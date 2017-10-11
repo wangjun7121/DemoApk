@@ -20,4 +20,11 @@
         android:textAllCaps="false"
         android:text="SharedPreference 读写测试" />
 
+    <Button
+        android:id="@+id/testDatabaseBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Database 操作" />
+
 </LinearLayout>

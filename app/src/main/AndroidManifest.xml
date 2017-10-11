@@ -9,8 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 监听开机广播权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!--弹窗权限-->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 弹窗权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <!-- ************************************ 相关权限 *********************************** -->
     <application
@@ -69,19 +69,23 @@
 
         <activity android:name=".BroadcastsDemo.CLocalBroadcastManagerActivity" />
         <activity android:name=".BroadcastsDemo.CLoginForceOfflineLoginActivity" />
-        <activity android:name=".BroadcastsDemo.CLoginForecOfflineMainActivity"></activity>
+        <activity android:name=".BroadcastsDemo.CLoginForecOfflineMainActivity" />
+
         <receiver android:name=".BroadcastsDemo.CLoginForceOfflineReceiver">
             <intent-filter>
-                <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CLoginForecOfflineMainActivity.FORCE_OFFLINE"/>
+                <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CLoginForecOfflineMainActivity.FORCE_OFFLINE" />
             </intent-filter>
         </receiver>
         <!-- BroadcastsDemo end -->
+
 
         <!-- DataPersistenceDemo start -->
         <activity android:name=".DataPersistenceDemo.DataPersistenceDemoActivity" />
         <activity android:name=".DataPersistenceDemo.CReadWriteFileActivity" />
         <activity android:name=".DataPersistenceDemo.CSharedPreferencesActivity" />
+        <activity android:name=".DataPersistenceDemo.COperateDatabaseActivity"></activity>
         <!-- DataPersistenceDemo end -->
+
 
         <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
@@ -180,7 +184,6 @@
         <activity android:name=".WidgetDemo.CWidgetSizeActivity" />
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
-
 
 
     </application>
