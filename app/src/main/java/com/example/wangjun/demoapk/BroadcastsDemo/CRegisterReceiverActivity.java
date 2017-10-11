@@ -20,7 +20,7 @@ public class CRegisterReceiverActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.broadcsts_cregisterreceiver);
+        setContentView(R.layout.broadcastsdemo_cregisterreceiver);
 
         // 动态注册接收广播：监听网络变化
         //   缺点：必须在程序启动后才可以使用

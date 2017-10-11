@@ -64,6 +64,8 @@
                 <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".BroadcastsDemo.CLocalBroadcastManagerActivity" />
         <!-- BroadcastsDemo end -->
 
 
@@ -165,7 +167,9 @@
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
 
-        <activity android:name=".BroadcastsDemo.CLocalBroadcastManagerActivity"></activity>
+        <activity android:name=".DataPersistenceDemo.DataPersistenceDemoActivity" />
+        <activity android:name=".DataPersistenceDemo.CReadWriteFileActivity" />
+        <activity android:name=".DataPersistenceDemo.CSharedPreferencesActivity"></activity>
     </application>
 
 </manifest>

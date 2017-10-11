@@ -5,6 +5,11 @@
     <string name="testActivityLiftCycleBtn">Activity 生命周期演示</string>
     <!-- ActivityDemoActivity  end-->
 
+    <!-- BroadcastsDemo  start-->
+    <string name="datapersistence">存储路径：/data/data/(packagename)/files</string>
+    <!-- BroadcastsDemo  end-->
+
+
     <!-- LayoutDemoActivity  start-->
     <string name="testTablayoutBtn">TabLayout测试</string>
     <!-- LayoutDemoActivity  end-->
