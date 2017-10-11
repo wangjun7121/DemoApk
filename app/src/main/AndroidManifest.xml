@@ -13,7 +13,9 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 振动权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
-
+    <!--收发短信权限-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <!-- ************************************ 相关权限 *********************************** -->
     <application
         android:allowBackup="true"
@@ -89,6 +91,7 @@
         <provider
             android:name=".ContentDemo.CContentProvider_DatabaseProvider"
             android:authorities="com.example.databasetest.provider" />
+
         <activity android:name=".ContentDemo.CAccessContentProviderActivity" />
         <!-- ContentDemo end -->
 
@@ -173,6 +176,7 @@
         <activity android:name=".MenuDemo.CMenuActivity" />
         <!-- MenuDemo end -->
 
+
         <!-- MultimediaDemo start -->
         <activity android:name=".MultimediaDemo.MultimediaDemoActivity" />
         <activity android:name=".MultimediaDemo.CNotificationActivity" />
@@ -180,8 +184,10 @@
         <activity android:name=".MultimediaDemo.CNotificationIntroduceActivity" />
         <activity android:name=".MultimediaDemo.CWidthNotificationIntroduceActivity" />
         <activity android:name=".MultimediaDemo.CWidthNotificationActivity" />
-        <activity android:name=".MultimediaDemo.CNotificationProgressActivity"></activity>
+        <activity android:name=".MultimediaDemo.CNotificationProgressActivity" />
+        <activity android:name=".MultimediaDemo.CReceiveSendSMSActivity"></activity>
         <!-- MultimediaDemo end -->
+
 
         <!-- SensorDemo start -->
         <activity android:name=".SensorDemo.SensorDemoActivity" />
@@ -207,7 +213,6 @@
         <activity android:name=".WidgetDemo.CWidgetSizeActivity" />
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
-
 
 
     </application>

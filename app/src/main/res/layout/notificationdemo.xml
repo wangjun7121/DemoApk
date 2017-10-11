@@ -11,34 +11,42 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification 标准视图介绍" />
+        android:text="Notification: 标准视图介绍" />
 
     <Button
         android:id="@+id/testNotificationBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification 标准视图应用" />
+        android:text="Notification: 标准视图应用" />
 
     <Button
         android:id="@+id/widthNotificationIntroduceBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification 宽视图介绍" />
+        android:text="Notification: 宽视图介绍" />
 
     <Button
         android:id="@+id/widthNotificationBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification 宽视图应用" />
+        android:text="Notification: 宽视图应用" />
 
     <Button
         android:id="@+id/testNotificationProgressBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Notification 下载进度条" />
+        android:text="Notification: 下载进度条" />
+
+    <!--****************************************************************************-->
+    <Button
+        android:id="@+id/testReceiveSMSBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SMS: 收/发短信" />
 
 </LinearLayout>

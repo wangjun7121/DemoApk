@@ -7,9 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.wangjun.demoapk.ActivityDemo.ActivityDemoActivity;
-import com.example.wangjun.demoapk.ActivityDemo.CActivityLaunchModeActivity;
-import com.example.wangjun.demoapk.ActivityDemo.CActivityLifeCycleActivity;
 import com.example.wangjun.demoapk.R;
 
 public class MultimediaDemoActivity extends AppCompatActivity {
@@ -76,6 +73,18 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
                 Intent intent = new Intent(MultimediaDemoActivity.this, CNotificationProgressActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        Button testReceiveSMSBtn;
+        testReceiveSMSBtn = (Button) findViewById(R.id.testReceiveSMSBtn);
+        testReceiveSMSBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CReceiveSendSMSActivity.class);
                 startActivity(intent);
             }
         });
