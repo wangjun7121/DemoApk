@@ -19,6 +19,7 @@ public class CLoginForecOfflineMainActivity extends CLoginForceOffline_BaseActiv
         forceOffline.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 发送广播，跳转到 CLoginForceOfflineReceiver 中进行处理
                 Intent intent = new Intent("com.example.wangjun.demoapk.BroadcastsDemo.CLoginForecOfflineMainActivity.FORCE_OFFLINE");
                 sendBroadcast(intent);
             }

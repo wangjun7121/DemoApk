@@ -33,11 +33,15 @@ public class CLoginForceOfflineLoginActivity extends CLoginForceOffline_BaseActi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.broadcastsdemo_cloginforceoffline);
+        // 获得 SharedPreference
         pref = PreferenceManager.getDefaultSharedPreferences(this);
+
         accountEdit = (EditText) findViewById(R.id.account);
         passwordEdit = (EditText) findViewById(R.id.password);
         rememberPass = (CheckBox) findViewById(R.id.remember_pass);
         login = (Button) findViewById(R.id.login);
+
+        // 获得是否保存了密码,如果有则恢复
         boolean isRemember = pref.getBoolean("remember_password", false);
         if (isRemember) {
             String account = pref.getString("account", "");
@@ -52,6 +56,7 @@ public class CLoginForceOfflineLoginActivity extends CLoginForceOffline_BaseActi
             public void onClick(View v) {
                 String account = accountEdit.getText().toString();
                 String password = passwordEdit.getText().toString();
+                // 判断密码是滞正确
                 if (account.equals("admin") && password.equals("123456")) {
                     editor = pref.edit();
                     if (rememberPass.isChecked()) {

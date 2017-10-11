@@ -52,6 +52,7 @@ public class CLoginForceOfflineReceiver extends BroadcastReceiver {
             }
         }
 
+        // 创建一个弹窗
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("warning");
         builder.setMessage("you are forced to be offline, please try to login again.");
@@ -60,6 +61,7 @@ public class CLoginForceOfflineReceiver extends BroadcastReceiver {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 CLoginForceOffline_ActivityCollector.finishAll();
+                // 跳转回登录界面
                 Intent intent1 = new Intent(context, CLoginForceOfflineLoginActivity.class);
                 intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent1);
