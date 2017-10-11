@@ -65,6 +65,17 @@ public class BroadcastsDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testLoginForceOfflineBtn;
+        testLoginForceOfflineBtn = (Button) findViewById(R.id.testLoginForceOfflineBtn);
+        testLoginForceOfflineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(BroadcastsDemoActivity.this, CLoginForceOfflineLoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

@@ -34,4 +34,11 @@
         android:textAllCaps="false"
         android:text="本地广播" />
 
+    <Button
+        android:id="@+id/testLoginForceOfflineBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="登录->广播强制下线" />
+
 </LinearLayout>
