@@ -18,9 +18,9 @@ public class ActivityDemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activitydemo);
 
-        Button m_testActivityLiftCycleBtn;
-        m_testActivityLiftCycleBtn = (Button) findViewById(R.id.m_testActivityLiftCycleBtn);
-        m_testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
+        Button testActivityLiftCycleBtn;
+        testActivityLiftCycleBtn = (Button) findViewById(R.id.testActivityLiftCycleBtn);
+        testActivityLiftCycleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
@@ -29,9 +29,9 @@ public class ActivityDemoActivity extends AppCompatActivity {
             }
         });
 
-        Button m_testActivityLanchModeBtn;
-        m_testActivityLanchModeBtn = (Button) findViewById(R.id.m_testActivityLanchModeBtn);
-        m_testActivityLanchModeBtn.setOnClickListener(new View.OnClickListener() {
+        Button testActivityLanchModeBtn;
+        testActivityLanchModeBtn = (Button) findViewById(R.id.testActivityLanchModeBtn);
+        testActivityLanchModeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");

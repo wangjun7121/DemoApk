@@ -7,17 +7,24 @@
     >
 
     <Button
-        android:id="@+id/testActivityLiftCycleBtn"
+        android:id="@+id/readContactBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="@string/testActivityLiftCycleBtn" />
+        android:text="读取联系人" />
 
     <Button
-        android:id="@+id/testActivityLanchModeBtn"
+        android:id="@+id/testContentProviderBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="活动启示模式介绍" />
+        android:text="创建内容提供器" />
+
+    <Button
+        android:id="@+id/accessContentProviderBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="访问内容提供器" />
 
 </LinearLayout>

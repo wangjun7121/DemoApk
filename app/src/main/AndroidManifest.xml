@@ -79,11 +79,22 @@
         <!-- BroadcastsDemo end -->
 
 
+        <!-- ContentDemo start -->
+        <activity android:name=".ContentDemo.ContentDemoActivity" />
+        <activity android:name=".ContentDemo.CContentProviderActivity" />
+        <!-- android:name 属性中指定了该类的全名 -->
+        <!-- android:authorities 属性中指定了该内容提供器的权限 -->
+        <provider
+            android:name=".ContentDemo.CContentProvider_DatabaseProvider"
+            android:authorities="com.example.databasetest.provider"></provider>
+        <!-- ContentDemo end -->
+
+
         <!-- DataPersistenceDemo start -->
         <activity android:name=".DataPersistenceDemo.DataPersistenceDemoActivity" />
         <activity android:name=".DataPersistenceDemo.CReadWriteFileActivity" />
         <activity android:name=".DataPersistenceDemo.CSharedPreferencesActivity" />
-        <activity android:name=".DataPersistenceDemo.COperateDatabaseActivity"></activity>
+        <activity android:name=".DataPersistenceDemo.COperateDatabaseActivity" />
         <!-- DataPersistenceDemo end -->
 
 
@@ -185,7 +196,7 @@
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
 
-
+        <activity android:name=".ContentDemo.CAccessContentProviderActivity"></activity>
     </application>
 
 </manifest>
