@@ -8,7 +8,7 @@
 
         <TextView
             android:layout_height="wrap_content"
-            android:text="Account:" />
+            android:text="Account:admin" />
 
         <EditText
             android:id="@+id/account"
@@ -20,7 +20,7 @@
 
         <TextView
             android:layout_height="wrap_content"
-            android:text="Password:" />
+            android:text="Password: 123456" />
 
         <EditText
             android:id="@+id/password"
@@ -46,6 +46,13 @@
             android:layout_height="wrap_content"
             android:layout_span="2"
             android:text="Login" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="使用 SharedPerence 保存密码" />
     </TableRow>
 
 </TableLayout>
