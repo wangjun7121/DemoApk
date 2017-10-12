@@ -129,5 +129,18 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             }
         });
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Video: 视频相关
+        Button testVideoViewBtn;
+        testVideoViewBtn = (Button) findViewById(R.id.testVideoViewBtn);
+        testVideoViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CVideoViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

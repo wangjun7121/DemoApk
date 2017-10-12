@@ -65,12 +65,20 @@
         android:textAllCaps="false"
         android:text="Audio: MediaPlay 播放音频" />
 
-    <!--********************************** Audio ******************************************-->
+    <!--********************************** Explore ******************************************-->
     <Button
         android:id="@+id/testExploreBtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Explore: 文件浏览器" />
+
+    <!--********************************** Video ******************************************-->
+    <Button
+        android:id="@+id/testVideoViewBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="VideoView: 播放视频" />
 
 </LinearLayout>

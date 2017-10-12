@@ -249,7 +249,8 @@
         </provider>
 
         <activity android:name=".MultimediaDemo.CMediaPlayActivity" />
-        <activity android:name=".MultimediaDemo.CExploerActivity"></activity>
+        <activity android:name=".MultimediaDemo.CExploerActivity" />
+        <activity android:name=".MultimediaDemo.CVideoViewActivity"></activity>
         <!-- MultimediaDemo end -->
 
 
