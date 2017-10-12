@@ -49,4 +49,14 @@
         android:textAllCaps="false"
         android:text="SMS: 收/发短信" />
 
+    <!--****************************************************************************-->
+    <Button
+        android:id="@+id/testCameraBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Camera: 拍照" />
+
+
+
 </LinearLayout>

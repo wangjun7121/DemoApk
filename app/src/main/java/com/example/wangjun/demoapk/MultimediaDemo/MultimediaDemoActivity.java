@@ -78,6 +78,7 @@ public class MultimediaDemoActivity extends AppCompatActivity {
         });
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // SMS: 短信相关
         Button testReceiveSMSBtn;
         testReceiveSMSBtn = (Button) findViewById(R.id.testReceiveSMSBtn);
         testReceiveSMSBtn.setOnClickListener(new View.OnClickListener() {
@@ -88,5 +89,20 @@ public class MultimediaDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Camera: 摄像头相关
+        Button testCameraBtn;
+        testCameraBtn = (Button) findViewById(R.id.testCameraBtn);
+        testCameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CTakePhotoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

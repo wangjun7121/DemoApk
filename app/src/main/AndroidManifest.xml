@@ -3,19 +3,64 @@
     package="com.example.wangjun.demoapk">
 
     <!-- ************************************ 相关权限 *********************************** -->
+
+    <!--权限分类：-->
+        <!--危险权限：危险权限即需要动态申请的权限,一共9组,取得一组中某一个权限的授权,则自动拥有该组的所有授权-->
+            <!--身体传感器-->
+                <!--android.permission.BODY_SENSORS-->
+            <!--日历：-->
+                <!--android.permission.READ_CALENDAR-->
+                <!--android.permission.WRITE_CALENDAR-->
+            <!--摄像头-->
+                <!--android.permission.CAMERA-->
+            <!--通讯录-->
+                <!--android.permission.READ_CONTACTS-->
+                <!--android.permission.WRITE_CONTACTS-->
+                <!--android.permission.GET_ACCOUNTS-->
+            <!--地理位置-->
+                <!--android.permission.ACCESS_FINE_LOCATION-->
+                <!--android.permission.ACCESS_COARSE_LOCATION-->
+            <!--麦克风-->
+                <!--android.permission.RECORD_AUDIO-->
+            <!--电话-->
+                <!--android.permission.READ_PHONE_STATE-->
+                <!--android.permission.CALL_PHONE-->
+                <!--android.permission.READ_CALL_LOG-->
+                <!--android.permission.WRITE_CALL_LOG-->
+                <!--com.android.voicemail.permission.ADD_VOICEMAIL-->
+                <!--android.permission.USE_SIP-->
+                <!--android.permission.PROCESS_OUTGOING_CALLS-->
+            <!--短信-->
+                <!--android.permission.SEND_SMS-->
+                <!--android.permission.RECEIVE_SMS-->
+                <!--android.permission.READ_SMS-->
+                <!--android.permission.RECEIVE_WAP_PUSH-->
+                <!--android.permission.RECEIVE_MMS-->
+                <!--android.permission.READ_CELL_BROADCASTS-->
+            <!--存储空间-->
+                <!--android.permission.READ_EXTERNAL_STORAGE-->
+                <!--android.permission.WRITE_EXTERNAL_STORAGE-->
+        <!--一般权限-->
+            <!--除上面的危险权限之外的权限即为一般权限(普通权限)-->
+
     <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 查询网络状态权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 监听开机广播权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!-- 弹窗权限 -->
+    <!-- 弹窗权限：动态申请 -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 振动权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
-    <!--收发短信权限-->
+    <!-- 收发短信权限 -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <!--访问外部存储-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--访问摄像头权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <!-- ************************************ 相关权限 *********************************** -->
     <application
         android:allowBackup="true"
@@ -185,7 +230,22 @@
         <activity android:name=".MultimediaDemo.CWidthNotificationIntroduceActivity" />
         <activity android:name=".MultimediaDemo.CWidthNotificationActivity" />
         <activity android:name=".MultimediaDemo.CNotificationProgressActivity" />
-        <activity android:name=".MultimediaDemo.CReceiveSendSMSActivity"></activity>
+        <activity android:name=".MultimediaDemo.CReceiveSendSMSActivity" />
+
+        <activity android:name=".MultimediaDemo.CTakePhotoActivity"></activity>
+        <!--解决 Android N 上报错：android.os.FileUriExposedException-->
+            <!--android:exported:要求必须为false，为true则会报安全异常；-->
+            <!--android:grantUriPermissions:true，表示授予 URI 临时访问权限；-->
+            <!--android:authorities这个属性的值，建议写包名+fileprovider，当然也可以起别的字符串，但是在设备中不能出现2个及以上的APP使用到同一个authorities属性值，因为无法共存。-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.wangjun.demoapk.MultimediaDemo.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
         <!-- MultimediaDemo end -->
 
 
