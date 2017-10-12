@@ -15,7 +15,7 @@ public class MultimediaDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.notificationdemo);
+        setContentView(R.layout.multimediademo);
 
 
         Button notificationIntroduceBtn;
@@ -103,6 +103,31 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             }
         });
 
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Audio: 音频相关
+        Button testMediaPlayBtn;
+        testMediaPlayBtn = (Button) findViewById(R.id.testMediaPlayBtn);
+        testMediaPlayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CMediaPlayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // Explore: 文件浏览器
+        Button testExploreBtn;
+        testExploreBtn = (Button) findViewById(R.id.testExploreBtn);
+        testExploreBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CExploerActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
