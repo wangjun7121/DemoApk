@@ -62,6 +62,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 访问摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- ************************************ 相关权限 *********************************** -->
     <application
@@ -271,10 +273,11 @@
         <service android:name=".ServiceDemo.CServiceTest_MyIntentService" />
 
         <activity android:name=".ServiceDemo.CServiceLifeCycleActivity" />
+        <activity android:name=".ServiceDemo.CAlarmServiceActivity" />
 
-        <activity android:name=".ServiceDemo.CAlarmServiceActivity"></activity>
-        <service android:name=".ServiceDemo.CAlarmService_LongRunningService"/>
-        <receiver android:name=".ServiceDemo.CAlarmService_AlarmReceiver"/>
+        <service android:name=".ServiceDemo.CAlarmService_LongRunningService" />
+
+        <receiver android:name=".ServiceDemo.CAlarmService_AlarmReceiver" />
 
         <!-- ServiceDemo end -->
 
@@ -298,6 +301,13 @@
         <!-- WidgetDemo end -->
 
 
+        <!-- WebDemo end -->
+        <activity android:name=".WebDemo.WebDemoActivity" />
+        <activity android:name=".WebDemo.CWebViewActivity" />
+        <activity android:name=".WebDemo.CHttpURLConnectionTestActivity" />
+        <!-- WebDemo end -->
+
+        <activity android:name=".WebDemo.CHttpClientActivity"></activity>
     </application>
 
 </manifest>

@@ -30,6 +30,10 @@ android {
     // lintOptions {
     //     abortOnError false
     // }
+
+    // 在API 23中，Google已经移除了移除了Apache HttpClient相关的类，这里加入继续使用
+    useLibrary 'org.apache.http.legacy'
+
 }
 
 dependencies {

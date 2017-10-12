@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/pathCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="http://www.baidu.com" />
+
+    <Button
+        android:id="@+id/getCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="查看源码" />
+
+    <EditText
+        android:id="@+id/pathPic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="http://www.baidu.com/img/bd_logo1.png" />
+
+    <Button
+        android:id="@+id/getPic"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="查看图片" />
+
+    <ImageView
+        android:id="@+id/mIvShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <TextView
+            android:id="@+id/response_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+
+
+</LinearLayout>
