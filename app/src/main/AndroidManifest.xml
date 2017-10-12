@@ -250,7 +250,7 @@
 
         <activity android:name=".MultimediaDemo.CMediaPlayActivity" />
         <activity android:name=".MultimediaDemo.CExploerActivity" />
-        <activity android:name=".MultimediaDemo.CVideoViewActivity"></activity>
+        <activity android:name=".MultimediaDemo.CVideoViewActivity" />
         <!-- MultimediaDemo end -->
 
 
@@ -259,6 +259,24 @@
         <activity android:name=".SensorDemo.CAlsActivity" />
         <activity android:name=".SensorDemo.CAccelActivity" />
         <!-- SensorDemo end -->
+
+
+        <!-- ServiceDemo start -->
+        <activity android:name=".ServiceDemo.ServiceDemoActivity" />
+        <activity android:name=".ServiceDemo.CAndroidThreadActivity" />
+        <activity android:name=".ServiceDemo.CAsyncTaskActivity" />
+        <activity android:name=".ServiceDemo.CServiceTestActivity" />
+        <!-- 服务 -->
+        <service android:name=".ServiceDemo.CServiceTest_MyService" />
+        <service android:name=".ServiceDemo.CServiceTest_MyIntentService" />
+
+        <activity android:name=".ServiceDemo.CServiceLifeCycleActivity" />
+
+        <activity android:name=".ServiceDemo.CAlarmServiceActivity"></activity>
+        <service android:name=".ServiceDemo.CAlarmService_LongRunningService"/>
+        <receiver android:name=".ServiceDemo.CAlarmService_AlarmReceiver"/>
+
+        <!-- ServiceDemo end -->
 
 
         <!-- StatusBarDemo start -->
