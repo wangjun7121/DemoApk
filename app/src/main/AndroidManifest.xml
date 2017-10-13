@@ -64,7 +64,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <!--定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- ************************************ 相关权限 *********************************** -->
     <application
         android:allowBackup="true"
@@ -219,6 +220,10 @@
         <activity android:name=".ListViewDemo.CUIChatActivity" />
         <!-- ListViewDemo end -->
 
+        <!-- LocationDemo start -->
+        <activity android:name=".LocationDemo.LocationDemoActivity" />
+        <activity android:name=".LocationDemo.CLocationManagerActivity"></activity>
+        <!-- LocationDemo end -->
 
         <!-- MenuDemo start -->
         <activity android:name=".MenuDemo.MenuDemoActivity" />
@@ -308,7 +313,7 @@
         <activity android:name=".WebDemo.CHttpClientActivity" />
         <activity android:name=".WebDemo.CXMLAnalysisActivity" />
         <activity android:name=".WebDemo.CJSONObjectActivity" />
-        <activity android:name=".WebDemo.CGSONActivity"></activity>
+        <activity android:name=".WebDemo.CGSONActivity" />
         <!-- WebDemo end -->
 
 
