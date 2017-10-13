@@ -52,6 +52,17 @@ public class WebDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testXMLAnalysisBtn;
+        testXMLAnalysisBtn = (Button) findViewById(R.id.testXMLAnalysisBtn);
+        testXMLAnalysisBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WebDemoActivity.this, CXMLAnalysisActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

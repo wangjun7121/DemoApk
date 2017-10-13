@@ -27,4 +27,11 @@
         android:textAllCaps="false"
         android:text="HttpClient 应用" />
 
+    <Button
+        android:id="@+id/testXMLAnalysisBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="XML 解析：Dom/Sax/Pull" />
+
 </LinearLayout>

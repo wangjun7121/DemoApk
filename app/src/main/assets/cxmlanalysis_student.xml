@@ -1,0 +1,23 @@
+<!--1. assets 目录的位置问题-->
+    <!--在 Eclispe 中，这个目录的位置在 res/ 下面；-->
+    <!--在 Android Studio 中，这个assets目录必须放在跟 java 和 res 同级目录下；-->
+
+<!--2. 资源读取-->
+    <!-- InputStream input = getAssets().open("pic.jpg"); -->
+    <!-- context.getClass().getClassLoader().getResourceAsStream("assets/"+资源名); -->
+
+<students>
+    <student>
+        <name sex="man">小明</name>
+        <nickName>明明</nickName>
+    </student>
+    <student>
+        <name sex="woman">小红</name>
+        <nickName>红红</nickName>
+    </student>
+    <student>
+        <name sex="man">小亮</name>
+        <nickName>亮亮</nickName>
+    </student>
+</students>
+
