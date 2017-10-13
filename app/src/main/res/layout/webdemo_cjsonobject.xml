@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/readJsioBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JSONObject 解析 JSON" />
+
+    <Button
+        android:id="@+id/writeJsioBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JSONObject 创建 JSON" />
+
+
+
+    <TextView
+        android:id="@+id/readJsonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/writeJsonText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

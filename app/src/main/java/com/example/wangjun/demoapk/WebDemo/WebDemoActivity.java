@@ -7,9 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.wangjun.demoapk.ActivityDemo.ActivityDemoActivity;
-import com.example.wangjun.demoapk.ActivityDemo.CActivityLaunchModeActivity;
-import com.example.wangjun.demoapk.ActivityDemo.CActivityLifeCycleActivity;
 import com.example.wangjun.demoapk.R;
 
 public class WebDemoActivity extends AppCompatActivity {
@@ -63,6 +60,16 @@ public class WebDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testJSONObjectBtn;
+        testJSONObjectBtn = (Button) findViewById(R.id.testJSONObjectBtn);
+        testJSONObjectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WebDemoActivity.this, CJSONObjectActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

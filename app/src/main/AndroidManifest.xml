@@ -306,7 +306,8 @@
         <activity android:name=".WebDemo.CWebViewActivity" />
         <activity android:name=".WebDemo.CHttpURLConnectionTestActivity" />
         <activity android:name=".WebDemo.CHttpClientActivity" />
-        <activity android:name=".WebDemo.CXMLAnalysisActivity"></activity>
+        <activity android:name=".WebDemo.CXMLAnalysisActivity" />
+        <activity android:name=".WebDemo.CJSONObjectActivity"></activity>
         <!-- WebDemo end -->
 
 

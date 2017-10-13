@@ -34,4 +34,11 @@
         android:textAllCaps="false"
         android:text="XML 解析：Dom/Sax/Pull" />
 
+    <Button
+        android:id="@+id/testJSONObjectBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="JSON 解析：JSONObject" />
+
 </LinearLayout>

@@ -82,7 +82,7 @@ public class CXMLAnalysisActivity_XMLUtils {
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     /**
-     * SAX是一个解析速度快并且占用内存少的xml解析器，SAX解析XML文件采用的是事件驱动，它并不需要解析完整个文档，而是按内容顺序解析文档的过程
+     * SAX 是一个解析速度快并且占用内存少的 xml 解析器，SAX解析XML文件采用的是事件驱动，它并不需要解析完整个文档，而是按内容顺序解析文档的过程
      */
     public List<CXMLAnalysisActivity_Student> sax2xml(InputStream is) throws Exception {
         SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -206,8 +206,25 @@ public class CXMLAnalysisActivity_XMLUtils {
         int type = parser.getEventType();
         //无限判断文件类型进行读取
         while (type != XmlPullParser.END_DOCUMENT) {
+//      解析的 XML 格式：
+//            <students>
+//                <student>
+//                    <name sex="man">小明</name>
+//                    <nickName>明明</nickName>
+//                </student>
+//                <student>
+//                    <name sex="woman">小红</name>
+//                    <nickName>红红</nickName>
+//                </student>
+//                <student>
+//                    <name sex="man">小亮</name>
+//                    <nickName>亮亮</nickName>
+//                </student>
+//            </students>
+
+
             switch (type) {
-                //开始标签
+                //开始标签 // 开始解析某个结点
                 case XmlPullParser.START_TAG:
                     if ("students".equals(parser.getName())) {
                         list = new ArrayList<>();
@@ -226,7 +243,7 @@ public class CXMLAnalysisActivity_XMLUtils {
                         student.setNickName(nickName);
                     }
                     break;
-                //结束标签
+                //结束标签 // 完成解析某个结点
                 case XmlPullParser.END_TAG:
                     if ("student".equals(parser.getName())) {
                         list.add(student);
@@ -240,6 +257,8 @@ public class CXMLAnalysisActivity_XMLUtils {
     }
 
     /**
-     * SAX和Pull的区别：SAX解析器的工作方式是自动将事件推入事件处理器进行处理，因此你不能控制事件的处理主动结束；而Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。
+     * SAX和Pull的区别：
+     *      SAX解析器的工作方式是自动将事件推入事件处理器进行处理，因此你不能控制事件的处理主动结束；
+     *      Pull解析器的工作方式为允许你的应用程序代码主动从解析器中获取事件，正因为是主动获取事件，因此可以在满足了需要的条件后不再获取事件，结束解析。
      */
 }
