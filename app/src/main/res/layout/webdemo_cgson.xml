@@ -7,13 +7,13 @@
         android:id="@+id/readJsonBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="JSONObject 解析 JSON" />
+        android:text="GSON 解析 JSON" />
 
     <Button
         android:id="@+id/writeJsonBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="JSONObject 创建 JSON" />
+        android:text="GSON 创建 JSON" />
 
 
 

@@ -23,7 +23,7 @@ public class CJSONObjectActivity extends AppCompatActivity {
         readText = (TextView) findViewById(R.id.readJsonText);
         writeText = (TextView) findViewById(R.id.writeJsonText);
         /*读取Json数据*/
-        findViewById(R.id.readJsioBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.readJsonBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*获取到assets文件下的 cjsonanalysis.json文件的数据，并以输出流形式返回。*/
@@ -60,7 +60,7 @@ public class CJSONObjectActivity extends AppCompatActivity {
         });
 
          /*创建Json数据并显示*/
-        findViewById(R.id.writeJsioBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.writeJsonBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {

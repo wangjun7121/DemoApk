@@ -41,4 +41,12 @@
         android:textAllCaps="false"
         android:text="JSON 解析：JSONObject" />
 
+    <Button
+        android:id="@+id/testGSONBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="JSON 解析：GSON" />
+
+
 </LinearLayout>

@@ -71,5 +71,16 @@ public class WebDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testGSONBtn;
+        testGSONBtn = (Button) findViewById(R.id.testGSONBtn);
+        testGSONBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                Intent intent = new Intent(WebDemoActivity.this, CGSONActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
