@@ -3,6 +3,8 @@ package com.example.wangjun.demoapk;
 import android.app.Application;
 import android.content.Context;
 
+import com.example.wangjun.demoapk.Tools.LogUtil;
+
 /**
  * Created by wangjun on 2017/10/16.
  */
@@ -26,6 +28,7 @@ public class AppContext extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
+        LogUtil.d("Hello World\n");
     }
 
     public static Context getContext() {
