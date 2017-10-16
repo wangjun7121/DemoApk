@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
+// 工具类：用于访问指定传入的网址，然后调用接口函数进行处理
 public class HttpUtil {
 	
 	public static void sendHttpRequest(final String address,

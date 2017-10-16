@@ -1,0 +1,27 @@
+#Internal package file, do not edit.
+#Mon Oct 16 20:45:50 CST 2017
+2.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+5.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_launcher.png
+5.set=ANDROID_RESOURCE
+3.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+6.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\main.xml
+2.set=ANDROID_RESOURCE
+4.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+7.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+7.set=ANDROID_RESOURCE
+count=8
+0.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\refresh.png
+5.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+4.set=ANDROID_RESOURCE
+6.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+1.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+1.set=ANDROID_RESOURCE
+7.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+2.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\weather_layout.xml
+6.set=ANDROID_RESOURCE
+0.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+3.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\home.png
+3.set=ANDROID_RESOURCE
+1.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+4.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\choose_area.xml
+0.set=ANDROID_RESOURCE

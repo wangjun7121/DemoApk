@@ -5,17 +5,18 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
+// 仅是创建了三个数据库
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	
 	/**
-	 *  Province表建表语句
+	 *  Province 表建表语句
 	 */
 	public static final String CREATE_PROVINCE = "create table Province ("
 				+ "id integer primary key autoincrement, " 
 				+ "province_name text, "
 				+ "province_code text)";
 	/**
-	 *  City表建表语句
+	 *  City 表建表语句
 	 */
 	public static final String CREATE_CITY = "create table City ("
 				+ "id integer primary key autoincrement, " 
@@ -23,7 +24,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 				+ "city_code text, " 
 				+ "province_id integer)";
 	/**
-	 *  County表建表语句
+	 *  County 表建表语句
 	 */
 	public static final String CREATE_COUNTY = "create table County ("
 				+ "id integer primary key autoincrement, " 

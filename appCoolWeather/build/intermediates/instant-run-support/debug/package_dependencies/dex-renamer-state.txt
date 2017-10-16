@@ -1,0 +1,22 @@
+#Mon Oct 16 20:45:54 CST 2017
+renamed.6=classes2.dex
+renamed.5=classes.dex
+renamed.4=classes3.dex
+renamed.3=classes4.dex
+renamed.2=classes5.dex
+renamed.1=classes6.dex
+renamed.0=classes7.dex
+base.6=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1e33b7d50320b4cd394afaef88fe118478886ac2
+base.5=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1b98ec230c7c9698608518a3ff87453512db0b24
+base.4=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_211ca173c318909889bbe03267f8c459c5612652
+base.3=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a969fb6557983dd447e5e121b9be1c0a3378a3e
+base.2=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_844d471e95234e3bf5f7dd9fdf7609ad4429ef9c
+base.1=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_a867f2ee8a82caed2f0cef6a23ccd3392fd0ca97
+base.0=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-25.3.1_0135cb25bfd50bdc255f6e12a22137a9e5410d11
+file.6=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1e33b7d50320b4cd394afaef88fe118478886ac2\\classes.dex
+file.5=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_1b98ec230c7c9698608518a3ff87453512db0b24\\classes.dex
+file.4=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_211ca173c318909889bbe03267f8c459c5612652\\classes.dex
+file.3=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_3a969fb6557983dd447e5e121b9be1c0a3378a3e\\classes.dex
+file.2=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_844d471e95234e3bf5f7dd9fdf7609ad4429ef9c\\classes.dex
+file.1=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_a867f2ee8a82caed2f0cef6a23ccd3392fd0ca97\\classes.dex
+file.0=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-25.3.1_0135cb25bfd50bdc255f6e12a22137a9e5410d11\\classes.dex

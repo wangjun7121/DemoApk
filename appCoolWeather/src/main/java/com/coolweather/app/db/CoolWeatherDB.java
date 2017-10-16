@@ -12,6 +12,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+
+// 使用了单实例模式：
+//      作数据库中存取三个数据库
 public class CoolWeatherDB {
 
 	/**
@@ -48,7 +51,7 @@ public class CoolWeatherDB {
 	}
 
 	/**
-	 * 将Province实例存储到数据库。
+	 * 将 Province 实例存储到数据库。
 	 */
 	public void saveProvince(Province province) {
 		if (province != null) {
@@ -64,16 +67,15 @@ public class CoolWeatherDB {
 	 */
 	public List<Province> loadProvinces() {
 		List<Province> list = new ArrayList<Province>();
-		Cursor cursor = db
-				.query("Province", null, null, null, null, null, null);
+		Cursor cursor = db.query("Province", null, null, null, null, null, null);
+
+        // 遍历数据库
 		if (cursor.moveToFirst()) {
 			do {
 				Province province = new Province();
 				province.setId(cursor.getInt(cursor.getColumnIndex("id")));
-				province.setProvinceName(cursor.getString(cursor
-						.getColumnIndex("province_name")));
-				province.setProvinceCode(cursor.getString(cursor
-						.getColumnIndex("province_code")));
+				province.setProvinceName(cursor.getString(cursor.getColumnIndex("province_name")));
+				province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_code")));
 				list.add(province);
 			} while (cursor.moveToNext());
 		}
@@ -81,7 +83,7 @@ public class CoolWeatherDB {
 	}
 
 	/**
-	 * 将City实例存储到数据库。
+	 * 将 City 实例存储到数据库。
 	 */
 	public void saveCity(City city) {
 		if (city != null) {

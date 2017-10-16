@@ -1,0 +1,33 @@
+#Internal package file, do not edit.
+#Mon Oct 16 20:45:56 CST 2017
+2.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+5.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xhdpi-v4\\ic_launcher.png
+5.set=ANDROID_RESOURCE
+3.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+6.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2d08867b6f46c2f2efb93973dc39d536519c165e\\classes.dex
+2.set=ANDROID_RESOURCE
+4.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+7.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa30d6a1e5531fa33a69b44258399f89b30524e\\classes.dex
+7.set=DEX
+count=10
+0.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\refresh.png
+5.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+8.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\main.xml
+4.set=ANDROID_RESOURCE
+6.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2d08867b6f46c2f2efb93973dc39d536519c165e
+1.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+9.set=ANDROID_RESOURCE
+9.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+1.set=ANDROID_RESOURCE
+7.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa30d6a1e5531fa33a69b44258399f89b30524e
+2.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\weather_layout.xml
+6.set=DEX
+0.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+8.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+3.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\home.png
+3.set=ANDROID_RESOURCE
+1.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+9.base=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_
+4.file=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\choose_area.xml
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE

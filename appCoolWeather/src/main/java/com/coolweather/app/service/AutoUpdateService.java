@@ -22,14 +22,20 @@ public class AutoUpdateService extends Service {
 		return null;
 	}
 
+	// 这里创建一个定时器，然后 8 小时后，再执行此服务
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
+
+        // 创建一个子线程执行 updateWeather() 函数，更新天气信息
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				updateWeather();
 			}
 		}).start();
+
+
+        // 创建一个定时器，到期执行广播，再打开此服务，实现循环
 		AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
 //		int anHour = 8 * 60 * 60 * 1000; // 这是8小时的毫秒数
 		int anHour = 3 * 1000; // 这是8小时的毫秒数
@@ -41,13 +47,15 @@ public class AutoUpdateService extends Service {
 	}
 	
 	/**
-	 * 更新天气信息。
+	 * 更新天气信息，更新到 SharedPreferences 中
 	 */
 	private void updateWeather() {
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		String weatherCode = prefs.getString("weather_code", "");
 		String address = "http://www.weather.com.cn/data/cityinfo/" + weatherCode + ".html";
 		HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
+
+            // 当天气更新完之后，调用工具类保存到 SharedPreferences 中
 			@Override
 			public void onFinish(String response) {
 				Log.d("TAG", response);

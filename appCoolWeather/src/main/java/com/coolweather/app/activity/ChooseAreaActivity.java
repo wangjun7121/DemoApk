@@ -84,13 +84,19 @@ public class ChooseAreaActivity extends Activity {
 		setContentView(R.layout.choose_area);
 		listView = (ListView) findViewById(R.id.list_view);
 		titleText = (TextView) findViewById(R.id.title_text);
+
+
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dataList);
 		listView.setAdapter(adapter);
 		coolWeatherDB = CoolWeatherDB.getInstance(this);
+
+        // 选项点击响应
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View view, int index,
 					long arg3) {
+
+                // 判断当前的显示等级：
 				if (currentLevel == LEVEL_PROVINCE) {
 					selectedProvince = provinceList.get(index);
 					queryCities();
@@ -98,6 +104,7 @@ public class ChooseAreaActivity extends Activity {
 					selectedCity = cityList.get(index);
 					queryCounties();
 				} else if (currentLevel == LEVEL_COUNTY) {
+                    // 如果已经到县一级，则请求天气数据
 					String countyCode = countyList.get(index).getCountyCode();
 					Intent intent = new Intent(ChooseAreaActivity.this, WeatherActivity.class);
 					intent.putExtra("county_code", countyCode);
@@ -106,6 +113,8 @@ public class ChooseAreaActivity extends Activity {
 				}
 			}
 		});
+
+
 		queryProvinces();  // 加载省级数据
 	}
 
@@ -114,6 +123,8 @@ public class ChooseAreaActivity extends Activity {
 	 */
 	private void queryProvinces() {
 		provinceList = coolWeatherDB.loadProvinces();
+
+        // 如果之前已经请求过了，则获取数据库中内容
 		if (provinceList.size() > 0) {
 			dataList.clear();
 			for (Province province : provinceList) {
@@ -176,23 +187,25 @@ public class ChooseAreaActivity extends Activity {
 		} else {
 			address = "http://www.weather.com.cn/data/list3/city.xml";
 		}
+
+		// 显示进度条
 		showProgressDialog();
+
+        // 从服务器上查询省市数据
 		HttpUtil.sendHttpRequest(address, new HttpCallbackListener() {
 			@Override
 			public void onFinish(String response) {
 				boolean result = false;
 				if ("province".equals(type)) {
-					result = Utility.handleProvincesResponse(coolWeatherDB,
-							response);
+					result = Utility.handleProvincesResponse(coolWeatherDB,response);
 				} else if ("city".equals(type)) {
-					result = Utility.handleCitiesResponse(coolWeatherDB,
-							response, selectedProvince.getId());
+					result = Utility.handleCitiesResponse(coolWeatherDB,response, selectedProvince.getId());
 				} else if ("county".equals(type)) {
-					result = Utility.handleCountiesResponse(coolWeatherDB,
-							response, selectedCity.getId());
+					result = Utility.handleCountiesResponse(coolWeatherDB,response, selectedCity.getId());
 				}
 				if (result) {
-					// 通过runOnUiThread()方法回到主线程处理逻辑
+
+					// 通过 runOnUiThread() 方法回到主线程处理逻辑
 					runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
@@ -216,8 +229,7 @@ public class ChooseAreaActivity extends Activity {
 					@Override
 					public void run() {
 						closeProgressDialog();
-						Toast.makeText(ChooseAreaActivity.this,
-										"加载失败", Toast.LENGTH_SHORT).show();
+						Toast.makeText(ChooseAreaActivity.this,"加载失败", Toast.LENGTH_SHORT).show();
 					}
 				});
 			}
@@ -246,7 +258,7 @@ public class ChooseAreaActivity extends Activity {
 	}
 	
 	/**
-	 * 捕获Back按键，根据当前的级别来判断，此时应该返回市列表、省列表、还是直接退出。
+	 * 捕获 Back 按键，根据当前的级别来判断，此时应该返回市列表、省列表、还是直接退出。
 	 */
 	@Override
 	public void onBackPressed() {
@@ -255,6 +267,7 @@ public class ChooseAreaActivity extends Activity {
 		} else if (currentLevel == LEVEL_CITY) {
 			queryProvinces();
 		} else {
+            // 跳转到天气显示界面
 			if (isFromWeatherActivity) {
 				Intent intent = new Intent(this, WeatherActivity.class);
 				startActivity(intent);

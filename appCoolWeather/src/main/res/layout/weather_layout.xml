@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    // 第一行显示：
+    //     主页按钮     省/市/县 名       刷新按钮
+    //     .......................................
+    //      天气显示
+    //     .......................................
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"

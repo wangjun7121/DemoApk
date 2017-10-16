@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\refresh.png",
+        "source": "E:\\AS_Project\\DemoApk\\appCoolWeather\\src\\main\\res\\drawable-hdpi\\refresh.png"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\home.png",
+        "source": "E:\\AS_Project\\DemoApk\\appCoolWeather\\src\\main\\res\\drawable-hdpi\\home.png"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_launcher.png",
+        "source": "E:\\AS_Project\\DemoApk\\appCoolWeather\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    }
+]
