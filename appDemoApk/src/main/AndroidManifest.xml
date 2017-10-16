@@ -64,10 +64,12 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--定位权限-->
+    <!-- 定位权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <!-- ************************************ 相关权限 *********************************** -->
     <application
+        android:name=".AppContext"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -220,10 +222,12 @@
         <activity android:name=".ListViewDemo.CUIChatActivity" />
         <!-- ListViewDemo end -->
 
+
         <!-- LocationDemo start -->
         <activity android:name=".LocationDemo.LocationDemoActivity" />
-        <activity android:name=".LocationDemo.CLocationManagerActivity"></activity>
+        <activity android:name=".LocationDemo.CLocationManagerActivity" />
         <!-- LocationDemo end -->
+
 
         <!-- MenuDemo start -->
         <activity android:name=".MenuDemo.MenuDemoActivity" />
@@ -316,7 +320,7 @@
         <activity android:name=".WebDemo.CGSONActivity" />
         <!-- WebDemo end -->
 
-
+        <activity android:name=".SensorDemo.CCompassActivity"></activity>
     </application>
 
 </manifest>

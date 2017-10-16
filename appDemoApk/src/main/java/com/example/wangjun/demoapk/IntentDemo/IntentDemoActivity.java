@@ -22,9 +22,9 @@ public class IntentDemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intentdemo);
 
-        Button testIntent1Btn;
-        testIntent1Btn = (Button) findViewById(R.id.testIntent1Btn);
-        testIntent1Btn.setOnClickListener(new View.OnClickListener() {
+        Button testImplicitIntentBtn;
+        testImplicitIntentBtn = (Button) findViewById(R.id.testImplicitIntentBtn);
+        testImplicitIntentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
@@ -34,9 +34,9 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
-        Button testIntent2Btn;
-        testIntent2Btn = (Button) findViewById(R.id.testIntent2Btn);
-        testIntent2Btn.setOnClickListener(new View.OnClickListener() {
+        Button testIntetBrowserBtn;
+        testIntetBrowserBtn = (Button) findViewById(R.id.testIntetBrowserBtn);
+        testIntetBrowserBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
@@ -46,9 +46,9 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
-        Button testIntent3Btn;
-        testIntent3Btn = (Button) findViewById(R.id.testIntent3Btn);
-        testIntent3Btn.setOnClickListener(new View.OnClickListener() {
+        Button testIntentCallBtn;
+        testIntentCallBtn = (Button) findViewById(R.id.testIntentCallBtn);
+        testIntentCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");
@@ -58,9 +58,9 @@ public class IntentDemoActivity extends AppCompatActivity {
             }
         });
 
-        Button testIntent4Btn;
-        testIntent4Btn = (Button) findViewById(R.id.testIntent4Btn);
-        testIntent4Btn.setOnClickListener(new View.OnClickListener() {
+        Button testIntentArgsBtn;
+        testIntentArgsBtn = (Button) findViewById(R.id.testIntentArgsBtn);
+        testIntentArgsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v(sLogcatTAG, "testArrayAdapterBtn");

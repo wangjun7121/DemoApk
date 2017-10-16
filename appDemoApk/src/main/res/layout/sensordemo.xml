@@ -19,4 +19,11 @@
     android:textAllCaps="false"
     android:text="@string/SensorDemo_testAccel_Btn" />
 
+    <Button
+        android:id="@+id/testCompassBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="方向传感器" />
+
 </LinearLayout>

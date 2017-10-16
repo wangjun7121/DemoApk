@@ -40,7 +40,16 @@ public class SensorDemoActivity extends AppCompatActivity {
         });
 
 
-
+        Button testCompassBtn;
+        testCompassBtn = (Button) findViewById(R.id.testCompassBtn);
+        testCompassBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testAccelBtn");
+                Intent intent = new Intent(SensorDemoActivity.this, CCompassActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
