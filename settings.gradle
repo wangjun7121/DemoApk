@@ -1,1 +1,1 @@
-include ':appDemoApk', 'appBaiduLocDemo'
+include ':appDemoApk', 'appBaiduLocDemo', 'appCoolWeather'

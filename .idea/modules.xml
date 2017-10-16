@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DemoApk.iml" filepath="$PROJECT_DIR$/DemoApk.iml" />
       <module fileurl="file://$PROJECT_DIR$/appBaiduLocDemo/appBaiduLocDemo.iml" filepath="$PROJECT_DIR$/appBaiduLocDemo/appBaiduLocDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appCoolWeather/appCoolWeather.iml" filepath="$PROJECT_DIR$/appCoolWeather/appCoolWeather.iml" />
       <module fileurl="file://$PROJECT_DIR$/appDemoApk/appDemoApk.iml" filepath="$PROJECT_DIR$/appDemoApk/appDemoApk.iml" />
     </modules>
   </component>

@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/appBaiduLocDemo" />
+            <option value="$PROJECT_DIR$/appCoolWeather" />
             <option value="$PROJECT_DIR$/appDemoApk" />
           </set>
         </option>
