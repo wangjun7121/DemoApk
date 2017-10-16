@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\locationfilter.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\locationfilter.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\locationconfig.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\locationconfig.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\location.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\location.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_location.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\activity_location.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\hotwifi.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\hotwifi.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\locationalarm.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\locationalarm.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\autonotifyconfig.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\autonotifyconfig.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\function_list.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\function_list.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\quest_activity.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\quest_activity.xml"
+    },
+    {
+        "merged": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\res\\merged\\debug\\layout\\notify.xml",
+        "source": "E:\\AS_Project\\DemoApk\\appBaiduLocDemo\\src\\main\\res\\layout\\notify.xml"
+    }
+]

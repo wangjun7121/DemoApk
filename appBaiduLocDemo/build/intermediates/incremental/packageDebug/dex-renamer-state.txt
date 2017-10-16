@@ -1,0 +1,7 @@
+#Mon Oct 16 09:12:46 CST 2017
+base.0=E\:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a7e341e1bfd44e36b6d383b1301202f88519d214
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=E\:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_daf06eeb442b30f258c65fd7483f01651d0864c5\\classes.dex
+base.1=E\:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_daf06eeb442b30f258c65fd7483f01651d0864c5
+file.0=E\:\\AS_Project\\DemoApk\\appBaiduLocDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a7e341e1bfd44e36b6d383b1301202f88519d214\\classes.dex
