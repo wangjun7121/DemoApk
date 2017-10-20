@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             "MultimediaDemo",
             "SensorDemo",
             "ServiceDemo",
+            "SoftwareDemo",
             "StatusBarDemo",
             "WebDemo",
             "WidgetDemo"
