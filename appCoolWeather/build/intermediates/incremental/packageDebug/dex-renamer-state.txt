@@ -1,7 +1,0 @@
-#Mon Oct 16 20:45:56 CST 2017
-base.0=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2d08867b6f46c2f2efb93973dc39d536519c165e
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa30d6a1e5531fa33a69b44258399f89b30524e\\classes.dex
-base.1=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_0aa30d6a1e5531fa33a69b44258399f89b30524e
-file.0=E\:\\AS_Project\\DemoApk\\appCoolWeather\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_2d08867b6f46c2f2efb93973dc39d536519c165e\\classes.dex
