@@ -1,5 +1,8 @@
 package com.example.wangjun.demoapk.HelloWorld;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -19,5 +22,10 @@ public class HelloWorldActivity extends AppCompatActivity {
         //    getSupportActionBar().hide();
         //}
         setContentView(R.layout.helloworld);
+
+
+
+
+
     }
 }

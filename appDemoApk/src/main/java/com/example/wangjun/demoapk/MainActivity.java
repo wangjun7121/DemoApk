@@ -1,6 +1,8 @@
 package com.example.wangjun.demoapk;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.logging.Logger;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             "BroadcastsDemo",
             "ContentDemo",
             "DataPersistenceDemo",
+            "HardwareDemo",
             "HelloWorld",
             "IntentDemo",
             "ListViewDemo",
@@ -45,16 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void expressItemClick(int position) throws ClassNotFoundException {
-        Class<?> clTargetActivity ;
-        String sTargetActivity ;
+        Class<?> clTargetActivity;
+        String sTargetActivity;
 
-        sTargetActivity = "com.example.wangjun.demoapk."+saDemo[position]+"."+saDemo[position]+"Activity";
-        Log.d(sLogcatTAG,sTargetActivity);
+        sTargetActivity = "com.example.wangjun.demoapk." + saDemo[position] + "." + saDemo[position] + "Activity";
+        Log.d(sLogcatTAG, sTargetActivity);
 
         // 使用反射从类路径获得类 class 对象
         clTargetActivity = Class.forName(sTargetActivity);
         //Intent intent = new Intent(MainActivity.this,HelloWorldActivity.class);
-        Intent intent = new Intent(MainActivity.this,(Class)clTargetActivity);
+        Intent intent = new Intent(MainActivity.this, (Class) clTargetActivity);
         startActivity(intent);
         //finish();//看你需不需要返回当前界面，如果点返回需要返回到当前界面，就不用这个
     }
@@ -78,11 +83,9 @@ public class MainActivity extends AppCompatActivity {
         // 设置 ListView 点击事件响应
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-            {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(MainActivity.this, "Current Item = "+id,Toast.LENGTH_SHORT).show();
-                switch (parent.getId())
-                {
+                switch (parent.getId()) {
                     case R.id.list_view:
                         try {
                             expressItemClick(position);//position 代表你点的哪一个
@@ -96,9 +99,53 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        acquireWakeLock();
+
+    }
+
+    PowerManager.WakeLock wakeLock;
+    private void acquireWakeLock() {
+
+        if (wakeLock == null) {
+
+            PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+            wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, this.getClass().getCanonicalName());
+            wakeLock.acquire();
+        }
+
     }
 
 
+    private void releaseWakeLock() {
+        if (wakeLock != null && wakeLock.isHeld()) {
+            wakeLock.release();
+            wakeLock = null;
+        }
 
+    }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        synchronized(this) {
+            releaseWakeLock();
+        }
+    }
+
+    //    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        synchronized(this) {
+//            releaseWakeLock();
+//
+//        }
+//    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        //获取锁，保持屏幕亮度
+//        acquireWakeLock();
+//    }
 }

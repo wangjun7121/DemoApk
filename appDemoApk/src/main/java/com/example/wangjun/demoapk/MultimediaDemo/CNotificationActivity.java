@@ -1,5 +1,7 @@
 package com.example.wangjun.demoapk.MultimediaDemo;
 
+import android.graphics.Color;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -44,8 +46,58 @@ public class CNotificationActivity extends AppCompatActivity {
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         //然后调用NotificationManager.notify()向系统转交
         manager.notify(NO_1, n);
+
+        /////////////////////////////////////////////////////////////////////////////////////////////////////
+        // 可用的新方法
+//        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//        Notification.Builder builder = new Notification.Builder(this);
+//        builder.setContentInfo("补充内容");
+//        builder.setContentText("主内容区");
+//        builder.setContentTitle("通知标题");
+//        builder.setSmallIcon(R.mipmap.ic_launcher);
+//        builder.setTicker("新消息");
+//        builder.setAutoCancel(true);
+//
+//        builder.setWhen(System.currentTimeMillis());//设置时间，设置为系统当前的时间
+//
+//        Notification notification = builder.build();
+//        /**
+//         * vibrate属性是一个长整型的数组，用于设置手机静止和振动的时长，以毫秒为单位。
+//         * 参数中下标为0的值表示手机静止的时长，下标为1的值表示手机振动的时长， 下标为2的值又表示手机静止的时长，以此类推。
+//         */
+//        long[] vibrates = { 0, 1000, 1000, 1000 };
+//        notification.vibrate = vibrates;
+//
+//        /**
+//         * 手机处于锁屏状态时， LED灯就会不停地闪烁， 提醒用户去查看手机,下面是绿色的灯光一 闪一闪的效果
+//         */
+//        notification.ledARGB = Color.RED;// 控制 LED 灯的颜色，一般有红绿蓝三种颜色可选
+//        notification.ledOnMS = 1000;// 指定 LED 灯亮起的时长，以毫秒为单位
+//        notification.ledOffMS = 1000;// 指定 LED 灯暗去的时长，也是以毫秒为单位
+//        notification.flags = Notification.FLAG_SHOW_LIGHTS;// 指定通知的一些行为，其中就包括显示
+//        // LED 灯这一选项
+//
+//
+//
+////                Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+////                notification.sound = uri;
+////                notification.defaults = Notification.DEFAULT_ALL;
+//        manager.notify(1, notification);
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     }
+
+
+
 }
+
+
+
+
+
+
+
+
 //
 //public class CNotificationActivity extends Activity {
 //    private static final int NOTIFICATION_FLAG = 1;
