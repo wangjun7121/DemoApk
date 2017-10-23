@@ -301,18 +301,25 @@
 
         <!-- ServiceDemo end -->
 
+
         <!-- SoftwareDemo start -->
         <activity android:name=".SoftwareDemo.SoftwareDemoActivity" />
-        <activity android:name=".SoftwareDemo.CDevicePolicyManagerActivity"></activity>
-        <receiver android:name=".SoftwareDemo.CDevicePolicyManager_MyAdmin" >
-            <meta-data android:name="android.app.device_admin"
-                android:resource="@xml/cdevicepolicymanager_myadmin"/>
-            <intent-filter >
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
-                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED"/>
+        <activity android:name=".SoftwareDemo.CDevicePolicyManagerActivity" />
+
+        <receiver android:name=".SoftwareDemo.CDevicePolicyManager_MyAdmin">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/cdevicepolicymanager_myadmin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".SoftwareDemo.CSettingMonitorActivity"></activity>
         <!-- SoftwareDemo start -->
+
 
         <!-- StatusBarDemo start -->
         <activity android:name=".StatusBarDemo.StatusBarDemoActivity" />
@@ -342,7 +349,6 @@
         <activity android:name=".WebDemo.CJSONObjectActivity" />
         <activity android:name=".WebDemo.CGSONActivity" />
         <!-- WebDemo end -->
-
 
 
     </application>

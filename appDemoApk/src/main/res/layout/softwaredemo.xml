@@ -13,6 +13,12 @@
         android:textAllCaps="false"
         android:text="DevicePolicyManager:锁屏测试" />
 
+    <Button
+        android:id="@+id/testSettingMonitorBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Setting: 监听飞行模式" />
 
 
 </LinearLayout>

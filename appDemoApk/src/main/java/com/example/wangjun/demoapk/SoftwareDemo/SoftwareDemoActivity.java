@@ -28,5 +28,14 @@ public class SoftwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testSettingMonitorBtn;
+        testSettingMonitorBtn = (Button) findViewById(R.id.testSettingMonitorBtn);
+        testSettingMonitorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SoftwareDemoActivity.this, CSettingMonitorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
