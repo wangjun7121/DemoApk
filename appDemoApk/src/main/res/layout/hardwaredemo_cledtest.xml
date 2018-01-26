@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#ffffff">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    >
 
     <TextView
         android:id="@+id/bl_title"
@@ -19,9 +20,37 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="200dp"
         android:gravity="center_horizontal"
         android:textColor="#ff0000"
         android:text="需要灭屏情况下才起作用"/>
 
-</RelativeLayout>
+
+    <Button
+        android:id="@+id/testRed_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="红灯" />
+    <Button
+        android:id="@+id/testGreen_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="绿灯" />
+
+    <Button
+        android:id="@+id/testBlue_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="蓝灯" />
+
+    <Button
+        android:id="@+id/testAllLED_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="三色灯/振动器测试" />
+
+
+</LinearLayout>

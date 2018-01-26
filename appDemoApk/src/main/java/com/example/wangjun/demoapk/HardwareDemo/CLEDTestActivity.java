@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.wangjun.demoapk.R;
+import com.example.wangjun.demoapk.SensorDemo.CAlsActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -156,6 +159,7 @@ public class CLEDTestActivity extends AppCompatActivity {
         isOrangeSupport = true;         // 橙灯 = 红 + 绿
 
 
+
         // 发送通知
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotification = new Notification.Builder(this).
@@ -169,9 +173,46 @@ public class CLEDTestActivity extends AppCompatActivity {
         mNotification.defaults = Notification.DEFAULT_VIBRATE;
 
         flag = true;
-        handler.sendEmptyMessageDelayed(LED_ON_RED, 1000);
-        //mNotification.ledARGB = Color.RED;
-        //mNM.notify(ID_LED, mNotification);
+
+        Button testRed_btn;
+        testRed_btn = (Button) findViewById(R.id.testRed_btn);
+        testRed_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNotification.ledARGB = Color.RED;
+                mNM.notify(ID_LED, mNotification);
+            }
+        });
+
+        Button testGreen_btn;
+        testGreen_btn = (Button) findViewById(R.id.testGreen_btn);
+        testGreen_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNotification.ledARGB = Color.GREEN;
+                mNM.notify(ID_LED, mNotification);
+            }
+        });
+
+        Button testBlue_btn;
+        testBlue_btn = (Button) findViewById(R.id.testBlue_btn);
+        testBlue_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNotification.ledARGB = Color.BLUE;
+                mNM.notify(ID_LED, mNotification);
+            }
+        });
+
+        Button testAllLED_btn;
+        testAllLED_btn = (Button) findViewById(R.id.testAllLED_btn);
+        testAllLED_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handler.sendEmptyMessageDelayed(LED_ON_RED, 1000);
+            }
+        });
+
 
         // 需要获得休眠锁，防止进程休眠，有时候也不起作用。。。
         acquireWakeLock();
