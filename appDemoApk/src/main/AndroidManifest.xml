@@ -68,7 +68,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- 休眠锁 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+    <!--<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>-->
     <!-- 电源管理 -->
     <!-- <uses-permission android:name="android.permission.DEVICE_POWER" /> -->
     <!-- ************************************ 相关权限 *********************************** -->
@@ -270,6 +274,7 @@
         </provider>
 
         <activity android:name=".MultimediaDemo.CMediaPlayActivity" />
+        <activity android:name=".MultimediaDemo.CAudioTrackRecordActivity"/>
         <activity android:name=".MultimediaDemo.CExploerActivity" />
         <activity android:name=".MultimediaDemo.CVideoViewActivity" />
         <!-- MultimediaDemo end -->
@@ -317,7 +322,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SoftwareDemo.CSettingMonitorActivity"></activity>
+        <activity android:name=".SoftwareDemo.CSettingMonitorActivity" />
         <!-- SoftwareDemo start -->
 
 

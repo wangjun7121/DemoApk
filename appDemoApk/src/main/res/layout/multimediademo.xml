@@ -65,6 +65,14 @@
         android:textAllCaps="false"
         android:text="Audio: MediaPlay 播放音频" />
 
+    <Button
+        android:id="@+id/testAutioTrackBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Audio:AutioTrack/AudioRecord 测试" />
+
+
     <!--********************************** Explore ******************************************-->
     <Button
         android:id="@+id/testExploreBtn"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10px"
+        android:orientation="vertical"
+        android:padding="1px" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/audio_act_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Record(Off)" />
+
+            <Button
+                android:id="@+id/audio_act_play"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Play(Off)" />
+
+            <Button
+                android:id="@+id/audio_act_read_buffer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Read buffer" />
+
+            <TextView
+                android:id="@+id/audio_act_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

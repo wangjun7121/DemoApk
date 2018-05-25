@@ -116,6 +116,17 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testAutioTrackBtn;
+        testAutioTrackBtn = (Button) findViewById(R.id.testAutioTrackBtn);
+        testAutioTrackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testAutioTrackBtn");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CAudioTrackRecordActivity.class);
+                startActivity(intent);
+            }
+        });
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Explore: 文件浏览器
         Button testExploreBtn;
