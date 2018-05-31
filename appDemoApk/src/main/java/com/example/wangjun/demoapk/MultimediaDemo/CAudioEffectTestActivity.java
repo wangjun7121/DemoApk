@@ -60,14 +60,22 @@ public class CAudioEffectTestActivity extends Activity
         // 创建MediaPlayer对象,并添加音频
         // 音频路径为  res/raw/beautiful.mp3
         mPlayer = MediaPlayer.create(this, R.raw.beautiful);
-        // 初始化示波器
+
+        ///////////////////////////////////////////////////////////
+        // 显示界面
+        // 初始化示波器: 以波形数据来更新显示
         setupVisualizer();
+
         // 初始化均衡控制器
         setupEqualizer();
+
         // 初始化重低音控制器
         setupBassBoost();
         // 初始化预设音场控制器
         setupPresetReverb();
+        ///////////////////////////////////////////////////////////
+
+
         // 开发播放音乐
         mPlayer.start();
     }
@@ -76,20 +84,27 @@ public class CAudioEffectTestActivity extends Activity
      */
     private void setupVisualizer()
     {
-        // 创建MyVisualizerView组件，用于显示波形图
-        final MyVisualizerView mVisualizerView =
-                new MyVisualizerView(this);
+        TextView eqTitle = new TextView(this);
+        eqTitle.setText("频谱：");
+        layout.addView(eqTitle);
+
+        // 创建 MyVisualizerView 组件，用于显示波形图
+        final MyVisualizerView mVisualizerView =  new MyVisualizerView(this);
         mVisualizerView.setLayoutParams(new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                (int) (120f * getResources().getDisplayMetrics().density)));
-        // 将MyVisualizerView组件添加到layout容器中
+                                        ViewGroup.LayoutParams.MATCH_PARENT,
+                                        (int) (120f * getResources().getDisplayMetrics().density)));
+
+        // 将 MyVisualizerView 组件添加到 layout 容器中
         layout.addView(mVisualizerView);
-        // 以MediaPlayer的AudioSessionId创建Visualizer
-        // 相当于设置Visualizer负责显示该MediaPlayer的音频数据
+
+        // 以 MediaPlayer 的 AudioSessionId 创建 Visualizer
+        // 相当于设置 Visualizer 负责显示该 MediaPlayer 的音频数据
         mVisualizer = new Visualizer(mPlayer.getAudioSessionId());
-        //设置需要转换的音乐内容长度，专业的说这就是采样，该采样值一般为2的指数倍，如64,128,256,512,1024。
+
+        //设置需要转换的音乐内容长度，专业的说这就是采样，该采样值一般为 2 的指数倍，如 64,128,256,512,1024。
         mVisualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
-        // 为mVisualizer设置监听器
+
+        // 为 mVisualizer 设置监听器
         /*
          * Visualizer.setDataCaptureListener(OnDataCaptureListener listener, int rate, boolean waveform, boolean fft
          *
@@ -104,19 +119,18 @@ public class CAudioEffectTestActivity extends Activity
                 {
                     //这个回调应该采集的是快速傅里叶变换有关的数据
                     @Override
-                    public void onFftDataCapture(Visualizer visualizer,
-                                                 byte[] fft, int samplingRate)
+                    public void onFftDataCapture(Visualizer visualizer, byte[] fft, int samplingRate)
                     {
                     }
                     //这个回调应该采集的是波形数据
                     @Override
-                    public void onWaveFormDataCapture(Visualizer visualizer,
-                                                      byte[] waveform, int samplingRate)
+                    public void onWaveFormDataCapture(Visualizer visualizer, byte[] waveform, int samplingRate)
                     {
-                        // 用waveform波形数据更新mVisualizerView组件
+                        // 用 waveform 波形数据更新 mVisualizerView 组件
                         mVisualizerView.updateVisualizer(waveform);
                     }
                 }, Visualizer.getMaxCaptureRate() / 2, true, false);
+
         mVisualizer.setEnabled(true);
     }
 
@@ -125,17 +139,20 @@ public class CAudioEffectTestActivity extends Activity
      */
     private void setupEqualizer()
     {
-        // 以MediaPlayer的AudioSessionId创建Equalizer
-        // 相当于设置Equalizer负责控制该MediaPlayer
+        // 以 MediaPlayer 的 AudioSessionId 创建 Equalizer
+        // 相当于设置 Equalizer 负责控制该 MediaPlayer
         mEqualizer = new Equalizer(0, mPlayer.getAudioSessionId());
+
         // 启用均衡控制效果
         mEqualizer.setEnabled(true);
         TextView eqTitle = new TextView(this);
         eqTitle.setText("均衡器：");
         layout.addView(eqTitle);
+
         // 获取均衡控制器支持最小值和最大值
         final short minEQLevel = mEqualizer.getBandLevelRange()[0];//第一个下标为最低的限度范围
         short maxEQLevel = mEqualizer.getBandLevelRange()[1];  // 第二个下标为最高的限度范围
+
         // 获取均衡控制器支持的所有频率
         short brands = mEqualizer.getNumberOfBands();
         for (short i = 0; i < brands; i++)
@@ -146,25 +163,32 @@ public class CAudioEffectTestActivity extends Activity
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
             eqTextView.setGravity(Gravity.CENTER_HORIZONTAL);
+
             // 设置该均衡控制器的频率
             eqTextView.setText((mEqualizer.getCenterFreq(i) / 1000)
                     + " Hz");
             layout.addView(eqTextView);
+
+
             // 创建一个水平排列组件的LinearLayout
             LinearLayout tmpLayout = new LinearLayout(this);
             tmpLayout.setOrientation(LinearLayout.HORIZONTAL);
+
             // 创建显示均衡控制器最小值的TextView
             TextView minDbTextView = new TextView(this);
             minDbTextView.setLayoutParams(new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
+
             // 显示均衡控制器的最小值
             minDbTextView.setText((minEQLevel / 100) + " dB");
+
             // 创建显示均衡控制器最大值的TextView
             TextView maxDbTextView = new TextView(this);
             maxDbTextView.setLayoutParams(new ViewGroup.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));
+
             // 显示均衡控制器的最大值
             maxDbTextView.setText((maxEQLevel / 100) + " dB");
             LinearLayout.LayoutParams layoutParams = new
@@ -172,13 +196,15 @@ public class CAudioEffectTestActivity extends Activity
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             layoutParams.weight = 1;
-            // 定义SeekBar做为调整工具
+
+            // 定义 SeekBar 做为调整工具
             SeekBar bar = new SeekBar(this);
             bar.setLayoutParams(layoutParams);
             bar.setMax(maxEQLevel - minEQLevel);
             bar.setProgress(mEqualizer.getBandLevel(i));
             final short brand = i;
-            // 为SeekBar的拖动事件设置事件监听器
+
+            // 为 SeekBar 的拖动事件设置事件监听器
             bar.setOnSeekBarChangeListener(new SeekBar
                     .OnSeekBarChangeListener()
             {
@@ -199,11 +225,11 @@ public class CAudioEffectTestActivity extends Activity
                 {
                 }
             });
-            // 使用水平排列组件的LinearLayout“盛装”3个组件
+            // 使用水平排列组件的 LinearLayout“盛装”3个组件
             tmpLayout.addView(minDbTextView);
             tmpLayout.addView(bar);
             tmpLayout.addView(maxDbTextView);
-            // 将水平排列组件的LinearLayout添加到myLayout容器中
+            // 将水平排列组件的 LinearLayout 添加到 myLayout 容器中
             layout.addView(tmpLayout);
         }
     }
@@ -216,17 +242,21 @@ public class CAudioEffectTestActivity extends Activity
         // 以MediaPlayer的AudioSessionId创建BassBoost
         // 相当于设置BassBoost负责控制该MediaPlayer
         mBass = new BassBoost(0, mPlayer.getAudioSessionId());
+
         // 设置启用重低音效果
         mBass.setEnabled(true);
         TextView bbTitle = new TextView(this);
         bbTitle.setText("重低音：");
         layout.addView(bbTitle);
-        // 使用SeekBar做为重低音的调整工具
+
+        // 使用 SeekBar 做为重低音的调整工具
         SeekBar bar = new SeekBar(this);
-        // 重低音的范围为0～1000
+
+        // 重低音的范围为 0～1000
         bar.setMax(1000);
         bar.setProgress(0);
-        // 为SeekBar的拖动事件设置事件监听器
+
+        // 为 SeekBar 的拖动事件设置事件监听器
         bar.setOnSeekBarChangeListener(new SeekBar
                 .OnSeekBarChangeListener()
         {
@@ -254,26 +284,29 @@ public class CAudioEffectTestActivity extends Activity
      */
     private void setupPresetReverb()
     {
-        // 以MediaPlayer的AudioSessionId创建PresetReverb
-        // 相当于设置PresetReverb负责控制该MediaPlayer
-        mPresetReverb = new PresetReverb(0,
-                mPlayer.getAudioSessionId());
+        // 以 MediaPlayer 的 AudioSessionId 创建 PresetReverb
+        // 相当于设置 PresetReverb 负责控制该 MediaPlayer
+        mPresetReverb = new PresetReverb(0, mPlayer.getAudioSessionId());
+
         // 设置启用预设音场控制
         mPresetReverb.setEnabled(true);
         TextView prTitle = new TextView(this);
         prTitle.setText("音场");
         layout.addView(prTitle);
+
         // 获取系统支持的所有预设音场
         for (short i = 0; i < mEqualizer.getNumberOfPresets(); i++)
         {
             reverbNames.add(i);
             reverbVals.add(mEqualizer.getPresetName(i));
         }
-        // 使用Spinner做为音场选择工具
+
+        // 使用 Spinner 做为音场选择工具
         Spinner sp = new Spinner(this);
         sp.setAdapter(new ArrayAdapter<String>(CAudioEffectTestActivity.this,
                 android.R.layout.simple_spinner_item, reverbVals));
-        // 为Spinner的列表项选中事件设置监听器
+
+        // 为 Spinner 的列表项选中事件设置监听器
         sp.setOnItemSelectedListener(new Spinner
                 .OnItemSelectedListener()
         {
@@ -314,12 +347,13 @@ public class CAudioEffectTestActivity extends Activity
      */
     private static class MyVisualizerView extends View
     {
-        // bytes数组保存了波形抽样点的值
+        // bytes 数组保存了波形抽样点的值
         private byte[] bytes;
+
         private float[] points;
         private Paint paint = new Paint();
         private Rect rect = new Rect();
-        private byte type = 0;
+        private byte type = 2;
         public MyVisualizerView(Context context)
         {
             super(context);
@@ -327,7 +361,7 @@ public class CAudioEffectTestActivity extends Activity
             // 设置画笔的属性
             paint.setStrokeWidth(1f);
             paint.setAntiAlias(true);//抗锯齿
-            paint.setColor(Color.YELLOW);//画笔颜色
+            paint.setColor(Color.RED);//画笔颜色
             paint.setStyle(Style.FILL);
         }
 
