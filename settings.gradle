@@ -1,1 +1,1 @@
-include ':appDemoApk', 'appBaiduLocDemo', 'appCoolWeather'
+include ':appDemoApk', 'appBaiduLocDemo', 'appCoolWeather', ':libwavelibrary', ':appRecordWaveCanvas'

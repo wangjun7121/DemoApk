@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/appBaiduLocDemo/appBaiduLocDemo.iml" filepath="$PROJECT_DIR$/appBaiduLocDemo/appBaiduLocDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/appCoolWeather/appCoolWeather.iml" filepath="$PROJECT_DIR$/appCoolWeather/appCoolWeather.iml" />
       <module fileurl="file://$PROJECT_DIR$/appDemoApk/appDemoApk.iml" filepath="$PROJECT_DIR$/appDemoApk/appDemoApk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appRecordWaveCanvas/appRecordWaveCanvas.iml" filepath="$PROJECT_DIR$/appRecordWaveCanvas/appRecordWaveCanvas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libwavelibrary/libwavelibrary.iml" filepath="$PROJECT_DIR$/libwavelibrary/libwavelibrary.iml" />
     </modules>
   </component>
 </project>

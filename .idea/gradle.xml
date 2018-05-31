@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$/appBaiduLocDemo" />
             <option value="$PROJECT_DIR$/appCoolWeather" />
             <option value="$PROJECT_DIR$/appDemoApk" />
+            <option value="$PROJECT_DIR$/appRecordWaveCanvas" />
+            <option value="$PROJECT_DIR$/libwavelibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
