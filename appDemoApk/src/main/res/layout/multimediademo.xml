@@ -72,6 +72,12 @@
         android:textAllCaps="false"
         android:text="Audio:AutioTrack/AudioRecord 测试" />
 
+    <Button
+        android:id="@+id/testAutioEffectBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="AudioEffect 测试" />
 
     <!--********************************** Explore ******************************************-->
     <Button
