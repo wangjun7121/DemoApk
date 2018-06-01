@@ -72,21 +72,19 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 音频修改权限 -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-
-    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.SHUTDOWN"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.REBOOT"/>
-    <uses-permission android:name="android.permission.NFC"/>
-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
-
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SHUTDOWN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
     <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
@@ -184,7 +182,8 @@
         <!-- HardwareDemo start -->
         <activity android:name=".HardwareDemo.HardwareDemoActivity" />
         <activity android:name=".HardwareDemo.CLEDTestActivity" />
-        <activity android:name=".HardwareDemo.CKeyTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CKeyTestActivity" />
+        <activity android:name=".HardwareDemo.CBTTestActivity"></activity>
         <!-- HelloWorld end -->
 
 

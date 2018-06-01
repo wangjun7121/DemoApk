@@ -40,4 +40,11 @@
         android:textAllCaps="false"
         android:text="按键测试" />
 
+    <Button
+        android:id="@+id/testBTtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="蓝牙硬件测试" />
+
 </LinearLayout>
