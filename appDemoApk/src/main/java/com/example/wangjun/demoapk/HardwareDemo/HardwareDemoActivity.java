@@ -15,9 +15,10 @@ import com.example.wangjun.demoapk.SensorDemo.CAccelActivity;
 import com.example.wangjun.demoapk.SensorDemo.CAlsActivity;
 import com.example.wangjun.demoapk.SensorDemo.CCompassActivity;
 import com.example.wangjun.demoapk.SensorDemo.SensorDemoActivity;
+import com.example.wangjun.demoapk.Tools.LogUtil;
 
 public class HardwareDemoActivity extends AppCompatActivity {
-    private static String sLogcatTAG = "ActivityDemoActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
         testAlsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CAlsActivity.class);
                 startActivity(intent);
             }
@@ -39,7 +40,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
         testAccelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testAccelBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CAccelActivity.class);
                 startActivity(intent);
             }
@@ -51,7 +52,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
         testCompassBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testAccelBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CCompassActivity.class);
                 startActivity(intent);
             }
@@ -62,7 +63,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
         testLEDBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testAccelBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CLEDTestActivity.class);
                 startActivity(intent);
             }
@@ -73,19 +74,30 @@ public class HardwareDemoActivity extends AppCompatActivity {
         testLEDBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testAccelBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CKeyTestActivity.class);
                 startActivity(intent);
             }
         });
 
         Button testBTtn;
-        testLEDBtn = (Button) findViewById(R.id.testBTtn);
-        testLEDBtn.setOnClickListener(new View.OnClickListener() {
+        testBTtn = (Button) findViewById(R.id.testBTtn);
+        testBTtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testAccelBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(HardwareDemoActivity.this, CBTTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button testBTCStn;
+        testBTCStn = (Button) findViewById(R.id.testBTCStn);
+        testBTCStn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CBTCSActivity.class);
                 startActivity(intent);
             }
         });

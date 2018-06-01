@@ -18,6 +18,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.wangjun.demoapk.Tools.LogUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +28,6 @@ import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String sLogcatTAG = "DemoApk";
 
     /*
     @Override
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         String sTargetActivity;
 
         sTargetActivity = "com.example.wangjun.demoapk." + saDemo[position] + "." + saDemo[position] + "Activity";
-        Log.d(sLogcatTAG, sTargetActivity);
+        LogUtil.d("debug\n");
 
         // 使用反射从类路径获得类 class 对象
         clTargetActivity = Class.forName(sTargetActivity);

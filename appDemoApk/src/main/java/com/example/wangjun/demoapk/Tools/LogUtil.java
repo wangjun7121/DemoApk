@@ -20,15 +20,23 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * Log工具，类似android.util.Log。 tag自动产生，格式:
- * customTagPrefix:className.methodName(Line:lineNumber),
- * customTagPrefix为空时只输出：className.methodName(Line:lineNumber)。
+ * Log 工具，类似android.util.Log。 tag 自动产生，格式:
+ *      customTagPrefix:className.methodName(Line:lineNumber),
+ * customTagPrefix 为空时只输出：className.methodName(Line:lineNumber)。
+ *
+ *  应用示例：
+ *      LogUtil.d("Hello World\n");
+ *  应用输出：
+ *      06-01 12:09:40.414 17837-17837/com.example.wangjun.demoapk D/wjwind:AppContext.onCreate(Line:36): Hello World
+ *
+ *   默认实例：
+ *      LogUtil.d("debug\n");
  */
 public class LogUtil {
 
-    public static String customTagPrefix = "";      // 自定义Tag的前缀，可以是作者名
-    public static boolean isSaveLog = false;      // 是否把保存日志到SD卡中
-    public static final String LOG_PATH = Environment.getExternalStorageDirectory().getPath(); // SD卡中的根目录
+    public static String customTagPrefix = "wjwind";      // 自定义 Tag 的前缀，可以是作者名
+    public static boolean isSaveLog = false;      // 是否把保存日志到 SD 卡中
+    public static final String LOG_PATH = Environment.getExternalStorageDirectory().getPath(); // SD 卡中的根目录
 
     private static DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.SIMPLIFIED_CHINESE);
 
@@ -417,9 +425,9 @@ public class LogUtil {
         }
     }
 
-//        ThreadLocal通过获取当前线程中的values属性，从而实现了每个单独线程的信息绑定。这样的话，Android的消息机制中，
-//    Looper便是采用ThreadLocal作为存储结构，所以looper对象的存储只会在当前线程中，子线程若是使用消息机制的话，
-//    必须调用Looper.prepare方法来在线程中新建一个Looper的对象。
+//        ThreadLocal 通过获取当前线程中的 values 属性，从而实现了每个单独线程的信息绑定。这样的话，Android 的消息机制中，
+//    Looper 便是采用 ThreadLocal 作为存储结构，所以 looper 对象的存储只会在当前线程中，子线程若是使用消息机制的话，
+//    必须调用 Looper.prepare 方法来在线程中新建一个 Looper 的对象。
     private static final ThreadLocal<ReusableFormatter> thread_local_formatter = new ThreadLocal<ReusableFormatter>() {
         protected ReusableFormatter initialValue() {
             return new ReusableFormatter();

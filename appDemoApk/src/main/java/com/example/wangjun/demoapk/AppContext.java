@@ -10,7 +10,7 @@ import com.example.wangjun.demoapk.Tools.LogUtil;
  */
 
 
-//一般获取context的方法
+//一般获取 context 的方法
 //
 //    1. Activity.this 的 context
 //        (一般用法)返回当前 activity 的上下文，属于 activity ，activity 摧毁他就摧毁
@@ -21,6 +21,11 @@ import com.example.wangjun.demoapk.Tools.LogUtil;
 //    4. getActivity()
 //        多用于 fragment 中
 
+// 此类是 Acitvity 的上一级：
+    // Application
+    //      Activity1
+    //      ...
+    //      Activityn
 
 public class AppContext extends Application {
     private static Context context;

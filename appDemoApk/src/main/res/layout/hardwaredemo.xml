@@ -47,4 +47,11 @@
         android:textAllCaps="false"
         android:text="蓝牙硬件测试" />
 
+    <Button
+        android:id="@+id/testBTCStn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="蓝牙服务测试" />
+
 </LinearLayout>

@@ -72,9 +72,12 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 音频修改权限 -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <!-- 蓝牙权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
     <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SHUTDOWN" />
@@ -183,7 +186,8 @@
         <activity android:name=".HardwareDemo.HardwareDemoActivity" />
         <activity android:name=".HardwareDemo.CLEDTestActivity" />
         <activity android:name=".HardwareDemo.CKeyTestActivity" />
-        <activity android:name=".HardwareDemo.CBTTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CBTTestActivity" />
+        <activity android:name=".HardwareDemo.CBTCSActivity"></activity>
         <!-- HelloWorld end -->
 
 
