@@ -76,7 +76,11 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+    <!--Wifi 权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
+    <!--其他权限-->
     <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
     <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -89,7 +93,7 @@
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
-    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
+
     <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
     <!-- 电源管理 -->
     <!-- <uses-permission android:name="android.permission.DEVICE_POWER" /> -->
@@ -187,8 +191,9 @@
         <activity android:name=".HardwareDemo.CLEDTestActivity" />
         <activity android:name=".HardwareDemo.CKeyTestActivity" />
         <activity android:name=".HardwareDemo.CBTTestActivity" />
-        <activity android:name=".HardwareDemo.CBTCSActivity"></activity>
-        <!-- HelloWorld end -->
+        <activity android:name=".HardwareDemo.CBTCSActivity" />
+        <activity android:name=".HardwareDemo.CWifiDemoActivity"></activity>
+        <!-- HardwareDemo end -->
 
 
         <!-- HelloWorld start -->

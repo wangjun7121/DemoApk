@@ -102,5 +102,16 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testWifitn;
+        testWifitn = (Button) findViewById(R.id.testWifitn);
+        testWifitn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CWifiDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
