@@ -71,7 +71,23 @@
     <!-- 录音权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 音频修改权限 -->
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.SHUTDOWN"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+
     <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
     <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
     <!-- 电源管理 -->
@@ -168,6 +184,7 @@
         <!-- HardwareDemo start -->
         <activity android:name=".HardwareDemo.HardwareDemoActivity" />
         <activity android:name=".HardwareDemo.CLEDTestActivity" />
+        <activity android:name=".HardwareDemo.CKeyTestActivity"></activity>
         <!-- HelloWorld end -->
 
 
@@ -278,7 +295,7 @@
         <activity android:name=".MultimediaDemo.CAudioTrackRecordActivity" />
         <activity android:name=".MultimediaDemo.CExploerActivity" />
         <activity android:name=".MultimediaDemo.CVideoViewActivity" />
-        <activity android:name=".MultimediaDemo.CAudioEffectTestActivity"></activity>
+        <activity android:name=".MultimediaDemo.CAudioEffectTestActivity" />
         <!-- MultimediaDemo end -->
 
 

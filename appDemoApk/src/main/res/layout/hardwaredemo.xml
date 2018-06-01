@@ -33,5 +33,11 @@
         android:textAllCaps="false"
         android:text="三色灯/振动器测试(需灭屏)" />
 
+    <Button
+        android:id="@+id/testKeytn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="按键测试" />
 
 </LinearLayout>

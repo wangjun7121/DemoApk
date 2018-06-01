@@ -67,5 +67,17 @@ public class HardwareDemoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button testKeytn;
+        testLEDBtn = (Button) findViewById(R.id.testKeytn);
+        testLEDBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v(sLogcatTAG, "testAccelBtn");
+                Intent intent = new Intent(HardwareDemoActivity.this, CKeyTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
