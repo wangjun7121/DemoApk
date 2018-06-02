@@ -113,5 +113,16 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testBatteryInfotn;
+        testBatteryInfotn = (Button) findViewById(R.id.testBatteryInfotn);
+        testBatteryInfotn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CBatteryInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

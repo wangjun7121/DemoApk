@@ -76,22 +76,26 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-    <!--Wifi 权限-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- Wifi 权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
-    <!--其他权限-->
-    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <!-- 其他权限 -->
     <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.SHUTDOWN" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.REBOOT" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!--只用于系统 app 的权限-->
+    <!--<uses-permission android:name="android.permission.CALL_PRIVILEGED" />-->
+    <!--<uses-permission android:name="android.permission.SHUTDOWN" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />-->
+    <!--<uses-permission android:name="android.permission.REBOOT" />-->
+
+    <!--只用于测试程序的权限-->
+    <!--<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />-->
 
 
     <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
@@ -192,7 +196,8 @@
         <activity android:name=".HardwareDemo.CKeyTestActivity" />
         <activity android:name=".HardwareDemo.CBTTestActivity" />
         <activity android:name=".HardwareDemo.CBTCSActivity" />
-        <activity android:name=".HardwareDemo.CWifiDemoActivity"></activity>
+        <activity android:name=".HardwareDemo.CWifiDemoActivity" />
+        <activity android:name=".HardwareDemo.CBatteryInfoActivity"></activity>
         <!-- HardwareDemo end -->
 
 

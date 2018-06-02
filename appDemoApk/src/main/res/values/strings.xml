@@ -9,6 +9,24 @@
     <string name="datapersistence">存储路径：/data/data/(packagename)/files</string>
     <!-- BroadcastsDemo  end-->
 
+    <!--HardwareDemo start -->
+    <string name="battery_info_status_charging_ac">"(AC)"</string>
+    <string name="battery_info_status_charging_usb">"(USB)"</string>
+    <string name="battery_info_status_charging_wireless">"(wireless)"</string>
+    <string name="battery_info_status_discharging">"discarging"</string>
+    <string name="battery_info_status_not_charging">"not charging"</string>
+    <string name="battery_info_status_full">"battery full"</string>
+    <string name="battery_info_status_unknown">"unknown"</string>
+    <string name="tv_loading">loading...</string>
+    <string name="battery_info_voltage_units">"mV"</string>
+    <string name="battery_info_temperature_units">"° C"</string>
+    <string name="temhighmessage">温度过高提示</string>
+    <string name="temmessage">温度过高</string>
+    <string name="volagehighmessage">电压过高提示</string>
+    <string name="volagehigh">电压过高</string>
+    <string name="temlowmessage">温度过低提示</string>
+    <string name="temlow">温度过低</string>
+    <!--HardwareDemo end -->
 
     <!-- LayoutDemoActivity  start-->
     <string name="testTablayoutBtn">TabLayout测试</string>
