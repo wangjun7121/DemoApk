@@ -27,6 +27,8 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+// 程序整体是以监听电池广播实现的，部分是直接读电池节点
+
 public class CBatteryInfoActivity extends AppCompatActivity {
     private static final int EVENT_TICK = 1;
     private static final int READ_ELEC = 2;
@@ -49,12 +51,16 @@ public class CBatteryInfoActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case EVENT_TICK:
+                case EVENT_TICK:// 每 1s 发消息唤醒一次线程，更新电池信息
+
+                    // 更新电池信息
                     updateBatteryStats();
+
+                    // 再隔 1s 再次唤醒此线程
                     sendEmptyMessageDelayed(EVENT_TICK, 1000);
 
                     break;
-                case READ_ELEC:
+                case READ_ELEC:// 每 3s 发消息唤醒一次线程，更新信息
                     if (getElectricityData() != null){
                         if (getElectricityData().toString().trim().equals("0")){
                             mElectricity.setText(getString(R.string.tv_loading));
@@ -77,6 +83,8 @@ public class CBatteryInfoActivity extends AppCompatActivity {
      * Listens for intent broadcasts
      */
     private IntentFilter mIntentFilter;
+
+    // 这里处理电池信息变化广播
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -197,6 +205,8 @@ public class CBatteryInfoActivity extends AppCompatActivity {
      * conversion to float.  E.g. 347 -> "34.7"
      */
     //songyan01@wind-mobi.com 2017/12/8 start
+
+    // 过温保护显示
     private void showDialogMessage(int tem,int message){
         AlertDialog.Builder builder = new AlertDialog.Builder(CBatteryInfoActivity.this);
         builder.setTitle(tem);
@@ -228,11 +238,14 @@ public class CBatteryInfoActivity extends AppCompatActivity {
         super.onCreate(icicle);
 
         setContentView(R.layout.hardwaredemo_cbatteryinfo);
+        // 设置标题
         setTitle("battery information");
         isShowElec = false;//getResources().getBoolean(R.bool.config_show_battery_elec_support);
 
         // create the IntentFilter that will be used to listen
         // to battery status broadcasts
+
+        // 监听电池信息变化广播
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
     }
@@ -260,6 +273,7 @@ public class CBatteryInfoActivity extends AppCompatActivity {
             mElectricity.setVisibility(View.GONE);
             mElectricityTv.setVisibility(View.GONE);
         }else {
+            // 发消息给 Handle 处理读消息
             mHandler.sendEmptyMessageDelayed(READ_ELEC, 3000);
         }
 
@@ -269,8 +283,11 @@ public class CBatteryInfoActivity extends AppCompatActivity {
         // Get awake time plugged in and on battery
         //mBatteryStats = IBatteryStats.Stub.asInterface(ServiceManager.getService("batteryinfo"));
         //mScreenStats = IPowerManager.Stub.asInterface(ServiceManager.getService(POWER_SERVICE));
+
+        // 发消息进行电池信息更新
         mHandler.sendEmptyMessageDelayed(EVENT_TICK, 1000);
 
+        // 注册广播监听
         registerReceiver(mIntentReceiver, mIntentFilter);
     }
 
@@ -310,6 +327,8 @@ public class CBatteryInfoActivity extends AppCompatActivity {
     }
 
     private void updateBatteryStats() {
+
+        // 更新时间显示： Battery uptime
         long uptime = SystemClock.elapsedRealtime();
         mUptime.setText(DateUtils.formatElapsedTime(uptime / 1000));
     }
