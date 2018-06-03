@@ -124,5 +124,16 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testBacklightBtn;
+        testBacklightBtn = (Button) findViewById(R.id.testBacklightBtn);
+        testBacklightBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CBackLightTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

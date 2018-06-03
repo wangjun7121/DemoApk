@@ -4,8 +4,10 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.PowerManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -27,7 +29,6 @@ import java.util.logging.Logger;
 
 
 public class MainActivity extends AppCompatActivity {
-
 
     /*
     @Override
@@ -179,6 +180,18 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             //低于23 不需要特殊处理，去掉用拍照的方法
+        }
+
+        // 获取 settting 写权限
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.System.canWrite(this)) {
+                Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                intent.setData(Uri.parse("package:" + this.getPackageName()));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                this.startActivity(intent);
+            } else {
+                //有了权限，具体的动作
+            }
         }
 
         acquireWakeLock();
