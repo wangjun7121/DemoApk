@@ -146,5 +146,17 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testProxBtn;
+        testProxBtn = (Button) findViewById(R.id.testProxBtn);
+        testProxBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CProximityTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

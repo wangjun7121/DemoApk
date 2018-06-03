@@ -11,6 +11,14 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="@string/SensorDemo_testAls_Btn" />
+
+    <Button
+        android:id="@+id/testProxBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="距感传感器" />
+
     <Button
         android:id="@+id/testAccel_btn"
         android:layout_width="fill_parent"
@@ -80,5 +88,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="内存信息" />
+
+
 
 </LinearLayout>

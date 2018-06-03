@@ -97,7 +97,7 @@ public class CBatteryInfoActivity extends AppCompatActivity {
                 mLevel.setText("" + intent.getIntExtra("level", 0));
                 mScale.setText("" + intent.getIntExtra("scale", 0));
                 mVoltage.setText("" + intent.getIntExtra("voltage", 0) + " " +
-                        getString(R.string.battery_info_voltage_units)); 
+                        getString(R.string.battery_info_voltage_units));
                 mTemperature.setText("" +
                         tenthsToFixedString(intent.getIntExtra("temperature", 0)) +
                         getString(R.string.battery_info_temperature_units));

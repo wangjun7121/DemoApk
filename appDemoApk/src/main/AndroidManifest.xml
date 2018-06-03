@@ -44,6 +44,7 @@
     <!-- 一般权限 -->
     <!-- 除上面的危险权限之外的权限即为一般权限(普通权限) -->
 
+
     <!-- 存储空间 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -198,7 +199,8 @@
         <activity android:name=".HardwareDemo.CWifiDemoActivity" />
         <activity android:name=".HardwareDemo.CBatteryInfoActivity" />
         <activity android:name=".HardwareDemo.CBackLightTestActivity" />
-        <activity android:name=".HardwareDemo.CMemoryTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CMemoryTestActivity" />
+        <activity android:name=".HardwareDemo.CProximityTestActivity"></activity>
         <!-- HardwareDemo end -->
 
 
