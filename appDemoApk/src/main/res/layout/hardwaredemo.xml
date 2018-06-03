@@ -1,94 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/testAls_btn"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/SensorDemo_testAls_Btn" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/testProxBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="距感传感器" />
+        <Button
+            android:id="@+id/testAls_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/SensorDemo_testAls_Btn" />
 
-    <Button
-        android:id="@+id/testAccel_btn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/SensorDemo_testAccel_Btn" />
+        <Button
+            android:id="@+id/testProxBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="距感传感器" />
 
-    <Button
-        android:id="@+id/testCompassBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="方向传感器" />
+        <Button
+            android:id="@+id/testAccel_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="@string/SensorDemo_testAccel_Btn" />
 
-    <Button
-        android:id="@+id/testLEDBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="三色灯/振动器测试(需灭屏)" />
+        <Button
+            android:id="@+id/testCompassBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="方向传感器" />
 
-    <Button
-        android:id="@+id/testKeytn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="按键测试" />
+        <Button
+            android:id="@+id/testLEDBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="三色灯/振动器测试(需灭屏)" />
 
-    <Button
-        android:id="@+id/testBTtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="蓝牙硬件测试" />
+        <Button
+            android:id="@+id/testKeytn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="按键测试" />
 
-    <Button
-        android:id="@+id/testBTCStn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="蓝牙服务测试" />
+        <Button
+            android:id="@+id/testBTtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="蓝牙硬件测试" />
 
-    <Button
-        android:id="@+id/testWifitn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Wifi 硬件测试" />
+        <Button
+            android:id="@+id/testBTCStn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="蓝牙服务测试" />
 
-    <Button
-        android:id="@+id/testBatteryInfotn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="电池信息测试" />
+        <Button
+            android:id="@+id/testWifitn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Wifi 硬件测试" />
 
-    <Button
-        android:id="@+id/testBacklightBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="背光亮度测试" />
+        <Button
+            android:id="@+id/testBatteryInfotn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="电池信息测试" />
 
-    <Button
-        android:id="@+id/testMemoryBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="内存信息" />
+        <Button
+            android:id="@+id/testBacklightBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="背光亮度测试" />
+
+        <Button
+            android:id="@+id/testMemoryBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="内存信息" />
+
+        <Button
+            android:id="@+id/testLCDBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="LCM 测试" />
 
 
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
+
+

@@ -201,6 +201,7 @@
         <activity android:name=".HardwareDemo.CBackLightTestActivity" />
         <activity android:name=".HardwareDemo.CMemoryTestActivity" />
         <activity android:name=".HardwareDemo.CProximityTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CLCDTestActivity" />
         <!-- HardwareDemo end -->
 
 
