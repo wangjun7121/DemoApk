@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
     };
     List<String> mPermissionList = new ArrayList<>();
 
+    // 通过反射来执行对应的程序
     private void expressItemClick(int position) throws ClassNotFoundException {
         Class<?> clTargetActivity;
         String sTargetActivity;

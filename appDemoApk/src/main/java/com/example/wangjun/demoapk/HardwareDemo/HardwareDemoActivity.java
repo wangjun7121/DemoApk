@@ -135,5 +135,16 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testMemoryBtn;
+        testMemoryBtn = (Button) findViewById(R.id.testMemoryBtn);
+        testMemoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CMemoryTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

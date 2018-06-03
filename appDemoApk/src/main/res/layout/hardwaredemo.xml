@@ -74,4 +74,11 @@
         android:textAllCaps="false"
         android:text="背光亮度测试" />
 
+    <Button
+        android:id="@+id/testMemoryBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="内存信息" />
+
 </LinearLayout>

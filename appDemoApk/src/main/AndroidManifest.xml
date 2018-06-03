@@ -44,7 +44,9 @@
     <!-- 一般权限 -->
     <!-- 除上面的危险权限之外的权限即为一般权限(普通权限) -->
 
-
+    <!-- 存储空间 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <!-- 查询网络状态权限 -->
@@ -195,7 +197,8 @@
         <activity android:name=".HardwareDemo.CBTCSActivity" />
         <activity android:name=".HardwareDemo.CWifiDemoActivity" />
         <activity android:name=".HardwareDemo.CBatteryInfoActivity" />
-        <activity android:name=".HardwareDemo.CBackLightTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CBackLightTestActivity" />
+        <activity android:name=".HardwareDemo.CMemoryTestActivity"></activity>
         <!-- HardwareDemo end -->
 
 
