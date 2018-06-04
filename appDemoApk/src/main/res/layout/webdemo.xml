@@ -48,5 +48,11 @@
         android:textAllCaps="false"
         android:text="JSON 解析：GSON" />
 
+    <Button
+        android:id="@+id/testSocketBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Socket 测试" />
 
 </LinearLayout>
