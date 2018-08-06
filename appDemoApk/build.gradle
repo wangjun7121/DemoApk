@@ -5,7 +5,7 @@ android {
     // 编译 SDK 的版本
     compileSdkVersion 25
     // build tools 的版本
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '27.0.3'
     defaultConfig {
         // 应用的包名
         applicationId "com.example.wangjun.demoapk"
@@ -38,17 +38,17 @@ android {
 
 dependencies {
     // 编译 libs 目录下的所有 jar 包
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
     // 编译extras目录下的ShimmerAndroid模块
     // compile project(':extras:ShimmerAndroid')
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.google.code.gson:gson:2.6.2'
-    testCompile 'junit:junit:4.12'
+    api 'com.android.support:appcompat-v7:25.3.1'
+    api 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    api 'com.android.support:design:25.3.1'
+    api 'com.android.support:support-v4:25.3.1'
+    api 'com.google.code.gson:gson:2.6.2'
+    testImplementation 'junit:junit:4.12'
 }
