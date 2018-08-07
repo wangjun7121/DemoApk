@@ -224,6 +224,19 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testTextureViewBtn = new Button(m_Context);
+        testTextureViewBtn.setText("TextureView: 预览 Camera");
+        testTextureViewBtn.setAllCaps(false);
+        layout.addView(testTextureViewBtn);
+        testTextureViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CTextureViewCameraActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
