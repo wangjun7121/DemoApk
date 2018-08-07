@@ -8,11 +8,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/appBaiduLocDemo" />
             <option value="$PROJECT_DIR$/appCoolWeather" />
             <option value="$PROJECT_DIR$/appDemoApk" />
             <option value="$PROJECT_DIR$/appRecordWaveCanvas" />
             <option value="$PROJECT_DIR$/libwavelibrary" />
+            <option value="$PROJECT_DIR$/nicevideoplayer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
