@@ -36,6 +36,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testAlsBtn = new Button(m_Context);
         testAlsBtn.setText("环境光传感器");
+        testAlsBtn.setAllCaps(false);
         layout.addView(testAlsBtn);
         testAlsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testAccelBtn = new Button(m_Context);
         testAccelBtn.setText("加速度传感器");
+        testAccelBtn.setAllCaps(false);
         layout.addView(testAccelBtn);
         testAccelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +62,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testProxBtn = new Button(m_Context);
         testProxBtn.setText("距离传感器");
+        testProxBtn.setAllCaps(false);
         layout.addView(testProxBtn);
         testProxBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +75,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testCompassBtn = new Button(m_Context);
         testCompassBtn.setText("方向传感器");
+        testCompassBtn.setAllCaps(false);
         layout.addView(testCompassBtn);
         testCompassBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +88,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testLEDBtn = new Button(m_Context);
         testLEDBtn.setText("三色灯/振动器测试(需灭屏)");
+        testLEDBtn.setAllCaps(false);
         layout.addView(testLEDBtn);
         testLEDBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +102,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testKeyBtn = new Button(m_Context);
         testKeyBtn.setText("按键测试");
+        testKeyBtn.setAllCaps(false);
         layout.addView(testKeyBtn);
         testKeyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +116,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testBTBtn = new Button(m_Context);
         testBTBtn.setText("蓝牙硬件测试");
+        testBTBtn.setAllCaps(false);
         layout.addView(testBTBtn);
         testBTBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +129,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testBTCSBtn = new Button(m_Context);
         testBTCSBtn.setText("蓝牙服务测试");
+        testBTCSBtn.setAllCaps(false);
         layout.addView(testBTCSBtn);
         testBTCSBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +142,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testWifiBtn = new Button(m_Context);
         testWifiBtn.setText("Wifi 硬件测试");
+        testWifiBtn.setAllCaps(false);
         layout.addView(testWifiBtn);
         testWifiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,6 +155,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testBatteryInfoBtn = new Button(m_Context);
         testBatteryInfoBtn.setText("电池信息");
+        testBatteryInfoBtn.setAllCaps(false);
         layout.addView(testBatteryInfoBtn);
         testBatteryInfoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,6 +168,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testBacklightBtn = new Button(m_Context);
         testBacklightBtn.setText("背光亮度测试");
+        testBacklightBtn.setAllCaps(false);
         layout.addView(testBacklightBtn);
         testBacklightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +181,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testMemoryBtn = new Button(m_Context);
         testMemoryBtn.setText("内存信息");
+        testMemoryBtn.setAllCaps(false);
         layout.addView(testMemoryBtn);
         testMemoryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,6 +196,7 @@ public class HardwareDemoActivity extends AppCompatActivity {
 
         Button testLCDBtn = new Button(m_Context);
         testLCDBtn.setText("LCD 测试");
+        testLCDBtn.setAllCaps(false);
         layout.addView(testLCDBtn);
         testLCDBtn.setOnClickListener(new View.OnClickListener() {
             @Override

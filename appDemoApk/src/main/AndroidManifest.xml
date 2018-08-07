@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wangjun.demoapk">
 
     <!-- ************************************ 相关权限 *********************************** -->
@@ -84,14 +85,13 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <!-- 其他权限 -->
-    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
-    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <!--<uses-permission android:name="android.permission.CALL_PRIVILEGED" />-->
+    <!--<uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-
 
     <!-- 只用于系统 app 的权限 -->
     <!-- <uses-permission android:name="android.permission.CALL_PRIVILEGED" /> -->
@@ -100,14 +100,12 @@
     <!-- <uses-permission android:name="android.permission.REBOOT" /> -->
     <!-- 只用于测试程序的权限 -->
     <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> -->
-
     <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
     <!-- 电源管理 -->
     <!-- <uses-permission android:name="android.permission.DEVICE_POWER" /> -->
     <!-- ************************************ 相关权限 *********************************** -->
     <application
         android:name=".AppContext"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -203,7 +201,7 @@
         <activity android:name=".HardwareDemo.CBatteryInfoActivity" />
         <activity android:name=".HardwareDemo.CBackLightTestActivity" />
         <activity android:name=".HardwareDemo.CMemoryTestActivity" />
-        <activity android:name=".HardwareDemo.CProximityTestActivity"></activity>
+        <activity android:name=".HardwareDemo.CProximityTestActivity" />
         <activity android:name=".HardwareDemo.CLCDTestActivity" />
         <!-- HardwareDemo end -->
 
@@ -225,7 +223,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".IntentDemo.CIntentBrowerActivity">
-            <intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
 
                 <!-- 接收和浏览器相关的 intent 事件 -->
                 <action android:name="android.intent.action.VIEW" />
@@ -316,6 +314,7 @@
         <activity android:name=".MultimediaDemo.CExploerActivity" />
         <activity android:name=".MultimediaDemo.CVideoViewActivity" />
         <activity android:name=".MultimediaDemo.CAudioEffectTestActivity" />
+        <activity android:name=".MultimediaDemo.CMediaPlayIndroduceActivity"></activity>
         <!-- MultimediaDemo end -->
 
 
@@ -392,7 +391,6 @@
         <activity android:name=".WebDemo.CXMLAnalysisActivity" />
         <activity android:name=".WebDemo.CJSONObjectActivity" />
         <activity android:name=".WebDemo.CGSONActivity" />
-
         <activity android:name=".WebDemo.CSocketCSSwActivity" />
         <activity android:name=".WebDemo.CSocketCS_ServerActivity" />
         <activity android:name=".WebDemo.CSocketCS_ClientActivity" />
