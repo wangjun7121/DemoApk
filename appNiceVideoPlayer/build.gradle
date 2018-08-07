@@ -34,7 +34,7 @@ dependencies {
     androidTestImplementation(rootProject.ext.dependencies.espresso, {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    api project(':nicevideoplayer')
+    api project(':libnicevideoplayer')
     api rootProject.ext.dependencies.appcompatV7
     api rootProject.ext.dependencies.rxpermissions
     api rootProject.ext.dependencies.rxjava
