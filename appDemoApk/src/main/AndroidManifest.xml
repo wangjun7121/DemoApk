@@ -89,7 +89,7 @@
     <!-- <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" /> -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
@@ -315,7 +315,8 @@
         <activity android:name=".MultimediaDemo.CVideoViewActivity" />
         <activity android:name=".MultimediaDemo.CAudioEffectTestActivity" />
         <activity android:name=".MultimediaDemo.CMediaPlayIndroduceActivity" />
-        <activity android:name=".MultimediaDemo.CTextureViewCameraActivity"></activity>
+        <activity android:name=".MultimediaDemo.CTextureViewCameraActivity" />
+        <activity android:name=".MultimediaDemo.CCameraV2ApiActivity"></activity>
         <!-- MultimediaDemo end -->
 
 

@@ -1,0 +1,13 @@
+#Wed Aug 08 21:23:22 CST 2018
+path.3=classes.dex
+path.2=classes.dex
+path.1=classes.dex
+path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.3=E\:\\AS_Project\\DemoApk\\appCameraV2Demo\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.2=E\:\\AS_Project\\DemoApk\\appCameraV2Demo\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.1=E\:\\AS_Project\\DemoApk\\appCameraV2Demo\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+base.0=E\:\\AS_Project\\DemoApk\\appCameraV2Demo\\build\\intermediates\\transforms\\dexMerger\\debug\\12

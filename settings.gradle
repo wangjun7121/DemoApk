@@ -1,1 +1,1 @@
-include ':appDemoApk', 'appBaiduLocDemo', 'appCoolWeather', ':libwavelibrary', ':appRecordWaveCanvas', ':appNiceVideoPlayer', ':libnicevideoplayer'
+include ':appDemoApk', 'appBaiduLocDemo', 'appCoolWeather', ':libwavelibrary', ':appRecordWaveCanvas', ':appNiceVideoPlayer', ':libnicevideoplayer', ':appCameraV2Demo'

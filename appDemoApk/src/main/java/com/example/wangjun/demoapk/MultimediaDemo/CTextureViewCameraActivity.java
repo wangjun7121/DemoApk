@@ -36,7 +36,7 @@ public class CTextureViewCameraActivity extends Activity implements SurfaceTextu
     }
     @SuppressLint("NewApi")
     @Override
-    // 在SurfaceTexture准备使用时调用
+    // 在 SurfaceTexture 准备使用时调用
     public void onSurfaceTextureAvailable(SurfaceTexture arg0, int arg1,
                                           int arg2) {
         mCamera = Camera.open();
@@ -44,10 +44,14 @@ public class CTextureViewCameraActivity extends Activity implements SurfaceTextu
         myTexture.setLayoutParams(new FrameLayout.LayoutParams(
                 previewSize.width, previewSize.height, Gravity.CENTER));
         try {
+            // 这句是将 Camera 预览输出流设置到显示的位置
             mCamera.setPreviewTexture(arg0);
+
         } catch (IOException t) {
         }
+        // 启动预览
         mCamera.startPreview();
+
         myTexture.setAlpha(1.0f);
         myTexture.setRotation(90.0f);
     }

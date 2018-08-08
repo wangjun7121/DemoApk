@@ -237,6 +237,18 @@ public class MultimediaDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testCameraV2Btn = new Button(m_Context);
+        testCameraV2Btn.setText("CameraV2 Api 使用");
+        testCameraV2Btn.setAllCaps(false);
+        layout.addView(testCameraV2Btn);
+        testCameraV2Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(MultimediaDemoActivity.this, CCameraV2ApiActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
