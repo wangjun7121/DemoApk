@@ -1,4 +1,0 @@
-#Wed Aug 08 21:23:21 CST 2018
-base.0=E\:\\AS_Project\\DemoApk\\appCameraV2Demo\\build\\intermediates\\transforms\\dexMerger\\debug\\1
-path.0=classes.dex
-renamed.0=classes.dex
