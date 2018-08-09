@@ -3,6 +3,7 @@ package com.example.wangjun.demoapk.MultimediaDemo;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
@@ -134,7 +135,7 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
         @Override
         public void onOpened(CameraDevice cameraDevice) {
             CCameraV2ApiActivity.this.cameraDevice = cameraDevice;
-            // 开始预览
+            // 创建 CameraCapureSession，开始预览
             createCameraPreviewSession();  // ②
         }
 
@@ -209,7 +210,7 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
             captureSession.capture(captureRequestBuilder.build()
                     , new CameraCaptureSession.CaptureCallback()  // ⑤
                     {
-                        // 拍照完成时激发该方法
+                        // 拍照完成时激发该方法, 重新进入预览方法
                         @Override
                         public void onCaptureCompleted(CameraCaptureSession session
                                 , CaptureRequest request, TotalCaptureResult result) {
@@ -236,7 +237,10 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
     // 打开摄像头
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void openCamera(int width, int height) {
+
+        // 设置 camera 输出属性
         setUpCameraOutputs(width, height);
+
         CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         try {
             // 打开摄像头
@@ -250,6 +254,11 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
                 // for ActivityCompat#requestPermissions for more details.
                 return;
             }
+
+            // 打开后摄时传入了一个 stateCallback 参数，该参数代表的对象可检测摄像头的状态改变
+            //      当摄像头的状态发生改变时，程序将会自动回调该对象的相应方法
+            //  null: 预览，拍照时没有传入 Handler 参数，这意味着程序直接在主线程中完成相应的 Callback 任务
+            //      这样可能会导致程序响应变慢，实际应用中建议传入的
             manager.openCamera(mCameraId, stateCallback, null); // ①
         }
         catch (CameraAccessException e)
@@ -282,6 +291,7 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
                     , imageReader.getSurface()), new CameraCaptureSession.StateCallback() // ③
                     {
                         @Override
+                        // 当 CameraCaptureSession 创建成功时将会自动回调该方法
                         public void onConfigured(CameraCaptureSession cameraCaptureSession)
                         {
                             // 如果摄像头为null，直接结束方法
@@ -292,16 +302,23 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
 
                             // 当摄像头已经准备好时，开始显示预览
                             captureSession = cameraCaptureSession;
+
+                            ////////////////////////////////////////////////////////////////////////
+                            // 设置了预览参数
+                            ////////////////////////////////////////////////////////////////////////
                             try
                             {
                                 // 设置自动对焦模式
                                 previewRequestBuilder.set(CaptureRequest.CONTROL_AF_MODE,
                                         CaptureRequest.CONTROL_AF_MODE_CONTINUOUS_PICTURE);
+
                                 // 设置自动曝光模式
                                 previewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
                                         CaptureRequest.CONTROL_AE_MODE_ON_AUTO_FLASH);
+
                                 // 开始显示相机预览
                                 previewRequest = previewRequestBuilder.build();
+
                                 // 设置预览时连续捕获图像数据
                                 captureSession.setRepeatingRequest(previewRequest,
                                         null, null);  // ④
@@ -331,10 +348,25 @@ public class CCameraV2ApiActivity extends Activity implements View.OnClickListen
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void setUpCameraOutputs(int width, int height)
     {
+
+        // 获取 CameraManager 服务
         CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+
+//             // 获取设备上摄像头列表
+//            String[] ids = manager.getCameraIdList();
+//
+//            // 创建一个空的 CameraInfo 对象，用于获取摄像头信息
+//            Camera.CameraInfo camerainfo = new Camera.getCameraInfo();
+//
+//            // 获取指定摄像头的特性: ID = 0 表示打开后摄
+//            CameraCharacteristics characteristics = manager.getCameraCharacteristics(mCameraId);
+
+
         try
         {
-            // 获取指定摄像头的特性
+
+
+            // 获取指定摄像头的特性: ID = 0 表示打开后摄
             CameraCharacteristics characteristics
                     = manager.getCameraCharacteristics(mCameraId);
 
