@@ -40,7 +40,7 @@ public class CMemoryTestActivity extends AppCompatActivity {
     public String availableMemory = null;
     public TextView memory = null;
     public TextView totalMemory = null;
-    private TextView tv_percent1,tv_percent2;
+    private TextView tv_percent1,tv_percent2,tv_flashtotalsize;
     public Button finish = null;;
     private String percent_sd,percent_memory;
 
@@ -50,6 +50,7 @@ public class CMemoryTestActivity extends AppCompatActivity {
         memory = (TextView) findViewById(R.id.sd_t1);
         tv_percent1 = (TextView) findViewById(R.id.percent1);
         tv_percent2 = (TextView) findViewById(R.id.percent2);
+        tv_flashtotalsize = (TextView) findViewById(R.id.flashtotalsize);
         finish = (Button) findViewById(R.id.sd_b);
         finish.setText("OK");
         finish.setOnClickListener(new OnClickListener() {
@@ -130,6 +131,23 @@ public class CMemoryTestActivity extends AppCompatActivity {
 
         tvTotalSpace.setText("Internal SDCard total:" + totalSpace);
         tvAvailableSpace.setText("Internal SDCard avail percent:" + availableSpace);
+
+        tv_flashtotalsize.setText("Data+Root about:"+roundStorageSize(Environment.getDataDirectory().getTotalSpace()+Environment.getRootDirectory().getTotalSpace()));
+        LogUtil.i("Total Size-->" + roundStorageSize(Environment.getDataDirectory().getTotalSpace()+Environment.getRootDirectory().getTotalSpace()));
+
+    }
+
+    public static long roundStorageSize(long size) {
+        long val = 1;
+        long pow = 1;
+        while ((val * pow) < size) {
+            val <<= 1;
+            if (val > 512) {
+                val = 1;
+                pow *= 1000;
+            }
+        }
+        return val * pow;
     }
 
     public boolean exeFree() {
