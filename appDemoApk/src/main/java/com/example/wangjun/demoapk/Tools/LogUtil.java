@@ -20,7 +20,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * Log 工具，类似android.util.Log。 tag 自动产生，格式:
+ * Log 工具，类似 android.util.Log。 tag 自动产生，格式:
  *      customTagPrefix:className.methodName(Line:lineNumber),
  * customTagPrefix 为空时只输出：className.methodName(Line:lineNumber)。
  *

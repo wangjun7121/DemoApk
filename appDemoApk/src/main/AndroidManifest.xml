@@ -64,6 +64,8 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <!-- 访问外部存储 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- 访问摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 网络权限 -->
@@ -316,7 +318,7 @@
         <activity android:name=".MultimediaDemo.CAudioEffectTestActivity" />
         <activity android:name=".MultimediaDemo.CMediaPlayIndroduceActivity" />
         <activity android:name=".MultimediaDemo.CTextureViewCameraActivity" />
-        <activity android:name=".MultimediaDemo.CCameraV2ApiActivity"></activity>
+        <activity android:name=".MultimediaDemo.CCameraV2ApiActivity" />
         <!-- MultimediaDemo end -->
 
 
@@ -363,6 +365,7 @@
         </receiver>
 
         <activity android:name=".SoftwareDemo.CSettingMonitorActivity" />
+        <activity android:name=".SoftwareDemo.CShellExecActivity" />
         <!-- SoftwareDemo start -->
 
 
@@ -398,7 +401,7 @@
         <activity android:name=".WebDemo.CSocketCS_ClientActivity" />
         <!-- WebDemo end -->
 
-
+        <activity android:name=".HardwareDemo.CScreenCapTestActivity"></activity>
     </application>
 
 </manifest>

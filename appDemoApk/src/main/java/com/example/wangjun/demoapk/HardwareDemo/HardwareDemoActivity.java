@@ -207,6 +207,19 @@ public class HardwareDemoActivity extends AppCompatActivity {
             }
         });
 
+        Button testScreenCapBtn = new Button(m_Context);
+        testScreenCapBtn.setText("ScreenCap fb0 测试");
+        testScreenCapBtn.setAllCaps(false);
+        layout.addView(testScreenCapBtn);
+        testScreenCapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.d("debug\n");
+                Intent intent = new Intent(HardwareDemoActivity.this, CScreenCapTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
