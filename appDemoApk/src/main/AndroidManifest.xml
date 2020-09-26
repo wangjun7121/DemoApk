@@ -2,10 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wangjun.demoapk">
-
     <!-- ************************************ 相关权限 *********************************** -->
-
-
     <!-- 权限分类： -->
     <!-- 危险权限：危险权限即需要动态申请的权限,一共9组,取得一组中某一个权限的授权,则自动拥有该组的所有授权 -->
     <!-- 身体传感器 -->
@@ -44,49 +41,30 @@
     <!-- android.permission.WRITE_EXTERNAL_STORAGE -->
     <!-- 一般权限 -->
     <!-- 除上面的危险权限之外的权限即为一般权限(普通权限) -->
-
-
     <!-- 存储空间 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 读取联系人权限 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <!-- 查询网络状态权限 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 监听开机广播权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <!-- 弹窗权限：动态申请 -->
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <!-- 振动权限 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <!-- 收发短信权限 -->
+    <!-- 指纹权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 查询网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 监听开机广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- 弹窗权限：动态申请 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 振动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 收发短信权限 -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <!-- 访问外部存储 -->
+    <uses-permission android:name="android.permission.SEND_SMS" /> <!-- 访问外部存储 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <!-- 访问摄像头权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!-- 网络权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 定位权限 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- 休眠锁 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <!-- 录音权限 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <!-- 音频修改权限 -->
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> <!-- 访问摄像头权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 休眠锁 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 音频修改权限 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 蓝牙权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-
-    <!-- Wifi 权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- Wifi 权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-
-    <!-- 其他权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 其他权限 -->
     <!-- <uses-permission android:name="android.permission.CALL_PRIVILEGED" /> -->
     <!-- <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" /> -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -95,17 +73,6 @@
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
-    <!-- 只用于系统 app 的权限 -->
-    <!-- <uses-permission android:name="android.permission.CALL_PRIVILEGED" /> -->
-    <!-- <uses-permission android:name="android.permission.SHUTDOWN" /> -->
-    <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> -->
-    <!-- <uses-permission android:name="android.permission.REBOOT" /> -->
-    <!-- 只用于测试程序的权限 -->
-    <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> -->
-    <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/> -->
-    <!-- 电源管理 -->
-    <!-- <uses-permission android:name="android.permission.DEVICE_POWER" /> -->
-    <!-- ************************************ 相关权限 *********************************** -->
     <application
         android:name=".AppContext"
         android:icon="@mipmap/ic_launcher"
@@ -125,8 +92,7 @@
 
         <!-- ActivityDemo start -->
         <activity android:name=".ActivityDemo.ActivityDemoActivity" />
-        <activity android:name=".ActivityDemo.CActivityLifeCycleActivity" />
-        <!-- 声明此 Activity 为一个 Dialog -->
+        <activity android:name=".ActivityDemo.CActivityLifeCycleActivity" /> <!-- 声明此 Activity 为一个 Dialog -->
         <activity
             android:name=".ActivityDemo.CActivityLifeCycleDialgActivity"
             android:theme="@android:style/Theme.Dialog" />
@@ -134,26 +100,22 @@
         <activity android:name=".ActivityDemo.CActivityLaunchModeActivity" />
         <!-- ActivityDemo end -->
 
-
         <!-- BroadcastsDemo start -->
         <activity android:name=".BroadcastsDemo.BroadcastsDemoActivity" />
         <activity android:name=".BroadcastsDemo.CBroadcastsIntroduceActivity" />
-        <activity android:name=".BroadcastsDemo.CRegisterReceiverActivity" />
-        <!-- 静态注册接收开机广播 -->
+        <activity android:name=".BroadcastsDemo.CRegisterReceiverActivity" /> <!-- 静态注册接收开机广播 -->
         <receiver android:name=".BroadcastsDemo.CRegisterReceiver_BootCompleteReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".BroadcastsDemo.CSendBroadcastActivity" />
-        <!-- 高优先级广播接收者 -->
+        <activity android:name=".BroadcastsDemo.CSendBroadcastActivity" /> <!-- 高优先级广播接收者 -->
         <receiver android:name=".BroadcastsDemo.CSendBroadcast_MyBroadcastReceiver">
             <intent-filter android:priority="100">
                 <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST" />
             </intent-filter>
-        </receiver>
-        <!-- 低优先级广播接收者 -->
+        </receiver> <!-- 低优先级广播接收者 -->
         <receiver android:name=".BroadcastsDemo.CSendBroadcast_MyBroadcastReceiver2">
             <intent-filter>
                 <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CSendBroadcastActivity.MY_BROADCAST" />
@@ -168,14 +130,11 @@
             <intent-filter>
                 <action android:name="com.example.wangjun.demoapk.BroadcastsDemo.CLoginForecOfflineMainActivity.FORCE_OFFLINE" />
             </intent-filter>
-        </receiver>
-        <!-- BroadcastsDemo end -->
-
+        </receiver> <!-- BroadcastsDemo end -->
 
         <!-- ContentDemo start -->
         <activity android:name=".ContentDemo.ContentDemoActivity" />
-        <activity android:name=".ContentDemo.CContentProviderActivity" />
-        <!-- android:name 属性中指定了该类的全名 -->
+        <activity android:name=".ContentDemo.CContentProviderActivity" /> <!-- android:name 属性中指定了该类的全名 -->
         <!-- android:authorities 属性中指定了该内容提供器的权限 -->
         <provider
             android:name=".ContentDemo.CContentProvider_DatabaseProvider"
@@ -184,14 +143,12 @@
         <activity android:name=".ContentDemo.CAccessContentProviderActivity" />
         <!-- ContentDemo end -->
 
-
         <!-- DataPersistenceDemo start -->
         <activity android:name=".DataPersistenceDemo.DataPersistenceDemoActivity" />
         <activity android:name=".DataPersistenceDemo.CReadWriteFileActivity" />
         <activity android:name=".DataPersistenceDemo.CSharedPreferencesActivity" />
         <activity android:name=".DataPersistenceDemo.COperateDatabaseActivity" />
         <!-- DataPersistenceDemo end -->
-
 
         <!-- HardwareDemo start -->
         <activity android:name=".HardwareDemo.HardwareDemoActivity" />
@@ -205,13 +162,12 @@
         <activity android:name=".HardwareDemo.CMemoryTestActivity" />
         <activity android:name=".HardwareDemo.CProximityTestActivity" />
         <activity android:name=".HardwareDemo.CLCDTestActivity" />
+        <activity android:name=".HardwareDemo.CScreenCapTestActivity" />
         <!-- HardwareDemo end -->
-
 
         <!-- HelloWorld start -->
         <activity android:name=".HelloWorld.HelloWorldActivity" />
         <!-- HelloWorld end -->
-
 
         <!-- IntentDemo start -->
         <activity android:name=".IntentDemo.IntentDemoActivity" />
@@ -249,7 +205,6 @@
         </activity>
         <!-- IntentDemo end -->
 
-
         <!-- LayoutDemo start -->
         <activity android:name=".LayoutDemo.LayoutDemoActivity" />
         <activity android:name=".LayoutDemo.CTabLayoutActivity" />
@@ -264,7 +219,6 @@
         <activity android:name=".LayoutDemo.CFragmentApp_NewsContentActivity" />
         <!-- LayoutDemo end -->
 
-
         <!-- ListViewDemo start -->
         <activity android:name=".ListViewDemo.ListViewDemoActivity" />
         <activity android:name=".ListViewDemo.CArrayAdapter" />
@@ -274,18 +228,15 @@
         <activity android:name=".ListViewDemo.CUIChatActivity" />
         <!-- ListViewDemo end -->
 
-
         <!-- LocationDemo start -->
         <activity android:name=".LocationDemo.LocationDemoActivity" />
         <activity android:name=".LocationDemo.CLocationManagerActivity" />
         <!-- LocationDemo end -->
 
-
         <!-- MenuDemo start -->
         <activity android:name=".MenuDemo.MenuDemoActivity" />
         <activity android:name=".MenuDemo.CMenuActivity" />
         <!-- MenuDemo end -->
-
 
         <!-- MultimediaDemo start -->
         <activity android:name=".MultimediaDemo.MultimediaDemoActivity" />
@@ -296,8 +247,7 @@
         <activity android:name=".MultimediaDemo.CWidthNotificationActivity" />
         <activity android:name=".MultimediaDemo.CNotificationProgressActivity" />
         <activity android:name=".MultimediaDemo.CReceiveSendSMSActivity" />
-        <activity android:name=".MultimediaDemo.CTakePhotoActivity" />
-        <!-- 解决 Android N 上报错：android.os.FileUriExposedException -->
+        <activity android:name=".MultimediaDemo.CTakePhotoActivity" /> <!-- 解决 Android N 上报错：android.os.FileUriExposedException -->
         <!-- android:exported:要求必须为false，为true则会报安全异常； -->
         <!-- android:grantUriPermissions:true，表示授予 URI 临时访问权限； -->
         <!-- android:authorities这个属性的值，建议写包名+fileprovider，当然也可以起别的字符串，但是在设备中不能出现2个及以上的APP使用到同一个authorities属性值，因为无法共存。 -->
@@ -321,21 +271,19 @@
         <activity android:name=".MultimediaDemo.CCameraV2ApiActivity" />
         <!-- MultimediaDemo end -->
 
-
         <!-- SensorDemo start -->
         <activity android:name=".SensorDemo.SensorDemoActivity" />
         <activity android:name=".SensorDemo.CAlsActivity" />
         <activity android:name=".SensorDemo.CAccelActivity" />
         <activity android:name=".SensorDemo.CCompassActivity" />
+        <activity android:name=".SensorDemo.CFingerprintActivity"></activity>
         <!-- SensorDemo end -->
-
 
         <!-- ServiceDemo start -->
         <activity android:name=".ServiceDemo.ServiceDemoActivity" />
         <activity android:name=".ServiceDemo.CAndroidThreadActivity" />
         <activity android:name=".ServiceDemo.CAsyncTaskActivity" />
-        <activity android:name=".ServiceDemo.CServiceTestActivity" />
-        <!-- 服务 -->
+        <activity android:name=".ServiceDemo.CServiceTestActivity" /> <!-- 服务 -->
         <service android:name=".ServiceDemo.CServiceTest_MyService" />
         <service android:name=".ServiceDemo.CServiceTest_MyIntentService" />
 
@@ -345,9 +293,7 @@
         <service android:name=".ServiceDemo.CAlarmService_LongRunningService" />
 
         <receiver android:name=".ServiceDemo.CAlarmService_AlarmReceiver" />
-
         <!-- ServiceDemo end -->
-
 
         <!-- SoftwareDemo start -->
         <activity android:name=".SoftwareDemo.SoftwareDemoActivity" />
@@ -368,14 +314,12 @@
         <activity android:name=".SoftwareDemo.CShellExecActivity" />
         <!-- SoftwareDemo start -->
 
-
         <!-- StatusBarDemo start -->
         <activity android:name=".StatusBarDemo.StatusBarDemoActivity" />
         <activity android:name=".StatusBarDemo.CAppCompatHideBar1Activity" />
         <activity android:name=".StatusBarDemo.CActivityHideBarActivity" />
         <activity android:name=".StatusBarDemo.CDynamicStatusBarActivity" />
         <!-- StatusBarDemo end -->
-
 
         <!-- WidgetDemo start -->
         <activity android:name=".WidgetDemo.WidgetDemoActivity" />
@@ -386,7 +330,6 @@
         <activity android:name=".WidgetDemo.CWidgetSizeActivity" />
         <activity android:name=".WidgetDemo.CTextViewActivity" />
         <!-- WidgetDemo end -->
-
 
         <!-- WebDemo end -->
         <activity android:name=".WebDemo.WebDemoActivity" />
@@ -401,7 +344,7 @@
         <activity android:name=".WebDemo.CSocketCS_ClientActivity" />
         <!-- WebDemo end -->
 
-        <activity android:name=".HardwareDemo.CScreenCapTestActivity"></activity>
+
     </application>
 
 </manifest>

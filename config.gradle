@@ -1,3 +1,5 @@
+
+// 被 appNiceVideoPlayer 引用
 ext {
 
     android = [
