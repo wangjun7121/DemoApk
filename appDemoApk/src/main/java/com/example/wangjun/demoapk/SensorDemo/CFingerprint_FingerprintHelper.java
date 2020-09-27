@@ -31,18 +31,24 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
     private String data = "123456";
 
     public CFingerprint_FingerprintHelper(Context context) {
+        // 获取指纹服务
         manager = context.getSystemService(FingerprintManager.class);
+
+        // 初始化 SharedPreference 用于保存加密后数据
         mLocalSharedPreference = new CFingerprint_LocalSharedPreference(context);
+
+        // 初始化密钥生成保存服务
         mLocalAndroidKeyStore = new CFingerprint_LocalAndroidKeyStore();
     }
 
     public void generateKey() {
-        //在keystore中生成加密密钥
+        //在 keystore 中生成加密密钥
         mLocalAndroidKeyStore.generateKey(CFingerprint_LocalAndroidKeyStore.keyName);
         setPurpose(KeyProperties.PURPOSE_ENCRYPT);
     }
 
     public boolean isKeyProtectedEnforcedBySecureHardware() {
+        // 判断 KeyStore 是使用安全硬件了没有
         return mLocalAndroidKeyStore.isKeyProtectedEnforcedBySecureHardware();
     }
 
@@ -64,6 +70,7 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
         return 1;
     }
 
+    // 获取保存在 SharedPreference 中的加密数据
     public boolean containsToken() {
         return mLocalSharedPreference.containsKey(mLocalSharedPreference.dataKeyName);
     }
@@ -76,9 +83,13 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
         this.purpose = purpose;
     }
 
+
+    // 认证指纹
     public boolean authenticate() {
         try {
             FingerprintManager.CryptoObject object;
+
+            // 根据配置进行加解密
             if (purpose == KeyProperties.PURPOSE_DECRYPT) {
                 String IV = mLocalSharedPreference.getData(mLocalSharedPreference.IVKeyName);
                 object = mLocalAndroidKeyStore.getCryptoObject(Cipher.DECRYPT_MODE, Base64.decode(IV, Base64.URL_SAFE));
@@ -89,6 +100,8 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
                 object = mLocalAndroidKeyStore.getCryptoObject(Cipher.ENCRYPT_MODE, null);
             }
             mCancellationSignal = new CancellationSignal();
+
+            // 进行指纹认证
             manager.authenticate(object, mCancellationSignal, 0, this, null);
             return true;
         } catch (SecurityException e) {
@@ -97,6 +110,7 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
         }
     }
 
+    // 停止指纹认证
     public void stopAuthenticate() {
         if (mCancellationSignal != null) {
             mCancellationSignal.cancel();
@@ -115,8 +129,10 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
             return;
         }
         final Cipher cipher = result.getCryptoObject().getCipher();
+
+        // 解密
         if (purpose == KeyProperties.PURPOSE_DECRYPT) {
-            //取出secret key并返回
+            //取出 secret key 并返回
             String data = mLocalSharedPreference.getData(mLocalSharedPreference.dataKeyName);
             if (TextUtils.isEmpty(data)) {
                 callback.onAuthenticationFail();
@@ -129,8 +145,9 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
                 e.printStackTrace();
                 callback.onAuthenticationFail();
             }
+        // 加密
         } else {
-            //将前面生成的data包装成secret key，存入沙盒
+            //将前面生成的 data 包装成 secret key，存入沙盒
             try {
                 byte[] encrypted = cipher.doFinal(data.getBytes());
                 byte[] IV = cipher.getIV();
