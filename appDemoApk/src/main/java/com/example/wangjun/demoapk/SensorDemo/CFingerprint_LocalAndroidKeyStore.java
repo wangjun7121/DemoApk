@@ -202,6 +202,41 @@ import javax.crypto.spec.IvParameterSpec;
  * @since 1.2
  */
 
+/*
+如何生成key，可以通过以下两个类：
+
+    KeyGenerator(KeyPairGenerator): 根据一些指定的参数，例如算法，补码模式等参数，来生成一个新的key。
+    KeyFactory: 当服务器想告知客户端key，只是将key的byte数组传过来，可以通过这个类来还原key。
+        当然生成key的时候，你要说明，可以通过KeySpec的子类来说明。
+
+看一个生成key和还原key的例子：
+
+    //对称key即SecretKey创建和导入，假设双方约定使用DES算法来生成对称密钥
+    KeyGeneratorkeyGenerator = KeyGenerator.getInstance("DES");
+    //设置密钥长度。注意，每种算法所支持的密钥长度都是不一样的。DES只支持64位长度密钥
+    keyGenerator.init(64);
+    //生成SecretKey对象，即创建一个对称密钥，并获取二进制的书面表达
+    SecretKey secretKey = keyGenerator.generateKey();
+    byte[] keyData =secretKey.getEncoded();
+    //日常使用时，一般会把上面的二进制数组通过Base64编码转换成字符串，然后发给使用者
+    String keyInBase64 =Base64.encodeToString(keyData,Base64.DEFAULT);
+     e(TAG,“==>secret key: encrpted data =”+ bytesToHexString(keyData))；
+     e(TAG,"==>secrety key:base64code=" + keyInBase64 +“  key:alg=" + secretKey.getAlgorithm());
+
+
+    //假设对方收到了base64编码后的密钥，首先要得到其二进制表达式，用二进制数组构造KeySpec对象。对称key使用SecretKeySpec类
+     byte[] receivedKeyData =Base64.decode(keyInBase64,Base64.DEFAULT);
+    SecretKeySpec keySpec =new SecretKeySpec(receivedKeyData,”DES”);
+    //创建对称Key导入用的SecretKeyFactory
+    SecretKeyFactorysecretKeyFactory = SecretKeyFactory.getInstance(”DES”);
+    //根据KeySpec还原Key对象，即把key的书面表达式转换成了Key对象
+    SecretKey receivedKeyObject = secretKeyFactory.generateSecret(keySpec);
+    byte[]encodedReceivedKeyData = receivedKeyObject.getEncoded();
+    e(TAG,"==>secret key: received key encoded data ="+bytesToHexString(encodedReceivedKeyData));
+
+* */
+
+
 public class CFingerprint_LocalAndroidKeyStore {
 
     private KeyStore mStore;

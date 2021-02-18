@@ -91,6 +91,7 @@ public class CFingerprint_FingerprintHelper extends FingerprintManager.Authentic
 
             // 根据配置进行加解密
             if (purpose == KeyProperties.PURPOSE_DECRYPT) {
+                // 从 SharedPreference 存储中获取密钥
                 String IV = mLocalSharedPreference.getData(mLocalSharedPreference.IVKeyName);
                 object = mLocalAndroidKeyStore.getCryptoObject(Cipher.DECRYPT_MODE, Base64.decode(IV, Base64.URL_SAFE));
                 if (object == null) {
