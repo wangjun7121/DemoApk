@@ -39,9 +39,11 @@ public class CLeftRightFragmentActivity extends AppCompatActivity {
 //                                片实例。
 //                            5. 提交事务，调用 commit()方法来完成。
 
+                        // 创建继承 Fragment 的类，类中通过 LayoutInflater.inflater 加载 layout 布局文件
                         CLeftRightFragment_Right2 fragment = new CLeftRightFragment_Right2();
                         FragmentManager fragmentManager = getFragmentManager();
                         FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        // 使用新布局，替换 fragment
                         transaction.replace(R.id.right_layout, fragment);
 
                         //////////////////////////////////////////////////////////
