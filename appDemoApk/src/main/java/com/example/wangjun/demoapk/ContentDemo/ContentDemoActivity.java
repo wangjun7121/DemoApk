@@ -1,24 +1,38 @@
 package com.example.wangjun.demoapk.ContentDemo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.wangjun.demoapk.ActivityDemo.ActivityDemoActivity;
 import com.example.wangjun.demoapk.ActivityDemo.CActivityLaunchModeActivity;
 import com.example.wangjun.demoapk.ActivityDemo.CActivityLifeCycleActivity;
 import com.example.wangjun.demoapk.ListViewDemo.CSimpleCursorAdapter;
 import com.example.wangjun.demoapk.R;
+import com.example.wangjun.demoapk.SensorDemo.CAlsActivity;
+import com.example.wangjun.demoapk.SensorDemo.SensorDemoActivity;
+import com.example.wangjun.demoapk.Tools.LogUtil;
 
 public class ContentDemoActivity extends AppCompatActivity {
     private static String sLogcatTAG = "ContentDemoActivity";
+    Context m_Context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contentdemo);
+        setContentView(R.layout.scrollview_entry);
+        m_Context = this;
+        final LinearLayout layout = (LinearLayout) this.findViewById(R.id.linearlayout);
+        layout.setOrientation(LinearLayout.VERTICAL);
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 访问其他程序的内容提供器：
@@ -78,12 +92,14 @@ public class ContentDemoActivity extends AppCompatActivity {
 //                最后，可以调用 ContentResolver 的 delete()方法将这条数据删除掉，代码如下所示：
 //                    getContentResolver().delete(uri, "column2 = ?", new String[] { "1" });
 
-        Button readContactBtn;
-        readContactBtn = (Button) findViewById(R.id.readContactBtn);
+        Button readContactBtn = new Button(m_Context);
+        readContactBtn.setText("读取联系人");
+        readContactBtn.setAllCaps(false);
+        layout.addView(readContactBtn);
         readContactBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(ContentDemoActivity.this, CSimpleCursorAdapter.class);
                 startActivity(intent);
             }
@@ -114,12 +130,16 @@ public class ContentDemoActivity extends AppCompatActivity {
 //            1. 创建了一个数据库操作类
 //            2. 创建了一个 ContentProvider ，里面操作数据库
 //            3. 通过 uri 访问数据库本地数据库
-        Button testContentProviderBtn;
-        testContentProviderBtn = (Button) findViewById(R.id.testContentProviderBtn);
+
+
+        Button testContentProviderBtn = new Button(m_Context);
+        testContentProviderBtn.setText("创建内容提供器");
+        testContentProviderBtn.setAllCaps(false);
+        layout.addView(testContentProviderBtn);
         testContentProviderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(ContentDemoActivity.this, CContentProviderActivity.class);
                 startActivity(intent);
             }
@@ -127,12 +147,15 @@ public class ContentDemoActivity extends AppCompatActivity {
 
         // 访问内容提供器：
 //            通过 uri 访问程序 2 创建的 ContentProvider
-        Button accessContentProviderBtn;
-        accessContentProviderBtn = (Button) findViewById(R.id.accessContentProviderBtn);
+
+        Button accessContentProviderBtn = new Button(m_Context);
+        accessContentProviderBtn.setText("访问内容提供器");
+        accessContentProviderBtn.setAllCaps(false);
+        layout.addView(accessContentProviderBtn);
         accessContentProviderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v(sLogcatTAG, "testArrayAdapterBtn");
+                LogUtil.d("debug\n");
                 Intent intent = new Intent(ContentDemoActivity.this, CAccessContentProviderActivity.class);
                 startActivity(intent);
             }
